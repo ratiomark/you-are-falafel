@@ -1,0 +1,85 @@
+
+.hamburger_container {
+  cursor: pointer;
+  /* background-color: red; */
+  /* padding: 10px; */
+}
+
+.menu-bar {
+  width: 60px;
+  height: 8px;
+  margin: 10px 0;
+  border-radius: 4px;
+  /* box-shadow: 0 2px 2px hsla(0, 0%, 0%, .2); */
+  /* background-color: white; */
+  background-color: #BFD4D6;
+  /* border: 1px  solid red; */
+  transform-origin: center;
+  animation-duration: .8s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+
+@keyframes topBarOpen {
+  0%   {transform: translateY(0);}
+  50%  {transform: translateY(18px);}
+  100% {transform: translateY(18px) rotate(45deg);}
+}
+
+@keyframes bottomBarOpen {
+  0%   {transform: translateY(0);}
+  50%  {transform: translateY(-18px);}
+  100% {transform: translateY(-18px) rotate(135deg);}
+}
+
+@keyframes middleBarOpen {
+  0%   {transform: scale(1)}
+  50%  {transform: scale(.5)}
+  51%  {transform: scale(0)}
+  100% {transform: scale(0)}
+}
+
+
+@keyframes topBarClose {
+  0% {transform: translateY(18px) rotate(45deg);}
+  50%  {transform: translateY(18px);}
+  100%   {transform: translateY(0);}
+}
+
+@keyframes bottomBarClose {
+  0% {transform: translateY(-18px) rotate(135deg);}
+  50%  {transform: translateY(-18px);}
+  100%   {transform: translateY(0);}
+}
+
+@keyframes middleBarClose {
+  0%   {transform: scale(0)}
+  50%  {transform: scale(0)}
+  51%  {transform: scale(.5)}
+  100% {transform: scale(1)}
+}
+
+.is-open .menu-bar:first-child {
+  animation-name: topBarOpen;
+}
+
+.is-open .menu-bar:last-child {
+  animation-name: bottomBarOpen;
+}
+
+.is-open .menu-bar:nth-child(2) {
+  animation-name: middleBarOpen;
+}
+
+.is-closed .menu-bar:first-child {
+  animation-name: topBarClose;
+}
+
+.is-closed .menu-bar:last-child {
+  animation-name: bottomBarClose;
+}
+
+.is-closed .menu-bar:nth-child(2) {
+  animation-name: middleBarClose;
+}

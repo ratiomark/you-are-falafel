@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  label {
+    &[for] {
+
+      /* Проверяем, ассоциирован ли label с input, select или button, которые имеют атрибут required */
+      &[for]:has(+ input[required])::after,
+      &[for]:has(+ select[required])::after,
+      &[for]:has(+ button[aria-required="true"])::after,
+      /* Поддержка для структуры с div или другим контейнером между label и input/select/button */
+      &[for]:has(+ * input[required])::after,
+      &[for]:has(+ * select[required])::after,
+      &[for]:has(+ * button[aria-required="true"])::after {
+        content: ' *';
+        color: red;
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family: 'CreatoDisplay';
+  src: url('/fonts/CreatoDisplay-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+.main-layout {
+  grid-template-areas:
+    "header header"
+    "navbar page";
+    
+}
+
+@media (max-width: 767px) {
+  .main-layout {
+    grid-template-areas:
+      "header header"
+      "page page";
+  }
+}
+/* .main-layout-mobile {
+  grid-template-areas:
+    "header header"
+    "page page";
+} */
+
+.main-heading {
+  font-size: 34px;
+  line-height: 40px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: var(--scrollbar-size)
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #BFD4D6;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.custom-scrollbar-2::-webkit-scrollbar {
+  width: var(--scrollbar-size-2)
+}
+
+.custom-scrollbar-2::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-scrollbar-2::-webkit-scrollbar-thumb {
+  background: #BFD4D6;
+  border-radius: 10px;
+}
+
+.custom-scrollbar-2::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@layer base {
+
+  :root {
+    /* --background: 0 0% 100%; */
+    --background: 171 100% 99%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* --primary: 222.2 47.4% 11.2%; */
+    --primary: 187 100% 18%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    /* --secondary-foreground: 222.2 47.4% 11.2%; */
+    --secondary-foreground: 168 100% 99;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    /* --input: 214.3 31.8% 91.4%; */
+    --input: 187 100% 18%;
+    --input-color-border: 185 22% 79%;
+    /* --tab: 187 100% 18%; */
+    --tab: 187 51% 30%;
+    /* --tab: 187°, 51%, 30%; */
+    --tab-secondary: 187.8 22.1% 59.2%;
+    --label: 187 100% 18%;
+    /* --ring: 222.2 84% 4.9%; */
+    --ring: 187 100% 18%;
+
+    --radius: 0.5rem;
+
+    /* custom */
+    --input-font-size: 1rem;
+    --input-line-height: 1.25rem;
+    --label-font-size: 0.875rem;
+    --label-line-height: 1rem;
+    --tab-font-size: 1rem;
+    --tab-line-height: 1.25rem;
+
+    /* -- */
+    /* scrollbar-width: thin; */
+    /* --scrollbar-size: 4px; */
+    /* --scrollbar-size-2: 8px; */
+    --header-height: 5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    /* --popover: 217.2 32.6% 17.5%; */
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    /* --input: 214.3 31.8% 91.4%; */
+    --input: 187 100% 18%;
+    /* --tab: 187 100% 18%; */
+    --tab: 187 51% 30%;
+    /* --tab: 187°, 51%, 30%; */
+    --tab-secondary: 187.8 22.1% 59.2%;
+    --label: 187 100% 18%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    /* custom */
+    --input-font-size: 1rem;
+    --input-line-height: 1.25rem;
+    --tab-font-size: 1rem;
+    --tab-line-height: 1.25rem;
+
+
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-primary;
+    scrollbar-width: thin;
+    --scrollbar-size: 4px;
+    --scrollbar-size-2: 8px;
+    --header-height: 5rem;
+    --font-creato: 'CreatoDisplay', sans-serif;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    grid-area: header;
+  }
+
+  main {
+    flex-grow: 1;
+    flex-shrink: 1;
+    padding: var(--padding-page);
+
+    grid-area: page;
+    height: calc(100vh - var(--header-height));
+    overflow: auto;
+    scrollbar-gutter: stable;
+    /* scrollbar-width: thin; */
+  }
+
+  /* aside{
+      grid-area: navbar;
+      
+    } */
+}

@@ -1,0 +1,33 @@
+{
+  "headwind.removeDuplicates": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize",
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    // "editor.defaultFormatter": "vscode.typescript-language-features"
+    // "editor.defaultFormatter": "vscode.typescript-language-features"
+    // "editor.defaultFormatter": "vscode.typescript-language-features"
+    // "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    // "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // "editor.defaultFormatter": [
+    // "dbaeumer.vscode-eslint",
+    // "vscode.typescript-language-features"
+    // ]
+  },
+  "[typescript]": {
+    "editor.tabSize": 2,
+    "editor.indentSize": "tabSize",
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+  },
+  "hide-files.files": []
+}
