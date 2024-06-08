@@ -1,31 +1,60 @@
-'use client'
-import Link from 'next/link'
-import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarSeparator } from '@radix-ui/react-menubar'
-import { MenubarShortcut } from '../ui/menubar'
-import { usePathname, useRouter } from 'next/navigation'
-import { cn } from '../utils/cn'
-import designIcon from 'public/sidebar-design.svg'
-import storiesIcon from 'public/sidebar-stories.svg'
-import teamsIcon from 'public/sidebar-teams.svg'
-import logo from 'public/logo.svg'
-import Image from 'next/image'
-import { Button } from '@/shared/ui/button'
+'use client';
+import Link from 'next/link';
+import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarSeparator } from '@radix-ui/react-menubar';
+import { MenubarShortcut } from '../ui/menubar';
+import { usePathname, useRouter } from 'next/navigation';
+import { cn } from '../utils/cn';
+import designIcon from 'public/sidebar-design.svg';
+import storiesIcon from 'public/sidebar-stories.svg';
+import teamsIcon from 'public/sidebar-teams.svg';
+import logo from 'public/Lalafel.svg';
+import Image from 'next/image';
+import { Button } from '@/shared/ui/button';
+
+
+// Font
+// Creato Display
+// Weight
+// 400
+// Size
+// 18px
+// Line height
+// 21.6px
+// Align
+// Center
 export const Header = () => {
   return (
     // <header className=" fixed left-0 right-0 top-0 z-10 flex bg-secondary-foreground h-[var(--header-height)] w-full items-center border-b  px-[26px] py-5">
     <>
       {/* <div className="h-[var(--header-height)]" /> */}
-      {/* <header className="fixed left-0 right-0 top-0 z-10 flex h-[var(--header-height)] w-full items-center border-b bg-secondary-foreground px-[26px] py-5"> */}
-      <header className=" z-10 flex h-[var(--header-height)] w-full items-center border-b bg-secondary-foreground px-[26px] py-5">
-        <Image
-          src={logo}
-          alt="Brightr Logo"
-        />
+			{/* <header className="fixed left-0 right-0 top-0 z-10 flex h-[var(--header-height)] w-full items-center border-b bg-secondary-foreground px-[26px] py-5"> */}
+			
+      <header className="font-creato text-lg z-10 flex h-[var(--header-height)] w-full items-center justify-center  bg-transparent px-[26px] ">
+        <nav>
+          <ul className="flex items-center justify-center gap-2 pt-7">
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Image
+                src={logo}
+                height={57}
+                alt="Brightr Logo"
+              />
+            </li>
+            <li>
+              <Link href="/about">Studio Website</Link>
+            </li>
+          </ul>
+        </nav>
         {/* <Button> Some text</Button> */}
       </header>
     </>
-  )
-}
+  );
+};
 // export const SideBar = () => {
 // 	return (
 // 		<Menubar>

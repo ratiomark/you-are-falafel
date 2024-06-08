@@ -27,11 +27,37 @@
   font-weight: 500;
   font-style: normal;
 }
+@font-face {
+  font-family: 'CreatoDisplay';
+  src: url('/fonts/CreatoDisplay-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ZTChintzy';
+  src: url('/fonts/ZTChintzy-ExtraBold-BF65e6952156852.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libre';
+  src: url('/fonts/LibreCaslonCondensed-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Libre';
+  src: url('/fonts/LibreCaslonCondensed-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 
 .main-layout {
   grid-template-areas:
     "header header"
-    "navbar page";
+    "page page";
     
 }
 
@@ -89,12 +115,25 @@
   background: #555;
 }
 
+.backgroundImage {
+  background-image: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: local; */
+}
+
+
+
+
 @layer base {
 
   :root {
     /* --background: 0 0% 100%; */
-    --background: 171 100% 99%;
+    /* --background: 171 100% 99%; */
+    --background: #FFF3E1;
     --foreground: 222.2 84% 4.9%;
+    /* --foreground: #1C0F00; */
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -103,7 +142,8 @@
     --popover-foreground: 222.2 84% 4.9%;
 
     /* --primary: 222.2 47.4% 11.2%; */
-    --primary: 187 100% 18%;
+    /* --primary: 187 100% 18%; */
+    --primary: #1C0F00;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -206,17 +246,35 @@
     scrollbar-width: thin;
     --scrollbar-size: 4px;
     --scrollbar-size-2: 8px;
-    --header-height: 5rem;
+    --header-height: 57px;
     --font-creato: 'CreatoDisplay', sans-serif;
+    --font-zt: 'ZTChintzy', sans-serif;
+    --font-libre: 'Libre', sans-serif;
+    
   }
 
   header {
+    /* position: sticky; */
+    /* top: 0; */
+    /* grid-area: header; */
+  }
+  /* header {
     position: sticky;
     top: 0;
     grid-area: header;
-  }
+  } */
 
   main {
+    /* flex-grow: 1; */
+    /* flex-shrink: 1; */
+    /* padding: var(--padding-page); */
+
+    /* grid-area: page; */
+    /* height: calc(100vh - var(--header-height)); */
+    /* overflow: auto; */
+    scrollbar-gutter: stable;
+  }
+  /* main {
     flex-grow: 1;
     flex-shrink: 1;
     padding: var(--padding-page);
@@ -225,8 +283,7 @@
     height: calc(100vh - var(--header-height));
     overflow: auto;
     scrollbar-gutter: stable;
-    /* scrollbar-width: thin; */
-  }
+  } */
 
   /* aside{
       grid-area: navbar;

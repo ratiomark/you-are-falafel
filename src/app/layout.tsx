@@ -1,14 +1,15 @@
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google'
-import { Inter as FontSans } from 'next/font/google'
-import './globals.css'
-import { Providers } from './providers'
-import NavBar from '@/shared/components/NavBar'
-import { headers } from 'next/headers'
-import { cn } from '@/shared/utils/cn'
-import { Toaster } from '@/shared/ui/toaster'
-import Head from 'next/head'
-
+import { Inter as FontSans } from 'next/font/google';
+import './globals.css';
+import { Providers } from './providers';
+import NavBar from '@/shared/components/NavBar';
+import { headers } from 'next/headers';
+import { cn } from '@/shared/utils/cn';
+import { Toaster } from '@/shared/ui/toaster';
+import Head from 'next/head';
+import backgroundImage from 'public/background.png';
+import Image from 'next/image';
 // const inter = FontSans({
 // 	subsets: ['latin'],
 // 	variable: '--font-inter',
@@ -17,12 +18,12 @@ import Head from 'next/head'
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
-})
+});
 
 export const metadata: Metadata = {
   title: 'Brightr',
   description: 'The Brightr platform lets tech consultancies easily create, manage, update and publish a steady stream of client stories.',
-}
+};
 
 {
   /* <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   // const headersList = headers()
   // const currentPath = headersList.get('x-pathname') || '/'
@@ -104,11 +105,21 @@ export default function RootLayout({
         >
           {/* <NavBar currentPath={currentPath} /> */}
           {children}
+          {/* <Image
+            src={backgroundImage}
+            alt=""
+            placeholder="blur"
+            fill
+            style={{
+              objectFit: 'cover',
+              zIndex: -1,
+            }}
+          /> */}
           <Toaster />
         </body>
       </html>
     </>
-  )
+  );
 }
 
 {
