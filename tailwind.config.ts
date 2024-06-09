@@ -1,6 +1,6 @@
-import type { Config } from 'tailwindcss'
-import { fontFamily } from 'tailwindcss/defaultTheme'
-import plugin from 'tailwindcss/plugin'
+import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
 
 const config = {
   darkMode: ['class'],
@@ -37,10 +37,10 @@ const config = {
         // input: 'hsl(var(--input))',
         'input-border': 'hsl(var(--input-border))',
         ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
+        background: 'var(--background)',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: 'hsl(var(--primary))',
+          DEFAULT: 'var(--primary)',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
@@ -79,6 +79,8 @@ const config = {
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
         creato: ['var(--font-creato)', ...fontFamily.sans],
+        zt: ['var(--font-zt)', ...fontFamily.sans],
+        libre: ['var(--font-libre)', ...fontFamily.sans],
       },
       borderColor: {
         input: 'hsl(var(--input-color-border))',
@@ -153,9 +155,9 @@ const config = {
         '.border-secondary': {
           borderColor: '#E6EEEF',
         },
-      })
+      });
     }),
   ],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;
