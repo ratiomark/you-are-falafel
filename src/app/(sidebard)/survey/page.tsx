@@ -11,6 +11,7 @@ import nextArrow from 'public/nextArrow.svg';
 import prevArrow from 'public/previousArrow.svg';
 // import cloudImage from 'public/cloudv2.svg';
 import cloudImage from 'public/cloudImage.png';
+import falafelResult from 'public/falafelResult.webp';
 
 interface SurveyAnswer {
   questionIndex: number;
@@ -137,8 +138,17 @@ export default function SurveyPage() {
   const currentAnswer = state.answers[currentQuestionIndex]?.answer;
   console.log('current question Index', currentQuestionIndex);
   console.log('currentAnswer', currentAnswer);
-  if (currentQuestionIndex === questions.length) {
-    return <div>End of survey</div>;
+  if (currentQuestionIndex === 0) {
+    // if (currentQuestionIndex === questions.length) {
+    return (
+      <div className="flex p-20 h-full w-full items-center justify-center">
+        <Image
+          src={falafelResult}
+          alt="falafelResult"
+          // className='absolute bottom-[-65%] left-[33%] w-[15vw]'
+        />
+      </div>
+    );
   }
 
   const goToPreviousQuestion = (index: number) => {
