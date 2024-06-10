@@ -40,7 +40,7 @@ const config = {
         background: 'var(--background)',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: 'var(--primary)',
+          DEFAULT: 'var(--primary, #1C0F00)',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {

@@ -7,10 +7,9 @@ import { cn } from '../utils/cn';
 import designIcon from 'public/sidebar-design.svg';
 import storiesIcon from 'public/sidebar-stories.svg';
 import teamsIcon from 'public/sidebar-teams.svg';
-import logo from 'public/Lalafel.svg';
+import logo from 'public/logo (1).svg';
 import Image from 'next/image';
 import { Button } from '@/shared/ui/button';
-
 
 // Font
 // Creato Display
@@ -27,22 +26,23 @@ export const Header = () => {
     // <header className=" fixed left-0 right-0 top-0 z-10 flex bg-secondary-foreground h-[var(--header-height)] w-full items-center border-b  px-[26px] py-5">
     <>
       {/* <div className="h-[var(--header-height)]" /> */}
-			{/* <header className="fixed left-0 right-0 top-0 z-10 flex h-[var(--header-height)] w-full items-center border-b bg-secondary-foreground px-[26px] py-5"> */}
-			
-      <header className="font-creato text-lg z-10 flex h-[var(--header-height)] w-full items-center justify-center  bg-transparent px-[26px] ">
+      {/* <header className="fixed left-0 right-0 top-0 z-10 flex h-[var(--header-height)] w-full items-center border-b bg-secondary-foreground px-[26px] py-5"> */}
+
+      <header className="z-10 flex min-h-[var(--header-height)] w-full items-center justify-center bg-transparent px-[26px]  font-creato text-lg ">
         <nav>
-          <ul className="flex items-center justify-center gap-2 pt-7">
+          <ul className="flex items-center justify-center gap-10  uppercase">
             <li>
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About</Link>
+              <Link href="/about">Share</Link>
             </li>
             <li>
               <Image
                 src={logo}
-                height={57}
-                alt="Brightr Logo"
+                // height={61}
+                className={'h-[61px]'}
+                alt="lolafel Logo"
               />
             </li>
             <li>
