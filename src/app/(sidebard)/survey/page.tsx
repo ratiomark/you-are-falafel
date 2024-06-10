@@ -138,10 +138,10 @@ export default function SurveyPage() {
   const currentAnswer = state.answers[currentQuestionIndex]?.answer;
   console.log('current question Index', currentQuestionIndex);
   console.log('currentAnswer', currentAnswer);
-  if (currentQuestionIndex === 0) {
-    // if (currentQuestionIndex === questions.length) {
+  // if (currentQuestionIndex === 0) {
+  if (currentQuestionIndex === questions.length) {
     return (
-      <div className="flex p-20 h-full w-full items-center justify-center">
+      <div className="flex h-full w-full items-center justify-center p-20">
         <Image
           src={falafelResult}
           alt="falafelResult"
