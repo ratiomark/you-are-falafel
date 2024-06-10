@@ -47,7 +47,7 @@ export default function Home() {
             id="content"
             className="flex h-full grow flex-col  justify-between"
           >
-            <div className="flex items-center justify-center pt-[255px]  font-creato uppercase tall:hidden ">
+            <div className="flex items-center justify-center pt-[255px]  font-creato uppercase">
               <div className="flex w-full max-w-[1420px]  items-center justify-between">
                 <p className=" max-w-[142px] text-center leading-[120%]">This is an entertainment website</p>
                 <p className=" max-w-[110px] text-center leading-[120%]">
