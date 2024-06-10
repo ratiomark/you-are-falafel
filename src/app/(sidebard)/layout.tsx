@@ -1,3 +1,4 @@
+import Footer from '@/shared/components/Footer';
 import { Header } from '@/shared/components/Header';
 export default function Layout({
   children,
@@ -5,27 +6,18 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    // <div className="grid min-h-screen grid-rows-[var(--header-height)_1fr] ">
+    // <div className="custom-scrollbar-2 mx-auto  h-screen w-full border-2 border-green-400">
     //   <Header />
-    //   <div className="">
-    //     <SideBar />
-    //     <main className="custom-scrollbar-2 pt-[var(--header-height)] overflow-y-auto pl-[240px]">
-    //       <div className="relative border-l px-6 pt-12">{children}</div>
-    //     </main>
-    //   </div>
+    //   <main className="custom-scrollbar-2 min-h-[calc(100vh_-_var(--header-height)_-_20px)] border border-purple-500 md:pl-0">
+    //     {children}
+    //   </main>
     // </div>
-    <div className="custom-scrollbar-2 mx-auto  h-screen w-full border-2 border-green-400">
-      {/* <div className="backgroundImage custom-scrollbar-2 mx-auto  h-full w-full "> */}
-      {/* Content goes here */}
-      {/* <div className="main-layout mx-auto grid min-h-screen  grid-rows-[var(--header-height)_1fr] "> */}
-      {/* <div className="main-layout mx-auto grid min-h-screen grid-cols-[auto_1fr] grid-rows-[var(--header-height)_1fr] "> */}
+    <div className="custom-scrollbar-2 w-full pt-[30px] ">
       <Header />
-      <main className="custom-scrollbar-2 min-h-[calc(100vh_-_var(--header-height)_-_20px)] border border-purple-500 md:pl-0">
-        {/* <main className="custom-scrollbar-2 pl-[240px] md:pl-0"> */}
-        {children}
-        {/* <div className="relative border-l px-6">{children}</div> */}
-      </main>
+      <main className="custom-scrollbar-2 mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-10">{children}</main>
+      <Footer />
     </div>
+
     // <div className=" main-layout mx-auto grid min-h-screen grid-cols-[auto_1fr] grid-rows-[var(--header-height)_1fr] ">
     //   <Header />
     //   {/* <div className="grid h-full grid-cols-[1fr] pt-20"> */}

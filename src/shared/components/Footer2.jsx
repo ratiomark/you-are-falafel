@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer2 = () => {
   return (
     <footer className='bg-stone-300 py-4 text-center text-white'>
       <div className='container'>
@@ -8,4 +8,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer2

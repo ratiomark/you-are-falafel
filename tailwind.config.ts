@@ -20,11 +20,13 @@ const config = {
     },
     extend: {
       screens: {
-        '2xl': { max: '1535px' }, // изначально используйте 'min'
-        xl: { max: '1279px' },
-        lg: { max: '1023px' },
-        md: { max: '767px' },
-        sm: { max: '639px' },
+        // '2xl': { max: '1535px'}, // изначально используйте 'min'
+        // xl: { max: '1279px' },
+        // lg: { max: '1023px' },
+        // md: { max: '767px' },
+				// sm: { max: '639px' },
+				// начнет работать с 1200px, например, tall:hidden скроет элемент если высота экрана > или = 1200px
+        tall: { raw: '(min-height: 1200px)' },
       },
       spacing: {
         // '1': '1rem',

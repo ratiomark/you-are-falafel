@@ -46,7 +46,12 @@ export const Header = () => {
               />
             </li>
             <li>
-              <Link href="/about">Studio Website</Link>
+              <Link
+                target="_blank"
+                href="https://butcher.studio"
+              >
+                Studio Website
+              </Link>
             </li>
           </ul>
         </nav>

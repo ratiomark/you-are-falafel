@@ -75,7 +75,7 @@ const QuestionComponent: React.FC<QuestionProps2> = ({ state, questionData }) =>
     return serializeStateToBase64(newState);
   };
   return (
-    <div className=" flex w-full flex-col justify-center 	 ">
+    <div className=" flex w-full flex-col justify-center 	 border-2 border-red-500">
       <div className="flex flex-col items-center justify-center gap-10 pb-20 text-center">
         {/* <h3 className="font-zt text-[50px] leading-[120%]  tracking-[-2px]">Question №{currentQuestionIndex + 1}</h3> */}
         <h2 className="font-libre text-[35px] leading-[120%] tracking-[-0.7px]">Question {currentQuestionIndex + 1}</h2>
@@ -83,10 +83,12 @@ const QuestionComponent: React.FC<QuestionProps2> = ({ state, questionData }) =>
         {/* <h1 className="text-center font-zt text-6xl">{questionData.question}</h1> */}
       </div>
 
-      <ul className="relative grid grid-cols-2 gap-x-5 gap-y-8 ">
+      <ul className="relative grid grid-cols-2 gap-x-5 gap-y-8 border-2 ">
+        {/* <ul className="grid w-full grid-cols-[minmax(240px,auto)_1fr]  gap-4"> */}
+        {/* <ul className="grid w-full grid-cols-[minmax(1fr_1fr)] gap-4"> */}
         {questionData.answers.map((answer, index) => (
           <li
-            className="relative bg-background font-libre text-3xl font-normal tracking-[-0.7px]"
+            className="bg-background font-libre text-3xl font-normal tracking-[-0.7px]"
             key={index}
           >
             <Link
@@ -98,21 +100,13 @@ const QuestionComponent: React.FC<QuestionProps2> = ({ state, questionData }) =>
             >
               {index + 1}. {answer}
             </Link>
-            {index === 2 && (
-              <Image
-                src={cloudImage}
-                alt="cloud"
-                // className="absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-full transform"
-                className="absolute bottom-[-200%] right-[-60px] w-[15vw] "
-              />
-            )}
           </li>
         ))}
-        {/* <Image
+        <Image
           src={cloudImage}
           alt="cloud"
-          className="absolute bottom-[-65%] left-[33%] w-[15vw]"
-        /> */}
+          className="absolute bottom-[-65%] left-[33%] w-[15vw] "
+        />
       </ul>
     </div>
   );
@@ -168,14 +162,14 @@ export default function SurveyPage() {
   console.log('currentQuestionIndex', currentQuestionIndex, state.answers.length);
 
   return (
-    <div className="flex h-full w-full grow flex-col  items-center justify-between  pt-[12vh]">
+    <div className="flex h-full w-full grow flex-col  items-center justify-between border-2 border-green-500 pt-[12vh]">
       {/* <Link href={'/survey'}>Заново</Link> */}
       <QuestionComponent
         state={state}
         questionData={questions[currentQuestionIndex]}
         // key={index}
       />
-      <div className="z-20 flex  w-full items-center justify-center gap-6 pb-[2vw] ">
+      <div className="flex items-center  justify-center gap-6 pb-[2vw] ">
         <Link
           href={`?state=${goToPreviousQuestion(currentQuestionIndex - 1)}`}
           className={cn(currentQuestionIndex === 0 ? 'text-muted-foreground' : 'text-green-500')}
@@ -183,11 +177,10 @@ export default function SurveyPage() {
           <Image
             alt="<="
             src={prevArrow}
-            className="rounded-full bg-background"
           />
         </Link>
         <div className="flex items-center justify-center gap-6">
-          <p className="min-w-[40px] text-center font-libre text-3xl font-normal">
+          <p className="min-w-[30px] text-center font-libre text-3xl font-normal">
             {currentQuestionIndex + 1}/{questions.length}
           </p>
         </div>
@@ -200,7 +193,6 @@ export default function SurveyPage() {
           <Image
             alt="=>"
             src={nextArrow}
-            className="rounded-full bg-background"
           />
         </Link>
       </div>
