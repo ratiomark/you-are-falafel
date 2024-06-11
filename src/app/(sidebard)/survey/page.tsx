@@ -138,8 +138,8 @@ export default function SurveyPage() {
   const currentAnswer = state.answers[currentQuestionIndex]?.answer;
   console.log('current question Index', currentQuestionIndex);
   console.log('currentAnswer', currentAnswer);
-  if (currentQuestionIndex === 0) {
-    // if (currentQuestionIndex === questions.length) {
+  // if (currentQuestionIndex === 0) {
+  if (currentQuestionIndex === questions.length) {
     return (
       <>
         {/* <Image
