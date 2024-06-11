@@ -138,16 +138,26 @@ export default function SurveyPage() {
   const currentAnswer = state.answers[currentQuestionIndex]?.answer;
   console.log('current question Index', currentQuestionIndex);
   console.log('currentAnswer', currentAnswer);
-  // if (currentQuestionIndex === 0) {
-  if (currentQuestionIndex === questions.length) {
+  if (currentQuestionIndex === 0) {
+    // if (currentQuestionIndex === questions.length) {
     return (
-      <div className="flex h-full w-full items-center justify-center p-20">
-        <Image
+      <>
+        {/* <Image
           src={falafelResult}
           alt="falafelResult"
+          className="w-[70%] "
           // className='absolute bottom-[-65%] left-[33%] w-[15vw]'
-        />
-      </div>
+        /> */}
+        <div className="flex flex-col  items-center justify-center p-20">
+          <Image
+            src={falafelResult}
+            alt="falafelResult"
+            // width={700}
+            className="h-[70vh] w-auto"
+            // className='absolute bottom-[-65%] left-[33%] w-[15vw]'
+          />
+        </div>
+      </>
     );
   }
 
