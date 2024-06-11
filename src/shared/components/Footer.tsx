@@ -26,16 +26,50 @@ export default function Footer() {
       <div className="flex flex-col items-center justify-center gap-[60px] pt-[60px]">
         <p className="font-zt text-[50px] leading-[120%] tracking-[-0.7px]">Share: Copy link / Facebook / LinkedIn / Twitter</p>
         <div className="flex w-full items-center  justify-between gap-5">
-          <button className="w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]">Behance</button>
-          <button className="w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]">Instagram</button>
-          <button className="w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]">LinkedIn</button>
+          <Link
+            target="_blank"
+            href="https://www.behance.net/butcher_studio"
+            className="w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]"
+          >
+            Behance
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.instagram.com/butcherwebstudio"
+            className="w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]"
+          >
+            Instagram
+          </Link>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/company/butcher-studio/"
+            className="w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]"
+          >
+            LinkedIn
+          </Link>
         </div>
       </div>
       <div className="relative flex w-full  justify-between gap-5  pt-20 font-creato uppercase">
-        <p className="basis-1/3 text-left">idea&design&illustration: margarita golubeva</p>
+        <p className="basis-1/3 text-left">
+          idea&design&illustration:
+          <Link
+            target="_blank"
+            href="https://www.instagram.com/margaritagolubev.a"
+            // className="basis-1/3 text-left"
+          >
+            <span> margarita golubeva</span>
+          </Link>
+        </p>
+
         <p className="basis-1/3 text-center">.2024</p>
 
-        <p className="basis-1/3 text-right">Ⓒ lolafel by: butcher studio</p>
+        <Link
+          target="_blank"
+          href="https://butcher.studio"
+          className="basis-1/3 text-right"
+        >
+          Ⓒ lolafel by: butcher studio
+        </Link>
         {/* <p className="absolute bottom-0 left-1/2 ">.2024</p> */}
       </div>
     </div>
