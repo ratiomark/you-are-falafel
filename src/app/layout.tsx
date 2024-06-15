@@ -34,8 +34,9 @@ export function generateMetadata() {
     twitter: {
       card: 'summary_large_image',
       site: "Hey, I'm Falafel!!!!!!!!!!!!!",
-      title: titleSocial,
-      description: descriptionSocial,
+      title: 'Twitter Title Social',
+			description: descriptionSocial,
+			
       images: [
         {
           url: imageSocial,
@@ -44,7 +45,8 @@ export function generateMetadata() {
         },
       ],
     },
-    openGraph: {
+		openGraph: {
+			tags: ['social', 'falafel', 'you', 'are', 'today'],
       siteName: "Hey, I'm Falafel Social",
       title: titleSocial,
       description: descriptionSocial,
