@@ -85,8 +85,8 @@ export function getDataFromResult({ result }: { result: ResultType }) {
   const imageUrls = {
     angel: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
     devil: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
-    king: 'https://your-domain.com/images/king.jpg',
-    sushi: 'https://your-domain.com/images/sushi.jpg',
+    king: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
+    sushi: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
   };
   return {
     result,
