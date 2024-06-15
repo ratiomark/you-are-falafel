@@ -81,7 +81,7 @@ export function getDataFromResult({ result }: { result: ResultType }) {
 
   const imageUrls = {
     angel: 'https://your-domain.com/images/angel.jpg',
-    devil: 'public/orionLogo.png',
+    devil: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/public/orionLogo.png',
     king: 'https://your-domain.com/images/king.jpg',
     sushi: 'https://your-domain.com/images/sushi.jpg',
   };
