@@ -80,8 +80,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // const headersList = headers()
-  // const currentPath = headersList.get('x-pathname') || '/'
   return (
     <>
       <html lang="en">
@@ -144,7 +142,6 @@ export default function RootLayout({
           // className={cn('min-h-screen bg-background font-sans antialiased', inter.variable, inter.className)}
           suppressHydrationWarning
         >
-          {/* <NavBar currentPath={currentPath} /> */}
           {children}
           {/* <Image
             src={backgroundImage}

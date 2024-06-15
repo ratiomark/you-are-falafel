@@ -8,15 +8,15 @@ interface SurveyResultProps {
   description: string;
   imageUrl: string;
 }
-const results = ['angel', 'devil', 'king', 'sushi'] as const; // Обратите внимание на `as const`
-type ResultType = (typeof results)[number]; // 'angel' | 'devil' | 'king' | 'sushi'
+const results = ['angel', 'devil', 'king', 'sushi'] as const;
+type ResultType = (typeof results)[number];
+
 function SurveyResult({ params }: { params: { result: ResultType } }) {
   // console.log(params);
   const { result, title, description, imageUrl } = getDataFromResult(params);
   // const { result, title, description, imageUrl } = params;
   return (
     <>
-      
       <div>
         <h1>{title}</h1>
         <p>{description}</p>

@@ -1,33 +1,11 @@
 import Footer from '@/shared/components/Footer';
 import { Header } from '@/shared/components/Header';
-import { headers } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from 'public/logo (2).svg';
-// color: var(--black-brown, #1C0F00);
-// text-align: center;
-// /* h3 35 */
-// font-family: "Libre Caslon Condensed";
-// font-size: 35px;
-// font-style: normal;
-// font-weight: 400;
-// line-height: 120%; /* 42px */
-// letter-spacing: -0.7px;
-// font-family: "ZT Chintzy";
-// font-size: 140px;
-// font-style: normal;
-// font-weight: 900;
-// line-height: 120%; /* 168px */
-// letter-spacing: -11.2px;
+
 export default function Home() {
-  // redirect('/profile')
-  const headersList = headers();
-  const currentPath = headersList.get('x-pathname') || '/';
-  // redirect('/design')
   return (
     <>
-      {/* <SideBar currentPath={currentPath} /> */}
-
       <div className="custom-scrollbar-2 w-full pt-[30px] ">
         <Header />
         <main className="custom-scrollbar-2 mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 pt-[12vw] xl:px-10 xl:pt-[76px]">
