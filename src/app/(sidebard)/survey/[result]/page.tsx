@@ -54,6 +54,8 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
         <h1>{title}</h1>
         <p>{description}</p>
         <Image
+					width={1000}
+					height={1000}
           src={imageUrl}
           alt="Survey Result"
         />
@@ -81,7 +83,7 @@ export function getDataFromResult({ result }: { result: ResultType }) {
 
   const imageUrls = {
     angel: 'https://your-domain.com/images/angel.jpg',
-    devil: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/public/orionLogo.png',
+    devil: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
     king: 'https://your-domain.com/images/king.jpg',
     sushi: 'https://your-domain.com/images/sushi.jpg',
   };
