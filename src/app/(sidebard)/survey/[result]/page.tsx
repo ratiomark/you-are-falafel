@@ -83,7 +83,7 @@ export function getDataFromResult({ result }: { result: ResultType }) {
   };
 
   const imageUrls = {
-    angel: 'https://your-domain.com/images/angel.jpg',
+    angel: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
     devil: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
     king: 'https://your-domain.com/images/king.jpg',
     sushi: 'https://your-domain.com/images/sushi.jpg',
@@ -109,6 +109,7 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
 
     twitter: {
       card: 'summary_large_image',
+      site: "Hey, I'm Falafel",
       title,
       description,
       images: [
