@@ -21,10 +21,15 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: 'Brightr',
-  description: 'The Brightr platform lets tech consultancies easily create, manage, update and publish a steady stream of client stories.',
+  title: 'Falafel',
+  description: 'This is falafel website',
 };
-
+const metaSocial = {
+  title: 'Falafel social title',
+  description: 'This is falafel website social description',
+  image: 'https://butcher.studio/social-image.png',
+  url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/',
+};
 {
   /* <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -45,7 +50,43 @@ export default function RootLayout({
     <>
       <html lang="en">
         <Head>
-          <link
+          <meta
+            property="og:title"
+            content={metaSocial.title}
+          />
+          <meta
+            property="og:description"
+            content={metaSocial.description}
+          />
+          <meta
+            property="og:image"
+            content={metaSocial.image}
+          />
+          <meta
+            property="og:url"
+            content={metaSocial.url}
+          />
+          <meta
+            property="og:type"
+            content="website"
+          />
+          <meta
+            name="twitter:card"
+            content="summary_large_image"
+          />
+          <meta
+            name="twitter:title"
+            content="Example Title"
+          />
+          <meta
+            name="twitter:description"
+            content="Example description"
+          />
+          <meta
+            name="twitter:image"
+            content="https://your-domain.com/path/to/image.jpg"
+          />
+          {/* <link
             rel="apple-touch-icon"
             sizes="180x180"
             href="/apple-touch-icon.png"
@@ -94,7 +135,7 @@ export default function RootLayout({
           <meta
             name="theme-color"
             content="#ffffff"
-          />
+          /> */}
         </Head>
         <body
           // className={inter.className}

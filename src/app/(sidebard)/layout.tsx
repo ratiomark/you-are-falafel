@@ -12,7 +12,7 @@ export default function Layout({
     //     {children}
     //   </main>
     // </div>
-    <div className="custom-scrollbar-2 w-full pt-[30px] ">
+    <div className="custom-scrollbar-2 w-full  pt-[30px] ">
       <Header />
       <main className="custom-scrollbar-2 mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-10">{children}</main>
       <Footer />

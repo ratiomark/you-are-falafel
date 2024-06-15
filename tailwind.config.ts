@@ -21,7 +21,7 @@ const config = {
     extend: {
       screens: {
         // '2xl': { max: '1535px'}, // изначально используйте 'min'
-        // xl: { max: '1279px' },
+        xl: { min: '1440px' },
         // lg: { max: '1023px' },
         // md: { max: '767px' },
 				// sm: { max: '639px' },
