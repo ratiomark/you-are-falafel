@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import logo from 'public/orionLogo.png';
@@ -54,8 +55,8 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
         <h1>{title}</h1>
         <p>{description}</p>
         <Image
-					width={1000}
-					height={1000}
+          width={1000}
+          height={1000}
           src={imageUrl}
           alt="Survey Result"
         />
@@ -98,4 +99,37 @@ export async function generateStaticParams() {
   return results.map(result => ({
     result,
   }));
+}
+
+export function generateMetadata({ params }: { params: { result: ResultType } }): Metadata {
+  const { result, title, description, imageUrl } = getDataFromResult(params);
+  return {
+    title,
+    description,
+
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1000,
+          height: 1000,
+        },
+      ],
+    },
+    openGraph: {
+      siteName: "Hey, I'm Falafel",
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1000,
+          height: 1000,
+        },
+      ],
+    },
+  };
 }
