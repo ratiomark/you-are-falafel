@@ -25,6 +25,7 @@ const titleSocial = 'Falafel social title';
 const descriptionSocial = 'This is falafel website social description';
 const imageSocial = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/falafelResult.webp';
 const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/';
+
 export const metadata: Metadata = {
   title,
   description,
@@ -80,9 +81,8 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <Head>
-          
-          {/* <link
+        {/* <Head> */}
+        {/* <link
             rel="apple-touch-icon"
             sizes="180x180"
             href="/apple-touch-icon.png"
@@ -132,7 +132,7 @@ export default function RootLayout({
             name="theme-color"
             content="#ffffff"
           /> */}
-        </Head>
+        {/* </Head> */}
         <body
           // className={inter.className}
           // className={cn('min-h-screen bg-background font-sans antialiased', inter.className)}
