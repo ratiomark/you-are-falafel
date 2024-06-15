@@ -26,36 +26,40 @@ const descriptionSocial = 'This is falafel website social description';
 const imageSocial = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/falafelResult.webp';
 const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/';
 
-export const metadata: Metadata = {
-  title,
-  description,
+export function generateMetadata() {
+  const metadata: Metadata = {
+    title,
+    description,
 
-  twitter: {
-    card: 'summary_large_image',
-    site: "Hey, I'm Falafel",
-    title: titleSocial,
-    description: descriptionSocial,
-    images: [
-      {
-        url: imageSocial,
-        width: 1000,
-        height: 1000,
-      },
-    ],
-  },
-  openGraph: {
-    siteName: "Hey, I'm Falafel Social",
-    title: titleSocial,
-    description: descriptionSocial,
-    images: [
-      {
-        url: imageSocial,
-        width: 1000,
-        height: 1000,
-      },
-    ],
-  },
-};
+    twitter: {
+      card: 'summary_large_image',
+      site: "Hey, I'm Falafel!!!!!!!!!!!!!",
+      title: titleSocial,
+      description: descriptionSocial,
+      images: [
+        {
+          url: imageSocial,
+          width: 1000,
+          height: 1000,
+        },
+      ],
+    },
+    openGraph: {
+      siteName: "Hey, I'm Falafel Social",
+      title: titleSocial,
+      description: descriptionSocial,
+      images: [
+        {
+          url: imageSocial,
+          width: 1000,
+          height: 1000,
+        },
+      ],
+    },
+  };
+  return metadata;
+}
+
 // const metaSocial = {
 //   title: 'Falafel social title',
 //   description: 'This is falafel website social description',
