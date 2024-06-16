@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <>
       {/* <div className="custom-scrollbar-2 h-[calc(100vh_-_30px)] w-full pt-[30px] "> */}
-      <div className="custom-scrollbar-2 h-screen w-full pb-[var(--main-page-padding-bottom)] ">
-        <div className="pt-[30px]">
-          <Header />
-        </div>
-        <main className="custom-scrollbar-2 mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-0 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]">
+      <div className="custom-scrollbar-2 h-screen w-full pb-[var(--main-page-padding-bottom)] pt-[30px] ">
+        {/* <div className="pt-[30px]"> */}
+        <Header />
+        {/* </div> */}
+        <main className="custom-scrollbar-2 mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]">
           {/* <main className="custom-scrollbar-2 mx-auto flex h-[calc(100vh_-_var(--header-height)_-_30px_-_20vh)] flex-col px-2.5 pt-[7vh] xl:px-10 xl:pt-[76px]"> */}
           <div className="flex flex-col items-center justify-center  gap-[2vh] text-center xl:gap-0">
             <h1 className="font-libre text-[22px] leading-7 tracking-[0.44px] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">What kind of...</h1>
