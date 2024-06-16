@@ -37,7 +37,7 @@ export default function Home() {
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className="  flex w-full pb-[30px] text-center font-libre text-[22px] leading-7  tracking-[0.44px] md:pb-[72px] md:text-[26px] md:leading-8 xl:pb-[6vh] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">
+            <div className="  flex w-full pb-[30px] text-center font-libre text-[22px] leading-7  tracking-[0.44px] md:pb-[72px] md:text-[26px] md:leading-8 xl:pb-[6vh] 2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
