@@ -20,7 +20,7 @@ export default function Home() {
             className="flex h-full grow flex-col  justify-between"
           >
             <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]">
-              <div className="flex w-full max-w-[1420px]  items-center justify-center justify-between">
+              <div className="flex w-full max-w-[1420px]  items-center justify-between">
                 <p className=" max-w-[142px] text-center leading-[120%]">This is an entertainment website</p>
                 <p className=" max-w-[110px] text-center leading-[120%]">
                   created <br />
