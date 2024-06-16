@@ -19,7 +19,8 @@ export default function Home() {
             id="content"
             className="flex h-full grow flex-col  justify-between"
           >
-            <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]">
+            <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
+              {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
               <div className="flex w-full max-w-[1420px]  items-center justify-between">
                 <p className=" max-w-[142px] text-center leading-[120%]">This is an entertainment website</p>
                 <p className=" max-w-[110px] text-center leading-[120%]">
@@ -36,7 +37,7 @@ export default function Home() {
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className="  flex w-full pb-[30px] text-center font-libre text-[22px] leading-7  tracking-[0.44px] md:pb-[72px] md:text-[26px] md:leading-8 xl:pb-[2vw] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">
+            <div className="  flex w-full pb-[30px] text-center font-libre text-[22px] leading-7  tracking-[0.44px] md:pb-[72px] md:text-[26px] md:leading-8 xl:pb-[6vh] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
