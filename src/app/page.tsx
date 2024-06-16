@@ -17,7 +17,7 @@ export default function Home() {
           </div>
           <div
             id="content"
-            className="flex h-full grow flex-col  justify-between"
+            className="flex h-full  flex-col  justify-between"
           >
             <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
               {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}

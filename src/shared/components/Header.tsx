@@ -63,7 +63,7 @@ export const Header = () => {
           <ul className="flex items-center justify-center gap-10  uppercase">
             <li>
               <Link
-                className="underline-effect"
+                // className="underline-effect"
                 href="/"
               >
                 Home
@@ -79,11 +79,12 @@ export const Header = () => {
               </Link> */}
               <Popover>
                 <PopoverTrigger asChild>
-                  <p className="underline-effect cursor-pointer">Share</p>
+                  <p className=" cursor-pointer">Share</p>
+                  {/* <p className="underline-effect cursor-pointer">Share</p> */}
                 </PopoverTrigger>
                 <PopoverContent className="rounded-[40px] border-2 border-primary bg-[#FFF3E1] p-10 pt-[30px]">
                   <div className="flex w-full justify-between">
-                    <p className='font-libre text-[35px] tracking-[-0.7px] leading-[120%]'>Share:</p>
+                    <p className="font-libre text-[35px] leading-[120%] tracking-[-0.7px]">Share:</p>
                     <PopoverClose
                       className="cursor-pointer outline-none"
                       aria-label="Close"
@@ -113,7 +114,7 @@ export const Header = () => {
               <Link
                 target="_blank"
                 href="https://butcher.studio"
-                className="underline-effect"
+                // className="underline-effect"
               >
                 Studio Website
               </Link>
