@@ -341,6 +341,7 @@
     --scrollbar-size: 4px;
     --scrollbar-size-2: 8px;
     --header-height: 61px;
+    --main-page-padding-bottom: 30px;
     --font-creato: 'CreatoDisplay', sans-serif;
     --font-zt: 'ZTChintzy', sans-serif;
     --font-libre: 'Libre', sans-serif;
@@ -352,6 +353,7 @@
     @media (max-width: 767px) {
       body {
         --header-height: 63px; /* Меньшая высота для мобильных устройств */
+        --main-page-padding-bottom: 30px;
       }
     }
 
@@ -359,6 +361,7 @@
     @media (min-width: 768px) and (max-width: 1439px) {
       body {
         --header-height: 83px; /* Стандартная высота для планшетов и малых настольных экранов */
+        --main-page-padding-bottom: 72px;
       }
     }
 
@@ -366,11 +369,14 @@
     @media (min-width: 1440px) {
       body {
         --header-height: 45px; /* Большая высота для больших настольных экранов */
+        --main-page-padding-bottom: 69px;
       }
     }
     @media (min-width: 1920px) {
       body {
         --header-height: 61px; /* Большая высота для больших настольных экранов */
+        --main-page-padding-bottom: 94px;
+        --main-page-padding-bottom: 6vh;
       }
     }
 
