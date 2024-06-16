@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <div className="custom-scrollbar-2 w-full pt-[30px] ">
         <Header />
-        <main className="custom-scrollbar-2 mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 pt-[12vw] xl:px-10 xl:pt-[76px]">
+        <main className="custom-scrollbar-2 mx-auto flex h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 pt-[7vh] xl:px-10 xl:pt-[76px]">
           <div className="flex flex-col items-center justify-center  gap-[2vh] text-center xl:gap-0">
             <h1 className="font-libre text-[22px] leading-7 tracking-[0.44px] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">What kind of...</h1>
             <h2 className=" font-zt text-[60px] leading-[54px] tracking-[-4.8px]  xl:pt-0 xl:text-[140px]  xl:leading-[120%] xl:tracking-[-11.2px]">
@@ -20,9 +20,9 @@ export default function Home() {
             className="flex h-full grow flex-col  justify-between"
           >
             <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]">
-              <div className="flex w-full max-w-[1420px]  items-center justify-center xl:justify-between">
-                <p className=" text-center leading-[120%] xl:max-w-[142px]">This is an entertainment website</p>
-                <p className=" text-center leading-[120%] xl:max-w-[110px]">
+              <div className="flex w-full max-w-[1420px]  items-center justify-center justify-between">
+                <p className=" max-w-[142px] text-center leading-[120%]">This is an entertainment website</p>
+                <p className=" max-w-[110px] text-center leading-[120%]">
                   created <br />
                   by butcher studio
                 </p>
@@ -30,6 +30,7 @@ export default function Home() {
               </div>
             </div>
 
+            {/* mobile & small */}
             <div className="flex flex-col items-center justify-center pt-[15px] font-creato text-[14px] uppercase leading-4 md:flex-row md:gap-[2vw] md:pt-[3vh] xl:hidden">
               <p className="">This is an entertainment website</p>
               <p className="">created by butcher studio</p>
