@@ -1,5 +1,14 @@
 import Footer from '@/shared/components/Footer';
 import { Header } from '@/shared/components/Header';
+import Image from 'next/image';
+import nextArrow from 'public/nextArrow.svg';
+import prevArrow from 'public/previousArrow.svg';
+// import cloudImage from 'public/cloudv2.svg';
+import cloudImage from 'public/cloudImage.png';
+import cloud from 'public/cloud.svg';
+import cloud2 from 'public/cloud2.svg';
+import cloud3 from 'public/cloud3.svg';
+import falafelResult from 'public/falafelResult.webp';
 export default function Layout({
   children,
 }: Readonly<{
@@ -12,9 +21,57 @@ export default function Layout({
     //     {children}
     //   </main>
     // </div>
-    <div className="custom-scrollbar-2 w-full  pt-[30px] ">
-      <Header />
-      <main className="custom-scrollbar-2 mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-10">{children}</main>
+    <div className=" custom-scrollbar-2 relative w-full  pt-[30px] ">
+      <div className="relative">
+        <Header />
+        <main className="custom-scrollbar-2 relative mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 md:px-5 xl:px-10">
+          {children}
+        </main>
+        <Image
+          src={cloud}
+          alt="cloud"
+          className="absolute left-[73vw] top-[10vh] w-[33vw] md:hidden"
+        />
+
+        <Image
+          src={cloud2}
+          alt="cloud"
+          className="absolute right-[78vw] top-[13vh] w-[33vw] md:hidden "
+        />
+        {/* md */}
+        <Image
+          src={cloud}
+          alt="cloud"
+          className="absolute left-[65vw] top-[55vh] hidden w-[24vw] max-w-[280px] md:block xl:hidden"
+        />
+        <Image
+          src={cloud2}
+          alt="cloud"
+          className="absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] md:block xl:hidden"
+        />
+        <Image
+          src={cloud3}
+          alt="cloud"
+          className="absolute left-[13vw] top-[15vh] hidden w-[33vw] max-w-[180px] md:block  xl:hidden"
+        />
+        {/* xl */}
+        <Image
+          src={cloud}
+          alt="cloud"
+          className="absolute bottom-[13vh] right-[18vw] hidden w-[13.8vw] xl:block 2xl:hidden"
+        />
+        <Image
+          src={cloud2}
+          alt="cloud"
+          // className="absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] xl:block 2xl:hidden"
+          className="absolute bottom-[30vh] left-[38vw] hidden w-[15vw] max-w-[250px] xl:block 2xl:hidden"
+        />
+        <Image
+          src={cloud3}
+          alt="cloud"
+          className="absolute bottom-[8vh] left-[18vw] hidden w-[13.3vw] max-w-[250px] xl:block 2xl:hidden"
+        />
+      </div>
       <Footer />
     </div>
 
