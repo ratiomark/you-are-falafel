@@ -6,13 +6,9 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-      {/* <div className="custom-scrollbar-2 h-[calc(100vh_-_30px)] w-full pt-[30px] "> */}
       <div className="custom-scrollbar-2 h-screen w-full pt-[30px] ">
-        {/* <div className="pt-[30px]"> */}
         <Header />
-        {/* </div> */}
-        <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]">
-          {/* <main className="custom-scrollbar-2 mx-auto flex h-[calc(100vh_-_var(--header-height)_-_30px_-_20vh)] flex-col px-2.5 pt-[7vh] xl:px-10 xl:pt-[76px]"> */}
+        <main className="custom-scrollbar-2 mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]">
           <div className="flex flex-col items-center justify-center  gap-[2vh] text-center xl:gap-0">
             <h1 className="font-libre text-[22px] leading-7 tracking-[0.44px] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">What kind of...</h1>
             <h2 className=" font-zt text-[60px] leading-[54px] tracking-[-4.8px]  xl:pt-0 xl:text-[140px]  xl:leading-[120%] xl:tracking-[-11.2px]">
@@ -24,24 +20,21 @@ export default function Home() {
             className="flex grow   flex-col  justify-between"
           >
             <div className="hidden  items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
-              {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
               <div className="flex w-full max-w-[1420px]  items-center justify-between">
                 <p className=" max-w-[142px] text-center leading-[120%]">This is an entertainment website</p>
                 <p className=" max-w-[110px] text-center leading-[120%]">
                   created <br />
                   by butcher studio
                 </p>
-                {/* <p className=" text-center leading-[120%] xl:hidden xl:max-w-[110px]">created by butcher studio</p> */}
               </div>
             </div>
 
-            {/* mobile & small */}
             <div className="flex flex-col items-center justify-center pt-[15px] font-creato text-[14px] uppercase leading-4 md:flex-row md:gap-[2vw] md:pt-[3vh] xl:hidden">
               <p className="">This is an entertainment website</p>
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className=" sticky bottom-[var(--main-page-padding-bottom)] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:static  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            <div className=" md:static fixed  flex w-full  text-center font-libre text-[22px] leading-7  tracking-[0.44px]  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
@@ -49,14 +42,6 @@ export default function Home() {
                 Start test
               </Link>
             </div>
-            {/* <div className="  flex w-full pb-[30px] text-center font-libre text-[22px] leading-7  tracking-[0.44px] md:pb-[72px] md:text-[26px] md:leading-8 xl:pb-[6vh] 2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
-              <Link
-                href="/survey"
-                className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
-              >
-                Start test
-              </Link>
-            </div> */}
           </div>
         </main>
       </div>
