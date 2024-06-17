@@ -172,9 +172,6 @@ export default function SurveyPage() {
   }
 
   const goToPreviousQuestion = (index: number) => {
-    window && window.blur();
-    const activeElement = document.activeElement;
-    activeElement && activeElement.blur();
     if (index < 0) {
       return serializeStateToBase64(state);
     }
@@ -187,9 +184,6 @@ export default function SurveyPage() {
     return serializeStateToBase64(newState);
   };
   const goToNextQuestion = (index: number) => {
-    window && window.blur();
-    const activeElement = document.activeElement;
-    activeElement && activeElement.blur();
     if (currentQuestionIndex >= state.answers.length) {
       return serializeStateToBase64(state);
     }
@@ -218,9 +212,9 @@ export default function SurveyPage() {
         <div className="z-20 flex  w-full items-center justify-center gap-2.5 xl:gap-5 ">
           <Link
             href={`?state=${goToPreviousQuestion(currentQuestionIndex - 1)}`}
-            onMouseDown={handleBlur}
-            onTouchStart={handleBlur}
-            onClick={handleBlur}
+            // onMouseDown={handleBlur}
+            // onTouchStart={handleBlur}
+            // onClick={handleBlur}
 
             // className={cn(currentQuestionIndex === 0 ? 'text-muted-foreground' : 'bg-[#FFA41C]')}
           >
@@ -231,9 +225,9 @@ export default function SurveyPage() {
                 'w-[56px] rounded-full bg-background transition-all md:w-[61px] 2xl:w-[82px]',
                 currentQuestionIndex === 0 ? 'text-muted-foreground' : 'betterhover:hover:bg-[#FFA41C]',
               )}
-              onMouseDown={handleBlur}
-              onTouchStart={handleBlur}
-              onClick={handleBlur}
+              // onMouseDown={handleBlur}
+              // onTouchStart={handleBlur}
+              // onClick={handleBlur}
             />
           </Link>
           <div className="flex items-center justify-center gap-6">
@@ -243,9 +237,9 @@ export default function SurveyPage() {
           </div>
           <Link
             href={`?state=${goToNextQuestion(currentQuestionIndex + 1)}`}
-            onMouseDown={handleBlur}
-            onTouchStart={handleBlur}
-            onClick={handleBlur}
+            // onMouseDown={handleBlur}
+            // onTouchStart={handleBlur}
+            // onClick={handleBlur}
             // className={cn(
             //   currentQuestionIndex === questions.length - 1 || currentQuestionIndex >= state.answers.length ? 'text-muted-foreground' : 'bg-[#FFA41C]',
             // )}
@@ -259,9 +253,9 @@ export default function SurveyPage() {
                   ? 'text-muted-foreground'
                   : 'betterhover:hover:bg-[#FFA41C]',
               )}
-              onMouseDown={handleBlur}
-              onTouchStart={handleBlur}
-              onClick={handleBlur}
+              // onMouseDown={handleBlur}
+              // onTouchStart={handleBlur}
+              // onClick={handleBlur}
               // className="w-[56px] rounded-full bg-background md:w-[61px] 2xl:w-[82px]"
             />
           </Link>
