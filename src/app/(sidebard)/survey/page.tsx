@@ -55,9 +55,7 @@ interface QuestionProps2 {
     answers: string[];
   };
 }
-const handleBlur = event => {
-  event.currentTarget.blur();
-};
+
 // font-family: "ZT Chintzy";
 // font-size: 50px;
 // font-style: normal;
