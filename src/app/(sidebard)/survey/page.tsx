@@ -55,7 +55,9 @@ interface QuestionProps2 {
     answers: string[];
   };
 }
-
+const handleBlur = event => {
+  event.currentTarget.blur();
+};
 // font-family: "ZT Chintzy";
 // font-size: 50px;
 // font-style: normal;
@@ -66,6 +68,7 @@ const QuestionComponent: React.FC<QuestionProps2> = ({ state, questionData }) =>
   const currentQuestionIndex = state.currentQuestionIndex;
   const currentAnswer = state.answers[currentQuestionIndex]?.answer;
   const handleAnswer = (index: number, answer: string) => {
+    window && window.blur();
     const newState: SurveyState = {
       currentQuestionIndex: currentQuestionIndex + 1,
       answers: [
@@ -93,13 +96,15 @@ const QuestionComponent: React.FC<QuestionProps2> = ({ state, questionData }) =>
         {questionData.answers.map((answer, index) => (
           <li
             className="relative  w-full bg-background font-libre text-[22px] font-normal leading-[120%] tracking-[-0.7px] md:w-full md:text-[26px] 2xl:text-3xl"
-            key={index}
+            key={answer}
           >
             <Link
               className={cn(
                 'flex min-w-full items-center justify-center rounded-full border-2 border-primary p-[15px] transition-all hover:bg-[#FF2F85] 2xl:p-5',
+
                 index === currentAnswer ? 'bg-[#FF2F85]' : 'text-primary',
               )}
+              key={answer}
               href={`?state=${handleAnswer(index, answer)}`}
             >
               {index + 1}. {answer}
@@ -167,6 +172,9 @@ export default function SurveyPage() {
   }
 
   const goToPreviousQuestion = (index: number) => {
+    window && window.blur();
+    const activeElement = document.activeElement;
+    activeElement && activeElement.blur();
     if (index < 0) {
       return serializeStateToBase64(state);
     }
@@ -179,6 +187,9 @@ export default function SurveyPage() {
     return serializeStateToBase64(newState);
   };
   const goToNextQuestion = (index: number) => {
+    window && window.blur();
+    const activeElement = document.activeElement;
+    activeElement && activeElement.blur();
     if (currentQuestionIndex >= state.answers.length) {
       return serializeStateToBase64(state);
     }
@@ -207,6 +218,10 @@ export default function SurveyPage() {
         <div className="z-20 flex  w-full items-center justify-center gap-2.5 xl:gap-5 ">
           <Link
             href={`?state=${goToPreviousQuestion(currentQuestionIndex - 1)}`}
+            onMouseDown={handleBlur}
+            onTouchStart={handleBlur}
+            onClick={handleBlur}
+
             // className={cn(currentQuestionIndex === 0 ? 'text-muted-foreground' : 'bg-[#FFA41C]')}
           >
             <Image
@@ -214,8 +229,11 @@ export default function SurveyPage() {
               src={prevArrow}
               className={cn(
                 'w-[56px] rounded-full bg-background transition-all md:w-[61px] 2xl:w-[82px]',
-                currentQuestionIndex === 0 ? 'text-muted-foreground' : 'hover:bg-[#FFA41C]',
+                currentQuestionIndex === 0 ? 'text-muted-foreground' : 'betterhover:hover:bg-[#FFA41C]',
               )}
+              onMouseDown={handleBlur}
+              onTouchStart={handleBlur}
+              onClick={handleBlur}
             />
           </Link>
           <div className="flex items-center justify-center gap-6">
@@ -225,6 +243,9 @@ export default function SurveyPage() {
           </div>
           <Link
             href={`?state=${goToNextQuestion(currentQuestionIndex + 1)}`}
+            onMouseDown={handleBlur}
+            onTouchStart={handleBlur}
+            onClick={handleBlur}
             // className={cn(
             //   currentQuestionIndex === questions.length - 1 || currentQuestionIndex >= state.answers.length ? 'text-muted-foreground' : 'bg-[#FFA41C]',
             // )}
@@ -234,8 +255,13 @@ export default function SurveyPage() {
               src={nextArrow}
               className={cn(
                 'w-[56px] rounded-full bg-background md:w-[61px] 2xl:w-[82px]',
-                currentQuestionIndex === questions.length - 1 || currentQuestionIndex >= state.answers.length ? 'text-muted-foreground' : 'hover:bg-[#FFA41C]',
+                currentQuestionIndex === questions.length - 1 || currentQuestionIndex >= state.answers.length
+                  ? 'text-muted-foreground'
+                  : 'betterhover:hover:bg-[#FFA41C]',
               )}
+              onMouseDown={handleBlur}
+              onTouchStart={handleBlur}
+              onClick={handleBlur}
               // className="w-[56px] rounded-full bg-background md:w-[61px] 2xl:w-[82px]"
             />
           </Link>
