@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div
             id="content"
-            className="relative z-20 flex  grow  flex-col justify-between"
+            className="z-20 flex  grow  flex-col justify-between"
           >
             <div className="hidden  items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
               {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
@@ -59,7 +59,7 @@ export default function Home() {
               >
                 Start test
               </Link>
-              <Image
+              {/* <Image
                 src={flowerBlue}
                 alt="flowers"
                 // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
@@ -74,23 +74,22 @@ export default function Home() {
                 className="absolute left-[25%] top-[-18px] z-10 w-[33px] md:top-[-21px] md:w-[44] "
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-              />
-              {/* <Image
+              /> */}
+            </div>
+            {/* <Image
                 src={flowers}
                 alt="flowers"
                 className="absolute right-[50%] top-[-22px] z-10 w-[280px] max-w-[340px] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               /> */}
-              {/* <Image
+            {/* <Image
                 src={flowers}
                 alt="flowers"
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  "
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 className="absolute right-[50%] top-[-25px] z-10  hidden w-[280px] max-w-[340px] translate-x-1/2 md:block"
               /> */}
-            </div>
-
             {/* <div className="  flex w-full pb-[30px] text-center font-libre text-[22px] leading-7  tracking-[0.44px] md:pb-[72px] md:text-[26px] md:leading-8 xl:pb-[6vh] 2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
@@ -129,14 +128,14 @@ export default function Home() {
             src={cloud}
             alt="cloud"
             // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-            className="absolute left-[60vw] top-[1vh] z-10 w-[189px]  md:block hidden"
+            className="absolute left-[60vw] top-[1vh] z-10 hidden  w-[189px] md:block"
           />
 
           <Image
             src={cloud2}
             alt="cloud"
             // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-            className="absolute right-[78vw] top-[30vh] z-10 w-[189px] md:block hidden "
+            className="absolute right-[78vw] top-[30vh] z-10 hidden w-[189px] md:block "
           />
         </main>
       </div>
