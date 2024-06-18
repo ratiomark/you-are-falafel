@@ -375,8 +375,8 @@
     @media (min-width: 1920px) {
       body {
         --header-height: 61px; /* Большая высота для больших настольных экранов */
+        /* --main-page-padding-bottom: 6vh; */
         --main-page-padding-bottom: 94px;
-        --main-page-padding-bottom: 6vh;
       }
     }
 
