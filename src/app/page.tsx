@@ -52,7 +52,7 @@ export default function Home() {
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-[11] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            {/* <div className=" sticky bottom-[var(--main-page-padding-bottom)_-_200px] z-[11] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
@@ -75,7 +75,7 @@ export default function Home() {
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               />
-            </div>
+            </div> */}
             {/* <Image
                 src={flowers}
                 alt="flowers"
@@ -98,6 +98,30 @@ export default function Home() {
                 Start test
               </Link>
             </div> */}
+          </div>
+          <div className="sticky bottom-[calc(var(--main-page-padding-bottom))] z-[11] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            <Link
+              href="/survey"
+              className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
+            >
+              Start test
+            </Link>
+            <Image
+              src={flowerBlue}
+              alt="flowers"
+              // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
+              className="absolute right-[20%] top-[-16px] z-10 w-[33px] md:right-[25%] md:top-[-21px] md:w-[44]"
+              // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
+              // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
+            />
+            <Image
+              src={flowerPink}
+              alt="flowers"
+              // className="absolute left-[25%] top-[-18px] z-10 w-[33px] max-w-[340px] md:hidden"
+              className="absolute left-[25%] top-[-18px] z-10 w-[33px] md:top-[-21px] md:w-[44] "
+              // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
+              // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
+            />
           </div>
           <Image
             src={cloud}
