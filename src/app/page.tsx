@@ -239,7 +239,7 @@ export default function Home() {
           src={starsMobileYellow}
           alt="star"
           // className="absolute right-[14px] top-[597px] z-10 w-[19px] md:hidden"
-          className="absolute right-[14px] top-[597px] z-10 w-[19px] "
+          className="absolute right-[14px] top-[75vh] z-10 w-[19px] "
         />
         <Image
           src={starMiddleMobile}
