@@ -81,7 +81,7 @@ export default function Home() {
       {/* <div className="custom-scrollbar-2 h-[calc(100vh_-_30px)] w-full pt-[30px] "> */}
       <div className="custom-scrollbar-2 h-screen w-full  overflow-clip pt-[30px]">
         {/* <div className="pt-[30px]"> */}
-        <div className="h-9"></div>
+        {/* <div className="h-9"></div> */}
         <Header />
         {/* </div> */}
         <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]">
@@ -122,14 +122,6 @@ export default function Home() {
                 Start test
               </Link>
 
-              {/* <Image
-                src={flowerBlue}
-                alt="flowers"
-                // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
-                className="absolute right-[20%] top-[-16px] z-10 w-[33px] md:right-[25%] md:top-[-21px] md:w-[44]"
-                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
-                // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-              />
               <Image
                 src={flowerPink}
                 alt="flowers"
@@ -137,7 +129,15 @@ export default function Home() {
                 className="absolute left-[25%] top-[-18px] z-10 w-[33px] md:top-[-21px] md:w-[44] "
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-              /> */}
+              />
+              <Image
+                src={flowerBlue}
+                alt="flowers"
+                // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
+                className="absolute right-[20%] top-[-16px] z-10 w-[33px] md:right-[25%] md:top-[-21px] md:w-[44]"
+                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
+                // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
+              />
             </div>
             {/* <Image
                 src={flowers}
