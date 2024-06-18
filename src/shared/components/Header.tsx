@@ -106,7 +106,7 @@ export const Header = () => {
               <Image
                 src={logo}
                 // height={61}
-                className={'h-[61px]'}
+                className={'h-[61px] xl:h-[45px]'}
                 alt="lolafel Logo"
               />
             </li>
