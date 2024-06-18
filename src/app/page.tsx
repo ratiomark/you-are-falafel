@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div
             id="content"
-            className="relative z-20 flex grow  flex-col justify-between"
+            className=" flex grow  flex-col justify-between"
           >
             <div className="hidden  items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
               {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
@@ -52,7 +52,7 @@ export default function Home() {
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center font-libre  text-[22px] leading-7 tracking-[0.44px] md:block  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            <div className=" sticky bottom-[var(--main-page-padding-bottom)] flex w-full text-center font-libre  text-[22px] leading-7 tracking-[0.44px] md:block  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
