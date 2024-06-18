@@ -79,7 +79,7 @@ export default function Home() {
   return (
     <>
       {/* <div className="custom-scrollbar-2 h-[calc(100vh_-_30px)] w-full pt-[30px] "> */}
-      <div className="custom-scrollbar-2 h-screen w-full overflow-hidden pt-[30px]">
+      <div className="custom-scrollbar-2 h-screen w-full  pt-[30px]">
         {/* <div className="pt-[30px]"> */}
         <Header />
         {/* </div> */}
