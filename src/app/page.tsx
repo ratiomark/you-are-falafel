@@ -24,7 +24,7 @@ export default function Home() {
         {/* </div> */}
         <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col   px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]">
           {/* <main className="custom-scrollbar-2 mx-auto flex h-[calc(100vh_-_var(--header-height)_-_30px_-_20vh)] flex-col px-2.5 pt-[7vh] xl:px-10 xl:pt-[76px]"> */}
-          <div className="relative z-20 flex flex-col items-center  justify-center gap-[2vh] text-center xl:gap-0">
+          <div className=" z-20 flex flex-col items-center  justify-center gap-[2vh] text-center xl:gap-0">
             <h1 className="font-libre text-[22px] leading-7 tracking-[0.44px] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">What kind of...</h1>
             <h2 className=" font-zt text-[60px] leading-[54px] tracking-[-4.8px]  xl:pt-0 xl:text-[140px]  xl:leading-[120%] xl:tracking-[-11.2px]">
               Falafel are you today?
