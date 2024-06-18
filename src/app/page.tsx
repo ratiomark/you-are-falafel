@@ -87,7 +87,7 @@ export default function Home() {
         <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col   px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]">
           {/* <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]"> */}
 
-          <div className=" flex flex-col items-center  justify-center gap-[2vh] text-center xl:gap-0">
+          <div className=" relative z-20 flex flex-col items-center  justify-center gap-[2vh] text-center xl:gap-0">
             <h1 className="font-libre text-[22px] leading-7 tracking-[0.44px] xl:text-[35px] xl:leading-[120%] xl:tracking-[-0.7px]">What kind of...</h1>
             <h2 className=" font-zt text-[60px] leading-[54px] tracking-[-4.8px]  xl:pt-0 xl:text-[140px]  xl:leading-[120%] xl:tracking-[-11.2px]">
               Falafel are you today?
@@ -97,7 +97,7 @@ export default function Home() {
             id="content"
             className="flex grow  flex-col justify-between"
           >
-            <div className="hidden  items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
+            <div className="relative z-20 hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
               {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
               <div className="flex w-full max-w-[1420px]  items-center justify-between">
                 <p className=" max-w-[142px] text-center leading-[120%]">This is an entertainment website</p>
@@ -110,12 +110,12 @@ export default function Home() {
             </div>
 
             {/* mobile & small */}
-            <div className="flex flex-col items-center justify-center pt-[15px] font-creato text-[14px] uppercase leading-4 md:flex-row md:gap-[2vw] md:pt-[3vh] xl:hidden">
+            <div className="relative z-20 flex flex-col items-center justify-center pt-[15px] font-creato text-[14px] uppercase leading-4 md:flex-row md:gap-[2vw] md:pt-[3vh] xl:hidden">
               <p className="">This is an entertainment website</p>
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className=" sticky bottom-[var(--main-page-padding-bottom)] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:static  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:static  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
