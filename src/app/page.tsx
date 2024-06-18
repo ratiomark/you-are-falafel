@@ -13,6 +13,13 @@ import falafel768 from 'public/falaf768.svg';
 import flowers from 'public/flowerMobile.svg';
 import flowerPink from 'public/flowerPink.svg';
 import flowerBlue from 'public/flowerBlue.svg';
+import cloudLayoutMobile from 'public/cloudLayout.svg';
+import cloudsMobileRight  from 'public/cloudsRight.svg';
+import cloudsMobileLeft from 'public/cloudsLeft.svg';
+import starsMobile from 'public/starsMobile.svg';
+import starsMobileYellow from 'public/starMobileYellow.svg';
+import starBlackRightMobile from 'public/starBlackRightMobile.svg';
+import starMiddleMobile from 'public/starMiddleMobile.svg';
 // import flowers from 'public/flowMobile.jpg';
 // export default function Home() {
 //   return (
@@ -203,6 +210,40 @@ export default function Home() {
             className="absolute right-[78vw] top-[30vh] z-10 hidden w-[189px] md:block "
           />
         </main>
+        <Image
+          src={cloudsMobileLeft}
+          alt="cloud"
+          className="absolute left-[-68px] top-[-2px] z-10 w-[230px] md:hidden"
+        />
+        <Image
+          src={cloudsMobileRight}
+          alt="cloud"
+          className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
+        />
+        <Image
+          src={starBlackRightMobile}
+          alt="star"
+          className="absolute right-[10px] top-[308px] z-10 w-[22px] md:hidden"
+        />
+        <Image
+          src={starsMobileYellow}
+          alt="star"
+          className="absolute right-[14px] top-[597px] z-10 w-[19px] md:hidden"
+        />
+        <Image
+          src={starMiddleMobile}
+          alt="star"
+          // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
+          // className="absolute right-[10px] top-[308px] z-10 w-[19px] md:hidden"
+          className="absolute right-[50%] top-[108px] translate-x-1/2 z-10 w-[12px] md:hidden" 
+        />
+        <Image
+          src={starMiddleMobile}
+          alt="star"
+          // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
+          // className="absolute right-[10px] top-[308px] z-10 w-[19px] md:hidden"
+          className="absolute left-[10px] top-[465px] z-10 w-[12px] md:hidden" 
+        />
       </div>
       <Footer />
     </>
