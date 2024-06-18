@@ -32,7 +32,7 @@ export default function Home() {
           </div>
           <div
             id="content"
-            className="z-20 flex relative grow  flex-col justify-between"
+            className="relative z-20 flex grow  flex-col justify-between"
           >
             <div className="hidden  items-center justify-center font-creato uppercase  xl:flex xl:pt-[5vh]">
               {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
@@ -52,14 +52,14 @@ export default function Home() {
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-[11] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center font-libre  text-[22px] leading-7 tracking-[0.44px] md:block  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
               >
                 Start test
               </Link>
-              <Image
+              {/* <Image
                 src={flowerBlue}
                 alt="flowers"
                 // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
@@ -74,7 +74,7 @@ export default function Home() {
                 className="absolute left-[25%] top-[-18px] z-10 w-[33px] md:top-[-21px] md:w-[44] "
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-              />
+              /> */}
             </div>
             {/* <Image
                 src={flowers}
@@ -99,7 +99,7 @@ export default function Home() {
               </Link>
             </div> */}
           </div>
-         
+
           {/* <Image
             src={cloud}
             alt="cloud"
