@@ -99,7 +99,7 @@ export default function Home() {
               </Link>
             </div> */}
           </div>
-          <div className="sticky bottom-[calc(var(--main-page-padding-bottom)_+_20px)] z-[11] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+          <div className="sticky bottom-[calc(var(--main-page-padding-bottom))] z-[11] flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
             <Link
               href="/survey"
               className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
@@ -123,7 +123,7 @@ export default function Home() {
               // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
             />
           </div>
-          <Image
+          {/* <Image
             src={cloud}
             alt="cloud"
             // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
@@ -160,7 +160,7 @@ export default function Home() {
             alt="cloud"
             // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
             className="absolute right-[78vw] top-[30vh] z-10 hidden w-[189px] md:block "
-          />
+          /> */}
         </main>
       </div>
       <Footer />
