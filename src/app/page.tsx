@@ -20,6 +20,7 @@ import starsMobile from 'public/starsMobile.svg';
 import starsMobileYellow from 'public/starMobileYellow.svg';
 import starBlackRightMobile from 'public/starBlackRightMobile.svg';
 import starMiddleMobile from 'public/starMiddleMobile.svg';
+import starMdTop from 'public/starMdTop.svg';
 // import flowers from 'public/flowMobile.jpg';
 // export default function Home() {
 //   return (
@@ -86,7 +87,7 @@ export default function Home() {
   return (
     <>
       {/* <div className="custom-scrollbar-2 h-[calc(100vh_-_30px)] w-full pt-[30px] "> */}
-      <div className="custom-scrollbar-2 h-screen w-full relative overflow-clip pt-[30px] z-[11] md:w-auto md:overflow-hidden">
+      <div className="custom-scrollbar-2 relative z-[11] h-screen w-full overflow-clip pt-[30px] md:w-auto md:overflow-hidden">
         {/* <div className="pt-[30px]"> */}
         {/* <div className="h-9"></div> */}
         <Header />
@@ -197,20 +198,22 @@ export default function Home() {
             className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10 hidden min-w-[768px] max-w-[120vw]  translate-x-1/2 md:block"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
+          {/* md */}
           <Image
             src={cloud}
             alt="cloud"
             // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-            className="absolute left-[60vw] top-[1vh] z-10 hidden  w-[189px] md:block"
+            className="absolute left-[60vw] top-[0.5vh] z-10 hidden  w-[189px] md:block"
           />
 
           <Image
             src={cloud2}
             alt="cloud"
             // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-            className="absolute right-[78vw] top-[30vh] z-10 hidden w-[189px] md:block "
+            className="absolute left-[3.5vw] top-[25vh] z-10 hidden w-[189px] md:block "
           />
         </main>
+        {/* cloud top mobile */}
         <Image
           src={cloudsMobileLeft}
           alt="cloud"
@@ -223,35 +226,55 @@ export default function Home() {
           className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
           // className="absolute right-[-85px] top-[-2px] z-10 w-[342px] md:left-[496px] md:right-0"
         />
-        {/* <Image
+        {/* cloud top md */}
+        <Image
           src={cloudsMobileRight}
           alt="cloud"
           // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
-          className="absolute  top-[-2px] z-10 w-[342px] left-[496px] hidden md:block"
-        /> */}
+          className="absolute  left-[486px] top-[-15px] z-10 hidden w-[342px] md:block"
+        />
+        <Image
+          src={cloudsMobileLeft}
+          alt="cloud"
+          className="absolute  right-[486px] top-[-15px] z-10 hidden w-[342px] md:block"
+          // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+        />
+        {/* stars */}
         <Image
           src={starBlackRightMobile}
           alt="star"
           // className="absolute right-[10px] top-[308px] z-10 w-[22px] md:hidden"
           className="absolute right-[10px] top-[308px] z-10 w-[22px] "
         />
-        <Image
+        {/* <Image
+          src={starsMobileYellow}
+          alt="star"
+          // className="absolute right-[14px] top-[597px] z-10 w-[19px] md:hidden"
+          className="absolute right-[14px] top-[75vh] z-10 w-[19px] md:w-[55px] md:left-[3.4vw]"
+        /> */}
+        {/* <Image
           src={starsMobileYellow}
           alt="star"
           // className="absolute right-[14px] top-[597px] z-10 w-[19px] md:hidden"
           className="absolute right-[14px] top-[75vh] z-10 w-[19px] "
-        />
+        /> */}
         <Image
           src={starMiddleMobile}
           alt="star"
           // className="absolute right-[50%] top-[108px] z-10 w-[12px] translate-x-1/2 md:hidden"
-          className="absolute right-[50%] top-[108px] z-10 w-[12px] translate-x-1/2 "
+          className="absolute left-[50%] top-[108px] z-10 w-[12px] translate-x-1/2 md:hidden  "
+        />
+        <Image
+          src={starMdTop}
+          alt="star"
+          // className="absolute right-[50%] top-[108px] z-10 w-[12px] translate-x-1/2 md:hidden"
+          className="absolute left-[22.5vh] top-[15.5vh] z-10  w-[34px]"
         />
         <Image
           src={starMiddleMobile}
           alt="star"
           // className="absolute left-[10px] top-[465px] z-10 w-[12px] md:hidden"
-          className="absolute left-[10px] top-[465px] z-10 w-[12px] "
+          className="absolute left-[10px] top-[465px] z-10 w-[12px] md:hidden"
         />
       </div>
       <Footer />
