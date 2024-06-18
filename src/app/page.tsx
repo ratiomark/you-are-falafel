@@ -62,7 +62,16 @@ export default function Home() {
               <Image
                 src={flowerBlue}
                 alt="flowers"
-                className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
+                // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
+                className="absolute right-[20%] top-[-16px] z-10 w-[33px] md:right-[25%] md:top-[-21px] md:w-[44]"
+                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
+                // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
+              />
+              <Image
+                src={flowerPink}
+                alt="flowers"
+                // className="absolute left-[25%] top-[-18px] z-10 w-[33px] max-w-[340px] md:hidden"
+                className="absolute left-[25%] top-[-18px] z-10 w-[33px] md:top-[-21px] md:w-[44] "
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               />
@@ -94,27 +103,40 @@ export default function Home() {
           <Image
             src={cloud}
             alt="cloud"
-            className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-            // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  md:hidden"
+            // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
+            className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  md:hidden"
           />
 
           <Image
             src={cloud2}
             alt="cloud"
-            className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-            // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] md:hidden "
+            // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
+            className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] md:hidden "
           />
           <Image
             src={falafelMobile}
             alt="falafel image"
-            className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[645px] max-w-[100vw] translate-x-1/2  md:hidden"
+            className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_14px)] right-[50%] z-10 min-w-[655px] max-w-[100vw] translate-x-1/2  md:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
           <Image
             src={falafel768}
             alt="falafel image"
-            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_28px)] right-[50%] z-10 hidden min-w-[768px] max-w-[120vw]  translate-x-1/2 md:block"
+            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10 hidden min-w-[768px] max-w-[120vw]  translate-x-1/2 md:block"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
+          />
+          <Image
+            src={cloud}
+            alt="cloud"
+            // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
+            className="absolute left-[60vw] top-[1vh] z-10 w-[189px]  md:block hidden"
+          />
+
+          <Image
+            src={cloud2}
+            alt="cloud"
+            // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
+            className="absolute right-[78vw] top-[30vh] z-10 w-[189px] md:block hidden "
           />
         </main>
       </div>
