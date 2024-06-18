@@ -106,7 +106,7 @@ export default function Home() {
             >
               Start test
             </Link>
-            <Image
+            {/* <Image
               src={flowerBlue}
               alt="flowers"
               // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
@@ -121,7 +121,7 @@ export default function Home() {
               className="absolute left-[25%] top-[-18px] z-10 w-[33px] md:top-[-21px] md:w-[44] "
               // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
               // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-            />
+            /> */}
           </div>
           {/* <Image
             src={cloud}
