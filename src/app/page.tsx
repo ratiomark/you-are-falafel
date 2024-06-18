@@ -86,7 +86,7 @@ export default function Home() {
   return (
     <>
       {/* <div className="custom-scrollbar-2 h-[calc(100vh_-_30px)] w-full pt-[30px] "> */}
-      <div className="custom-scrollbar-2 h-screen w-full overflow-clip pt-[30px] z-[11] md:w-auto md:overflow-hidden">
+      <div className="custom-scrollbar-2 h-screen w-full relative overflow-clip pt-[30px] z-[11] md:w-auto md:overflow-hidden">
         {/* <div className="pt-[30px]"> */}
         {/* <div className="h-9"></div> */}
         <Header />
@@ -122,7 +122,7 @@ export default function Home() {
               <p className="">created by butcher studio</p>
             </div>
 
-            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:relative  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:relative md:bottom-0  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
