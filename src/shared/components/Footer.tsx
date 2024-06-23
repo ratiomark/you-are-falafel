@@ -94,12 +94,15 @@ export default function Footer() {
             This site is made for entertainment and fun. Enjoy and share with your friends!
           </h3>
         </div>
-        <div className="flex flex-col items-center justify-center gap-[60px] pt-[60px]">
-          <p className="font-zt text-[50px] leading-[120%] tracking-[-0.7px]">Share: Copy link / Facebook / LinkedIn / Twitter</p>
+        <div className="flex  flex-col items-center justify-center gap-[60px] pt-[60px]">
+          <p className="font-zt text-[50px] leading-[120%] tracking-[-0.7px]">
+            Share: <span className="underline-effect underline-white cursor-pointer">Copy link</span>/ Facebook / LinkedIn / Twitter
+          </p>
           <div className="flex w-full items-center  justify-between gap-5">
             <Link
               target="_blank"
               href="https://www.behance.net/butcher_studio"
+              // className="underline-effect underline-pink"
               className="behance w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]"
             >
               Behance

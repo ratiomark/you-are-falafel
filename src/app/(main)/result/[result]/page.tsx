@@ -1,0 +1,244 @@
+import { Metadata } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
+import logo from 'public/orionLogo.png';
+interface SurveyResultProps {
+  result: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+const results = ['angel', 'demon', 'king', 'sushi', 'artist', 'alien'] as const;
+type ResultType = (typeof results)[number];
+
+function SurveyResult({ params }: { params: { result: ResultType } }) {
+  // console.log(params);
+  const { result, title, description, imageUrl } = getDataFromResult(params);
+  // const { result, title, description, imageUrl } = params;
+  return (
+    <>
+      <div>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <Image
+          width={1000}
+          height={1000}
+          src={imageUrl}
+          alt="Survey Result"
+        />
+      </div>
+    </>
+  );
+}
+
+export default SurveyResult;
+
+export function getDataFromResult({ result }: { result: ResultType }) {
+  const titles = {
+    angel: 'Вы - Ангел!',
+    demon: 'Вы - Дьявол!',
+    king: 'Вы - Король!',
+    sushi: 'Вы - Суши!',
+		artist: 'Вы - Артист!',
+		alien: 'Вы - Пришелец!',
+  };
+
+  const descriptions = {
+    angel: 'Чистосердечный и добрый, вы всегда стремитесь помочь.',
+    demon: 'Озорной и хитрый, вы всегда найдёте способ развлечься.',
+    king: 'Достойный и мудрый, ваше правление бесспорно.',
+		sushi: 'Уникальный и изысканный, вы ценитель тонких вкусов.',
+		artist: 'Вы - Артист!',
+		alien: 'Вы - Пришелец!',
+  };
+
+  const imageUrls = {
+    angel: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_angel.svg',
+    demon: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_demon.svg',
+    king: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_king.svg',
+		sushi: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_sushi.svg',
+		artist: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_artist.svg',
+		alien: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_alien.svg',
+  };
+  return {
+    result,
+    title: titles[result],
+    description: descriptions[result],
+    imageUrl: imageUrls[result],
+  };
+}
+export async function generateStaticParams() {
+  return results.map(result => ({
+    result,
+  }));
+}
+
+export function generateMetadata({ params }: { params: { result: ResultType } }): Metadata {
+  const { result, title, description, imageUrl } = getDataFromResult(params);
+  return {
+    title,
+    description,
+
+    twitter: {
+      card: 'summary_large_image',
+      site: "Hey, I'm Falafel",
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1000,
+          height: 1000,
+        },
+      ],
+    },
+    openGraph: {
+      siteName: "Hey, I'm Falafel",
+      title,
+      description,
+      images: [
+        {
+          url: imageUrl,
+          width: 1000,
+          height: 1000,
+        },
+      ],
+    },
+  };
+}
+// import { Metadata } from 'next';
+// import Head from 'next/head';
+// import Image from 'next/image';
+// import logo from 'public/orionLogo.png';
+// interface SurveyResultProps {
+//   result: string;
+//   title: string;
+//   description: string;
+//   imageUrl: string;
+// }
+// const results = ['angel', 'demon', 'king', 'sushi'] as const; // Обратите внимание на `as const`
+// type ResultType = (typeof results)[number]; // 'angel' | 'devil' | 'king' | 'sushi'
+// function SurveyResult({ params }: { params: { result: ResultType } }) {
+//   // console.log(params);
+//   const { result, title, description, imageUrl } = getDataFromResult(params);
+//   // const { result, title, description, imageUrl } = params;
+//   return (
+//     <>
+//       <Head>
+//         <title>{title}</title>
+//         <meta
+//           name="description"
+//           content={description}
+//         />
+//         <meta
+//           property="og:title"
+//           content={title}
+//         />
+//         <meta
+//           property="og:description"
+//           content={description}
+//         />
+//         <meta
+//           property="og:image"
+//           content={imageUrl}
+//         />
+//         <meta
+//           name="twitter:card"
+//           content="summary_large_image"
+//         />
+//         <meta
+//           name="twitter:title"
+//           content={title}
+//         />
+//         <meta
+//           name="twitter:description"
+//           content={description}
+//         />
+//         <meta
+//           name="twitter:image"
+//           content={imageUrl}
+//         />
+//       </Head>
+//       <div>
+//         <h1>{title}</h1>
+//         <p>{description}</p>
+//         <Image
+//           width={1000}
+//           height={1000}
+//           src={imageUrl}
+//           alt="Survey Result"
+//         />
+//       </div>
+//     </>
+//   );
+// }
+
+// export default SurveyResult;
+
+// export function getDataFromResult({ result }: { result: ResultType }) {
+//   const titles = {
+//     angel: 'Вы - Ангел!',
+//     devil: 'Вы - Дьявол!',
+//     king: 'Вы - Король!',
+//     sushi: 'Вы - Суши!',
+//   };
+
+//   const descriptions = {
+//     angel: 'Чистосердечный и добрый, вы всегда стремитесь помочь.',
+//     devil: 'Озорной и хитрый, вы всегда найдёте способ развлечься.',
+//     king: 'Достойный и мудрый, ваше правление бесспорно.',
+//     sushi: 'Уникальный и изысканный, вы ценитель тонких вкусов.',
+//   };
+
+//   const imageUrls = {
+//     angel: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
+//     devil: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
+//     king: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
+//     sushi: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/orionLogo.png',
+//   };
+//   return {
+//     result,
+//     title: titles[result],
+//     description: descriptions[result],
+//     imageUrl: imageUrls[result],
+//   };
+// }
+// export async function generateStaticParams() {
+//   return results.map(result => ({
+//     result,
+//   }));
+// }
+
+// export function generateMetadata({ params }: { params: { result: ResultType } }): Metadata {
+//   const { result, title, description, imageUrl } = getDataFromResult(params);
+//   return {
+//     title,
+//     description,
+
+//     twitter: {
+//       card: 'summary_large_image',
+//       site: "Hey, I'm Falafel",
+//       title,
+//       description,
+//       images: [
+//         {
+//           url: imageUrl,
+//           width: 1000,
+//           height: 1000,
+//         },
+//       ],
+//     },
+//     openGraph: {
+//       siteName: "Hey, I'm Falafel",
+//       title,
+//       description,
+//       images: [
+//         {
+//           url: imageUrl,
+//           width: 1000,
+//           height: 1000,
+//         },
+//       ],
+//     },
+//   };
+// }
