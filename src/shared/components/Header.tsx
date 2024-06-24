@@ -4,12 +4,10 @@ import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, Menu
 import { MenubarShortcut } from '../ui/menubar';
 import { usePathname, useRouter } from 'next/navigation';
 import { cn } from '../utils/cn';
-import designIcon from 'public/sidebar-design.svg';
-import storiesIcon from 'public/sidebar-stories.svg';
-import teamsIcon from 'public/sidebar-teams.svg';
+
 import logo from 'public/logo (1).svg';
 import FacebookIcon from 'public/facebookicon.svg';
-import InstaIcon from 'public/instaicon.svg';
+import LinkedInIcon from 'public/instaicon.svg';
 import CopyIcon from 'public/copyicon.svg';
 import TwitterIcon from 'public/twittericon.svg';
 import CloseIcon from 'public/closeIcon.svg';
@@ -18,6 +16,7 @@ import { Button } from '@/shared/ui/button';
 import { Popover, PopoverTrigger, PopoverContent } from '@/shared/ui/popover';
 import { Cross2Icon } from '@radix-ui/react-icons';
 import { PopoverClose } from '@radix-ui/react-popover';
+// import { shareLinkedIn, shareOnFacebook } from '../lib/share';
 
 // Font
 // Creato Display
@@ -29,8 +28,58 @@ import { PopoverClose } from '@radix-ui/react-popover';
 // 21.6px
 // Align
 // Center
-const icons = [CopyIcon, FacebookIcon, InstaIcon, TwitterIcon];
+const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
+interface ShareData {
+  url: string;
+  title: string;
+  description: string;
+}
 
+const copyToClipboard = async ({ url, title, description }: ShareData): Promise<void> => {
+  const textToCopy = `${title}\n${description}\n${url}`;
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+};
+
+const shareLinkedIn = ({ url, title, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    url: url,
+    title: title,
+    summary: description,
+  });
+  return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
+};
+export function createLinkedInShareUrl({ url, title, description }: ShareData) {
+  return `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(description)}`;
+}
+const shareFacebook = ({ url, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    u: url,
+    quote: description,
+  });
+  return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
+};
+const shareTwitter = ({ url, title, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    url: url,
+    text: `${title}\n${description}\n`,
+  });
+  return `https://twitter.com/intent/tweet?${params.toString().trim()}`;
+};
+
+const shareFunctions = [shareFacebook, shareLinkedIn, shareTwitter];
+const useShareHelper = (index: number) => {
+  const shareFn = shareFunctions[index];
+  const result = shareFn({
+    url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/',
+    title: 'Тут какой-то title',
+    description: 'А тут какой-то description',
+  });
+  return result;
+};
 const iconsBg = ['#FFBAC2', '#8BE3FF', '#FFE900', '#00B261'];
 const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: number }) => (
   <>
@@ -40,17 +89,76 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
         className="icon-wrapper"
         style={{ '--bg-color': iconsBg[index] }}
       >
-        <Image
-          tabIndex={-1}
-          src={icon}
-          alt=""
-          height={height}
-          className="icon-image"
-        />
+        {index === 0 && (
+          <Image
+            tabIndex={-1}
+            src={icon}
+            alt=""
+            height={height}
+            className="icon-image"
+            onClick={() => {
+              copyToClipboard({
+                url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/',
+                title: 'Тут какой-то title',
+                description: 'А тут какой-то description',
+              });
+            }}
+          />
+        )}
+        {index !== 0 && (
+          <Link
+            target="_blank"
+            // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
+            href={useShareHelper(index - 1)}
+          >
+            <Image
+              tabIndex={-1}
+              src={icon}
+              alt=""
+              height={height}
+              className="icon-image"
+            />
+          </Link>
+        )}
       </div>
     ))}
   </>
 );
+// const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: number }) => (
+//   <>
+//     {icons.map((icon, index) => (
+//       <div
+//         key={index}
+//         className="icon-wrapper"
+//         style={{ '--bg-color': iconsBg[index] }}
+//       >
+//         <Link
+//           // target="_blank"
+//           // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
+//           href={'#'}
+//           // href={shareTwitter({ url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', title: 'Какой-то текст.', description: 'Описание.' })}
+//         >
+//           <Image
+//             tabIndex={-1}
+//             src={icon}
+//             alt=""
+//             height={height}
+//             className="icon-image"
+//             onClick={() => {
+//               if (index === 0) {
+//                 copyToClipboard({
+//                   url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/',
+//                   title: 'Какой-то текст.',
+//                   description: 'Описание.',
+//                 });
+//               }
+//             }}
+//           />
+//         </Link>
+//       </div>
+//     ))}
+//   </>
+// );
 export const Header = () => {
   return (
     // <header className=" fixed left-0 right-0 top-0 z-10 flex bg-secondary-foreground h-[var(--header-height)] w-full items-center border-b  px-[26px] py-5">
