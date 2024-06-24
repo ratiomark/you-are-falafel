@@ -9,7 +9,8 @@ interface SurveyResultProps {
   description: string;
   imageUrl: string;
 }
-const results = ['angel', 'demon', 'king', 'sushi', 'artist', 'alien'] as const;
+// const results = ['angel', 'demon', 'king', 'sushi', 'artist', 'alien'] as const;
+const results = ['demon', 'king', 'sushi', 'artist', 'alien'] as const;
 type ResultType = (typeof results)[number];
 
 function SurveyResult({ params }: { params: { result: ResultType } }) {
@@ -99,7 +100,7 @@ export function getDataFromResult({ result }: { result: ResultType }) {
   };
 
   const imageUrls = {
-    angel: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_angel.svg',
+    // angel: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_angel.svg',
     demon: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_demon.svg',
     king: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_king.svg',
     sushi: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_sushi.svg',

@@ -71,7 +71,7 @@ const shareTwitter = ({ url, title, description }: ShareData): string => {
 };
 
 const shareFunctions = [shareFacebook, shareLinkedIn, shareTwitter];
-const useShareHelper = (index: number) => {
+const getShareHelper = (index: number) => {
   const shareFn = shareFunctions[index];
   const result = shareFn({
     url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/',
@@ -109,7 +109,7 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
           <Link
             target="_blank"
             // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
-            href={useShareHelper(index - 1)}
+            href={getShareHelper(index - 1)}
           >
             <Image
               tabIndex={-1}
