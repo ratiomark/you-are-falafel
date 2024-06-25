@@ -156,7 +156,7 @@ const shareLinkedIn = (url: string): string => {
 
 const shareTwitter = (text: string, url: string): string => {
   const params = new URLSearchParams({
-    text: text.trim(),
+    text: text,
     url: url.trim(),
   });
   return `https://twitter.com/intent/tweet?${params.toString()}`;
