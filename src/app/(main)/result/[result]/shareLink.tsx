@@ -154,9 +154,10 @@ const shareLinkedIn = (url: string): string => {
   return `https://www.linkedin.com/shareArticle?mini=true&${params.toString()}`;
 };
 
-const shareTwitter = (text: string): string => {
+const shareTwitter = (text: string, url: string): string => {
   const params = new URLSearchParams({
     text: text,
+    url: url,
   });
   return `https://twitter.com/intent/tweet?${params.toString()}`;
 };
@@ -196,13 +197,13 @@ const ShareLink: React.FC<ShareLinkProps> = ({ result }) => {
         copyToClipboard(data.copyText);
         break;
       case 1:
-        window.open(shareFacebook('https://lolafel.fun'), '_blank');
+        window.open(shareFacebook(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/{result}`), '_blank');
         break;
       case 2:
-        window.open(shareLinkedIn('https://lolafel.fun'), '_blank');
+        window.open(shareLinkedIn(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/{result}`), '_blank');
         break;
       case 3:
-        window.open(shareTwitter(data.twitterText), '_blank');
+        window.open(shareTwitter(data.twitterText, `https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/{result}`), '_blank');
         break;
     }
   };
