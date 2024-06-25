@@ -42,7 +42,7 @@ Take the quiz here: https://lolafel.fun`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
 👑🧆 I'm the Falafel King! This quirky quiz crowned me as culinary royalty. Which food ruler are you? Take the test and claim your flavor throne! \n
 Created by https://butcher.studio \n
-Test your taste: https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/demon \n`,
+Test your taste: https://you-are-falafel-git-main-ratiomarks-projects.vercel.app \n`,
   },
   angel: {
     pageTitle: 'You are a falafel angel',
