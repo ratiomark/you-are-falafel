@@ -18,7 +18,7 @@ interface ShareData {
 }
 
 const copyToClipboard = async ({ url, title, description }: ShareData): Promise<void> => {
-  const textToCopy = `${title}\n${description}\n${url}`;
+  const textToCopy = `${title}${description}\n${url}`;
   try {
     await navigator.clipboard.writeText(textToCopy);
   } catch (err) {
@@ -88,9 +88,9 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
             className="icon-image"
             onClick={() => {
               copyToClipboard({
-                url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/',
-                title: 'Тут какой-то title',
-                description: 'А тут какой-то description',
+                url,
+                title,
+                description,
               });
             }}
           />
