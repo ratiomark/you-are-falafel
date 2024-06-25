@@ -1,5 +1,10 @@
 'use client';
 import Link from 'next/link';
+import { Menubar, MenubarMenu, MenubarTrigger, MenubarContent, MenubarItem, MenubarSeparator } from '@radix-ui/react-menubar';
+import { MenubarShortcut } from '../ui/menubar';
+import { usePathname, useRouter } from 'next/navigation';
+import { cn } from '../utils/cn';
+
 import logo from 'public/logo (1).svg';
 import FacebookIcon from 'public/facebookicon.svg';
 import LinkedInIcon from 'public/instaicon.svg';
@@ -7,9 +12,22 @@ import CopyIcon from 'public/copyicon.svg';
 import TwitterIcon from 'public/twittericon.svg';
 import CloseIcon from 'public/closeIcon.svg';
 import Image from 'next/image';
+import { Button } from '@/shared/ui/button';
 import { Popover, PopoverTrigger, PopoverContent } from '@/shared/ui/popover';
+import { Cross2Icon } from '@radix-ui/react-icons';
 import { PopoverClose } from '@radix-ui/react-popover';
+// import { shareLinkedIn, shareOnFacebook } from '../lib/share';
 
+// Font
+// Creato Display
+// Weight
+// 400
+// Size
+// 18px
+// Line height
+// 21.6px
+// Align
+// Center
 const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
 interface ShareData {
   url: string;
@@ -98,6 +116,7 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
         {index !== 0 && (
           <Link
             target="_blank"
+            // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
             href={getShareHelper(index - 1)}
           >
             <Image
@@ -113,10 +132,48 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
     ))}
   </>
 );
-
+// const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: number }) => (
+//   <>
+//     {icons.map((icon, index) => (
+//       <div
+//         key={index}
+//         className="icon-wrapper"
+//         style={{ '--bg-color': iconsBg[index] }}
+//       >
+//         <Link
+//           // target="_blank"
+//           // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
+//           href={'#'}
+//           // href={shareTwitter({ url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', title: 'Какой-то текст.', description: 'Описание.' })}
+//         >
+//           <Image
+//             tabIndex={-1}
+//             src={icon}
+//             alt=""
+//             height={height}
+//             className="icon-image"
+//             onClick={() => {
+//               if (index === 0) {
+//                 copyToClipboard({
+//                   url: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/',
+//                   title: 'Какой-то текст.',
+//                   description: 'Описание.',
+//                 });
+//               }
+//             }}
+//           />
+//         </Link>
+//       </div>
+//     ))}
+//   </>
+// );
 export const Header = () => {
-	return (
-		<>
+  return (
+    // <header className=" fixed left-0 right-0 top-0 z-10 flex bg-secondary-foreground h-[var(--header-height)] w-full items-center border-b  px-[26px] py-5">
+    <>
+      {/* <div className="h-[var(--header-height)]" /> */}
+      {/* <header className="fixed left-0 right-0 top-0 z-10 flex h-[var(--header-height)] w-full items-center border-b bg-secondary-foreground px-[26px] py-5"> */}
+
       <header className="relative z-20  hidden min-h-[var(--header-height)] w-full items-center justify-center bg-transparent px-[26px] font-creato  text-lg xl:flex ">
         <nav>
           <ul className="flex items-center justify-center gap-10  uppercase">
@@ -130,12 +187,23 @@ export const Header = () => {
             </li>
 
             <li>
+              {/* <Link
+                className="underline-effect"
+                href="/about"
+              >
+                Share
+              </Link> */}
               <Popover>
                 <PopoverTrigger asChild>
+                  {/* <p className=" cursor-pointer">Share</p> */}
                   <p className="underline-effect underline-pink cursor-pointer">Share</p>
                 </PopoverTrigger>
                 <PopoverContent
-                  className="rounded-[40px] border-2 border-primary bg-[#FFF3E1] md:p-[30px] md:pt-5 2xl:p-10 2xl:pt-[30px]"
+                  className="rounded-[40px] border-2 border-primary bg-[#FFF3E1] 
+								
+								md:p-[30px] md:pt-5
+								
+								2xl:p-10 2xl:pt-[30px]"
                 >
                   <div className="flex w-full justify-between">
                     <p className="font-libre text-[26px] leading-[120%] tracking-[-0.52px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">Share:</p>
@@ -195,10 +263,12 @@ export const Header = () => {
         </nav>
       </header>
 
+      {/* mobile */}
       <header className="relative z-20 flex min-h-[var(--header-height)] w-full flex-col items-center justify-center gap-2.5 bg-transparent px-[26px] font-creato text-[14px]  leading-4 md:gap-5 xl:hidden ">
         <Link href="/">
           <Image
             src={logo}
+            // height={61}
             className={'h-[36px]'}
             alt="lolafel Logo"
           />
@@ -216,9 +286,14 @@ export const Header = () => {
             <li>
               <Popover>
                 <PopoverTrigger asChild>
+                  {/* <p className="cursor-pointer">Share</p> */}
                   <p className="underline-effect underline-pink cursor-pointer">Share</p>
                 </PopoverTrigger>
                 <PopoverContent className="rounded-[30px] border-2 border-primary bg-[#FFF3E1] p-5 md:p-[30px] md:pt-5">
+                  {/* <div className="flex gap-5 p-10">
+                    <IconsWithHoverBackground height={56} icons={icons} />
+                  </div>
+                </PopoverContent> */}
                   <div className="flex w-full justify-between">
                     <p className="font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:text-[26px] md:tracking-[-0.52px]">Share:</p>
                     <PopoverClose
@@ -246,6 +321,12 @@ export const Header = () => {
                   </div>
                 </PopoverContent>
               </Popover>
+              {/* <Link
+                className="underline-effect"
+                href="/about"
+              >
+                Share
+              </Link> */}
             </li>
             <li>
               <Link

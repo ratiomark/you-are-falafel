@@ -19,8 +19,8 @@ const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
 });
-const title = 'You are Falafel';
-const description = 'What kind of falafel are you today?';
+const title = 'Which Falafel Are You? Fun Quiz by Butcher.Studio | Try Now!';
+const description = 'What kind of falafel are you? Find out your falafel essence by taking the most important test at lolafel.fun! Created by BUTCHER Studio.';
 const titleSocial = 'Falafel social title';
 const descriptionSocial = 'This is falafel website social description';
 const imageSocial = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/falafelResult.webp';
@@ -30,7 +30,35 @@ export function generateMetadata() {
   const metadata: Metadata = {
     title,
     description,
-
+    keywords: [
+      'falafel personality test',
+      'food personality quiz',
+      'what falafel are you',
+      'food character test',
+      'culinary personality types',
+      'food alter ego quiz',
+      'funny food quiz',
+      'hilarious personality test',
+      'quirky falafel test',
+      'creative web design',
+      'interactive personality quiz',
+      'unique website design',
+      'what does your favorite food say about you',
+      'discover your food personality type',
+      'which middle eastern dish are you',
+      'Butcher Studio quiz',
+      'Butcher Studio web design',
+      'lolafel personality test',
+      'types of falafel',
+      'falafel varieties',
+      'falafel culture',
+      'interactive web quiz',
+      'responsive personality test',
+      'mobile-friendly food quiz',
+      'shareable personality quiz',
+      'viral food test',
+      'social media personality quiz',
+    ],
     twitter: {
       card: 'summary_large_image',
       site: url,
@@ -47,7 +75,7 @@ export function generateMetadata() {
     },
     openGraph: {
       tags: ['social', 'falafel', 'you', 'are', 'today'],
-      siteName: "Hey, I'm Falafel Social",
+      siteName: 'LoLafel by Butcher.studio',
       title: titleSocial,
       description: descriptionSocial,
       images: [
