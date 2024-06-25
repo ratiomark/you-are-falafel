@@ -62,14 +62,14 @@ export function generateMetadata() {
     twitter: {
       card: 'summary_large_image',
       site: url,
-      title: 'Twitter Title Social',
-      description: 'twitter description text',
+      title: titleSocial,
+      description: descriptionSocial,
 
       images: [
         {
           url: imageSocial,
-          width: 1000,
-          height: 1000,
+          // width: 1000,
+          // height: 1000,
         },
       ],
     },
@@ -81,8 +81,8 @@ export function generateMetadata() {
       images: [
         {
           url: imageSocial,
-          width: 1000,
-          height: 1000,
+          // width: 1000,
+          // height: 1000,
         },
       ],
     },
