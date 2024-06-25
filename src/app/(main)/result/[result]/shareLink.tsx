@@ -142,22 +142,22 @@ const copyToClipboard = async (text: string): Promise<void> => {
 
 const shareFacebook = (url: string): string => {
   const params = new URLSearchParams({
-    u: url,
+    u: url.trim(),
   });
   return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
 };
 
 const shareLinkedIn = (url: string): string => {
   const params = new URLSearchParams({
-    url: url,
+    url: url.trim(),
   });
-  return `https://www.linkedin.com/shareArticle?mini=true&${params.toString()}`;
+  return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
 };
 
 const shareTwitter = (text: string, url: string): string => {
   const params = new URLSearchParams({
-    text: text,
-    url: url,
+    text: text.trim(),
+    url: url.trim(),
   });
   return `https://twitter.com/intent/tweet?${params.toString()}`;
 };
@@ -191,19 +191,20 @@ interface ShareLinkProps {
 const ShareLink: React.FC<ShareLinkProps> = ({ result }) => {
   const data = resultData[result];
 
-  const handleShare = (index: number) => {
+	const handleShare = (index: number) => {
+		const url = `https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result.trim()}`;
     switch (index) {
       case 0:
         copyToClipboard(data.copyText);
         break;
       case 1:
-        window.open(shareFacebook(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result}`), '_blank');
+        window.open(shareFacebook(url), '_blank');
         break;
       case 2:
-        window.open(shareLinkedIn(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result}`), '_blank');
+        window.open(shareLinkedIn(url), '_blank');
         break;
       case 3:
-        window.open(shareTwitter(data.twitterText, `https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result}`), '_blank');
+        window.open(shareTwitter(data.twitterText, url), '_blank');
         break;
     }
   };
