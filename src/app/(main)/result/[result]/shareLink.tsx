@@ -75,7 +75,6 @@ Check out Butcher Studio: https://butcher.studio \n
 Take the quiz here: https://lolafel.fun`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
 😈🧆 Hot take: I'm a Devil Falafel! This spicy quiz unveiled my fiery food soul. What's your culinary dark side? Dare to find out! \n
-Unleash your inner food demon: https://lolafel.fun \n
 Created by https://butcher.studio \n
 Test your taste: https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/demon`,
   },
