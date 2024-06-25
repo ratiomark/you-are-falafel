@@ -197,13 +197,13 @@ const ShareLink: React.FC<ShareLinkProps> = ({ result }) => {
         copyToClipboard(data.copyText);
         break;
       case 1:
-        window.open(shareFacebook(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/{result}`), '_blank');
+        window.open(shareFacebook(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result}`), '_blank');
         break;
       case 2:
-        window.open(shareLinkedIn(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/{result}`), '_blank');
+        window.open(shareLinkedIn(`https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result}`), '_blank');
         break;
       case 3:
-        window.open(shareTwitter(data.twitterText, `https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/{result}`), '_blank');
+        window.open(shareTwitter(data.twitterText, `https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result}`), '_blank');
         break;
     }
   };
