@@ -140,13 +140,19 @@ const copyToClipboard = async (text: string): Promise<void> => {
   }
 };
 
-const shareFacebook = (url: string): string => {
+// const shareFacebook = (url: string): string => {
+//   const params = new URLSearchParams({
+//     u: url.trim(),
+//   });
+//   return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
+// };
+const shareFacebook = (url:string, description:string ): string => { 
   const params = new URLSearchParams({
-    u: url.trim(),
+    u: url,
+    quote: description,
   });
   return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
 };
-
 const shareLinkedIn = (url: string): string => {
   const params = new URLSearchParams({
     url: url.trim(),
@@ -198,7 +204,7 @@ const ShareLink: React.FC<ShareLinkProps> = ({ result }) => {
         copyToClipboard(data.copyText);
         break;
       case 1:
-        window.open(shareFacebook(url), '_blank');
+        window.open(shareFacebook(url, `Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!`), '_blank');
         break;
       case 2:
         window.open(shareLinkedIn(url), '_blank');
