@@ -178,7 +178,8 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
   const { metaTitle, metaDescription, imageUrl } = getDataFromResult(params);
   return {
     title: metaTitle,
-    description: metaDescription,
+		description: metaDescription,
+		
     twitter: {
       card: 'summary_large_image',
       site: 'LoLafel by Butcher.studio',
@@ -198,7 +199,7 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
       title: metaTitle,
       description: metaDescription,
 			type: 'website',
-			
+			url: 'https://lolafel.fun',
       images: [
         {
 					url: imageUrl,
