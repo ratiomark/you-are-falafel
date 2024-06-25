@@ -233,12 +233,14 @@ export const Header = () => {
               </Popover>
             </li>
             <li>
-              <Image
-                src={logo}
-                // height={61}
-                className={'h-[61px] xl:h-[45px]'}
-                alt="lolafel Logo"
-              />
+              <Link href="/">
+                <Image
+                  src={logo}
+                  // height={61}
+                  className={'h-[61px] xl:h-[45px]'}
+                  alt="lolafel Logo"
+                />
+              </Link>
             </li>
             <li>
               <Link
@@ -255,12 +257,14 @@ export const Header = () => {
 
       {/* mobile */}
       <header className="relative z-20 flex min-h-[var(--header-height)] w-full flex-col items-center justify-center gap-2.5 bg-transparent px-[26px] font-creato text-[14px]  leading-4 md:gap-5 xl:hidden ">
-        <Image
-          src={logo}
-          // height={61}
-          className={'h-[36px]'}
-          alt="lolafel Logo"
-        />
+        <Link href="/">
+          <Image
+            src={logo}
+            // height={61}
+            className={'h-[36px]'}
+            alt="lolafel Logo"
+          />
+        </Link>
         <nav>
           <ul className="wrap-0 flex items-center justify-center gap-[15px] uppercase md:gap-[25px]">
             <li>
