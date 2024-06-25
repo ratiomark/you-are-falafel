@@ -197,10 +197,12 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
       siteName: 'LoLafel by Butcher.studio',
       title: metaTitle,
       description: metaDescription,
-      type: 'website',
+			type: 'website',
+			
       images: [
         {
-          url: imageUrl,
+					url: imageUrl,
+					
           // width: 1000,
           // height: 1000,
         },

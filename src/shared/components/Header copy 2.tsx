@@ -98,7 +98,6 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
         {index !== 0 && (
           <Link
             target="_blank"
-            // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
             href={getShareHelper(index - 1)}
           >
             <Image
@@ -114,6 +113,7 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
     ))}
   </>
 );
+
 export const Header = () => {
 	return (
 		<>
