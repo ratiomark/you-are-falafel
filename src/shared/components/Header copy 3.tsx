@@ -1,4 +1,4 @@
-// 'use client';
+'use client';
 import Link from 'next/link';
 import logo from 'public/logo (1).svg';
 import FacebookIcon from 'public/facebookicon.svg';
@@ -9,114 +9,113 @@ import CloseIcon from 'public/closeIcon.svg';
 import Image from 'next/image';
 import { Popover, PopoverTrigger, PopoverContent } from '@/shared/ui/popover';
 import { PopoverClose } from '@radix-ui/react-popover';
-import { HeaderShareLinksDesktop, HeaderShareLinksMobile } from './HeaderShareLink';
 
-// const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
-// interface ShareData {
-//   url: string;
-//   title: string;
-//   description: string;
-// }
+const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
+interface ShareData {
+  url: string;
+  title: string;
+  description: string;
+}
 
-// const copyToClipboard = async ({ url, title, description }: ShareData): Promise<void> => {
-//   const textToCopy = `${title}${description}\n${url}`;
-//   try {
-//     await navigator.clipboard.writeText(textToCopy);
-//   } catch (err) {
-//     console.error('Failed to copy: ', err);
-//   }
-// };
+const copyToClipboard = async ({ url, title, description }: ShareData): Promise<void> => {
+  const textToCopy = `${title}${description}\n${url}`;
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+};
 
-// const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
-// const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
+const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
+const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
 
-// const description = `Which Falafel Are You?  | Try Now!
+const description = `Which Falafel Are You?  | Try Now!
 
-// Just discovered the most hilarious personality quiz😂🧆 Give it a try and prepare to laugh!
+Just discovered the most hilarious personality quiz😂🧆 Give it a try and prepare to laugh!
 
-// Created by: https://butcher.studio
+Created by: https://butcher.studio
 
-// Take the quiz here:
-// https://you-are-falafel-git-main-ratiomarks-projects.vercel.app
-// `;
-// const shareLinkedIn = ({ url, title, description }: ShareData): string => {
-//   const params = new URLSearchParams({
-//     url: url,
-//     title: title,
-//     summary: description,
-//   });
-//   return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
-// };
+Take the quiz here:
+https://you-are-falafel-git-main-ratiomarks-projects.vercel.app
+`;
+const shareLinkedIn = ({ url, title, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    url: url,
+    title: title,
+    summary: description,
+  });
+  return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
+};
 
-// const shareFacebook = ({ url, description }: ShareData): string => {
-//   const params = new URLSearchParams({
-//     u: url,
-//     quote: description,
-//   });
-//   return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
-// };
-// const shareTwitter = ({ url, title, description }: ShareData): string => {
-//   const params = new URLSearchParams({
-//     // url: url,
-//     text: `${title}\n${description}\n`,
-//   });
-//   return `https://twitter.com/intent/tweet?${params.toString().trim()}`;
-// };
+const shareFacebook = ({ url, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    u: url,
+    quote: description,
+  });
+  return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
+};
+const shareTwitter = ({ url, title, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    // url: url,
+    text: `${title}\n${description}\n`,
+  });
+  return `https://twitter.com/intent/tweet?${params.toString().trim()}`;
+};
 
-// const shareFunctions = [shareFacebook, shareLinkedIn, shareTwitter];
-// const getShareHelper = (index: number) => {
-//   const shareFn = shareFunctions[index];
-//   const result = shareFn({
-//     url,
-//     title,
-//     description,
-//   });
-//   return result;
-// };
-// const iconsBg = ['#FFBAC2', '#8BE3FF', '#FFE900', '#00B261'];
-// const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: number }) => (
-//   <>
-//     {icons.map((icon, index) => (
-//       <div
-//         key={index}
-//         className="icon-wrapper"
-//         style={{ '--bg-color': iconsBg[index] }}
-//       >
-//         {index === 0 && (
-//           <Image
-//             tabIndex={-1}
-//             src={icon}
-//             alt=""
-//             height={height}
-//             className="icon-image"
-//             onClick={() => {
-//               copyToClipboard({
-//                 url,
-//                 title,
-//                 description,
-//               });
-//             }}
-//           />
-//         )}
-//         {index !== 0 && (
-//           <Link
-//             target="_blank"
-//             // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
-//             href={getShareHelper(index - 1)}
-//           >
-//             <Image
-//               tabIndex={-1}
-//               src={icon}
-//               alt=""
-//               height={height}
-//               className="icon-image"
-//             />
-//           </Link>
-//         )}
-//       </div>
-//     ))}
-//   </>
-// );
+const shareFunctions = [shareFacebook, shareLinkedIn, shareTwitter];
+const getShareHelper = (index: number) => {
+  const shareFn = shareFunctions[index];
+  const result = shareFn({
+    url,
+    title,
+    description,
+  });
+  return result;
+};
+const iconsBg = ['#FFBAC2', '#8BE3FF', '#FFE900', '#00B261'];
+const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: number }) => (
+  <>
+    {icons.map((icon, index) => (
+      <div
+        key={index}
+        className="icon-wrapper"
+        style={{ '--bg-color': iconsBg[index] }}
+      >
+        {index === 0 && (
+          <Image
+            tabIndex={-1}
+            src={icon}
+            alt=""
+            height={height}
+            className="icon-image"
+            onClick={() => {
+              copyToClipboard({
+                url,
+                title,
+                description,
+              });
+            }}
+          />
+        )}
+        {index !== 0 && (
+          <Link
+            target="_blank"
+            // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
+            href={getShareHelper(index - 1)}
+          >
+            <Image
+              tabIndex={-1}
+              src={icon}
+              alt=""
+              height={height}
+              className="icon-image"
+            />
+          </Link>
+        )}
+      </div>
+    ))}
+  </>
+);
 export const Header = () => {
   return (
     <>
@@ -133,8 +132,7 @@ export const Header = () => {
             </li>
 
             <li>
-              <HeaderShareLinksMobile />
-              {/* <Popover>
+              <Popover>
                 <PopoverTrigger asChild>
                   <p className="underline-effect underline-pink cursor-pointer">Share</p>
                 </PopoverTrigger>
@@ -172,7 +170,7 @@ export const Header = () => {
                     />
                   </div>
                 </PopoverContent>
-              </Popover> */}
+              </Popover>
             </li>
             <li>
               <Link href="/">
@@ -216,8 +214,7 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <HeaderShareLinksDesktop />
-              {/* <Popover>
+              <Popover>
                 <PopoverTrigger asChild>
                   <p className="underline-effect underline-pink cursor-pointer">Share</p>
                 </PopoverTrigger>
@@ -248,7 +245,7 @@ export const Header = () => {
                     />
                   </div>
                 </PopoverContent>
-              </Popover> */}
+              </Popover>
             </li>
             <li>
               <Link

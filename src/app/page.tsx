@@ -284,7 +284,7 @@ export default function Home() {
         <Image
           src={cloudsMobileLeft}
           alt="cloud top left"
-          className="absolute  left-[-25px] top-[-15px] z-10 hidden w-[230px] xl:block md:w-[342px] 2xl:hidden"
+          className="absolute  left-[-25px] top-[-15px] z-10 hidden w-[230px] md:w-[342px] xl:block 2xl:hidden"
           // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
         />
         <Image
@@ -298,7 +298,7 @@ export default function Home() {
         <Image
           src={cloudsMobileLeft}
           alt="cloud top left"
-          className="absolute  left-[-36px] top-[-22px] z-10 hidden w-[230px] md:w-[342px] 2xl:block"
+          className="absolute  left-[-36px] top-[-22px] z-10 hidden w-[342px] 2xl:block"
           // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
         />
         <Image
