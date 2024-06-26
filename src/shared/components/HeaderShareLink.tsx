@@ -9,8 +9,6 @@ import CloseIcon from 'public/closeIcon.svg';
 import Image from 'next/image';
 import { Popover, PopoverTrigger, PopoverContent } from '@/shared/ui/popover';
 import { PopoverClose } from '@radix-ui/react-popover';
-import { url } from 'inspector';
-import { title } from 'process';
 import { copyToClipboard, getShareHelper } from '../lib/shareHelpers';
 
 const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];

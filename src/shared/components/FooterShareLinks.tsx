@@ -5,67 +5,70 @@ import FacebookIcon from 'public/facebookicon.svg';
 import LinkedInIcon from 'public/instaicon.svg';
 import CopyIcon from 'public/copyicon.svg';
 import TwitterIcon from 'public/twittericon.svg';
-const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
-interface ShareData {
-  url: string;
-  title: string;
-  description: string;
-}
+// import { url } from 'inspector';
+// import { title } from 'process';
+import { copyToClipboard, getShareHelper } from '../lib/shareHelpers';
+// const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
+// interface ShareData {
+//   url: string;
+//   title: string;
+//   description: string;
+// }
 
-const copyToClipboard = async ({ url, title, description }: ShareData): Promise<void> => {
-  const textToCopy = `${title}${description}\n${url}`;
-  try {
-    await navigator.clipboard.writeText(textToCopy);
-  } catch (err) {
-    console.error('Failed to copy: ', err);
-  }
-};
+// const copyToClipboard = async ({ url, title, description }: ShareData): Promise<void> => {
+//   const textToCopy = `${title}${description}\n${url}`;
+//   try {
+//     await navigator.clipboard.writeText(textToCopy);
+//   } catch (err) {
+//     console.error('Failed to copy: ', err);
+//   }
+// };
 
-const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
-const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
+// const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
+// const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
 
-const description = `Which Falafel Are You?  | Try Now!
+// const description = `Which Falafel Are You?  | Try Now!
 
-Just discovered the most hilarious personality quiz😂🧆 Give it a try and prepare to laugh!
+// Just discovered the most hilarious personality quiz😂🧆 Give it a try and prepare to laugh!
 
-Created by: https://butcher.studio
+// Created by: https://butcher.studio
 
-Take the quiz here:
-https://you-are-falafel-git-main-ratiomarks-projects.vercel.app`;
-const shareLinkedIn = ({ url, title, description }: ShareData): string => {
-  const params = new URLSearchParams({
-    url: url,
-    title: title,
-    summary: description,
-  });
-  return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
-};
+// Take the quiz here:
+// https://you-are-falafel-git-main-ratiomarks-projects.vercel.app`;
+// const shareLinkedIn = ({ url, title, description }: ShareData): string => {
+//   const params = new URLSearchParams({
+//     url: url,
+//     title: title,
+//     summary: description,
+//   });
+//   return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
+// };
 
-const shareFacebook = ({ url, description }: ShareData): string => {
-  const params = new URLSearchParams({
-    u: url,
-    quote: description,
-  });
-  return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
-};
-const shareTwitter = ({ url, title, description }: ShareData): string => {
-  const params = new URLSearchParams({
-    // url: url,
-    text: `${title}\n${description}\n`,
-  });
-  return `https://twitter.com/intent/tweet?${params.toString().trim()}`;
-};
+// const shareFacebook = ({ url, description }: ShareData): string => {
+//   const params = new URLSearchParams({
+//     u: url,
+//     quote: description,
+//   });
+//   return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
+// };
+// const shareTwitter = ({ url, title, description }: ShareData): string => {
+//   const params = new URLSearchParams({
+//     // url: url,
+//     text: `${title}\n${description}\n`,
+//   });
+//   return `https://twitter.com/intent/tweet?${params.toString().trim()}`;
+// };
 
-const shareFunctions = [shareFacebook, shareLinkedIn, shareTwitter];
-const getShareHelper = (index: number) => {
-  const shareFn = shareFunctions[index];
-  const result = shareFn({
-    url,
-    title,
-    description,
-  });
-  return result;
-};
+// const shareFunctions = [shareFacebook, shareLinkedIn, shareTwitter];
+// const getShareHelper = (index: number) => {
+//   const shareFn = shareFunctions[index];
+//   const result = shareFn({
+//     url,
+//     title,
+//     description,
+//   });
+//   return result;
+// };
 // (
 //   <Link
 //     target="_blank"
@@ -82,7 +85,7 @@ export const FooterShareLinks = () => {
   const linkTexts = ['Facebook', 'LinkedIn', 'Twitter'];
   return (
     <>
-      <span onClick={() => copyToClipboard({ url, title, description })}>
+      <span onClick={() => copyToClipboard()}>
         <span className="underline-effect underline-white cursor-pointer">Copy link</span>
         &nbsp;/&nbsp;
       </span>

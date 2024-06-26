@@ -16,8 +16,7 @@ Just discovered the most hilarious personality quiz😂🧆 Give it a try and pr
 Created by: https://butcher.studio
 
 Take the quiz here:
-https://you-are-falafel-git-main-ratiomarks-projects.vercel.app
-`;
+https://you-are-falafel-git-main-ratiomarks-projects.vercel.app`;
 
 // export const copyToClipboard = async ({ url, title, description }: CustomShareData): Promise<void> => {
 export const copyToClipboard = async (): Promise<void> => {
