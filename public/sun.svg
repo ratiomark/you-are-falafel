@@ -1,0 +1,34 @@
+<svg width="281" height="280" viewBox="0 0 281 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M212.5 27.5C207.334 39.1667 202 65.9 222 79.5C242 93.1 264.667 90.1667 273.5 87C264.167 92.1667 246.4 108.2 250 131C253.6 153.8 271.5 158.833 280 158.5C255 162.167 212.5 183 242.5 237C225.167 226.333 190.2 217.2 189 266C185.833 259 174.1 245.6 152.5 248C130.9 250.4 117.167 270.333 114 279C115.667 271.667 112 248.5 86 237C63.5 227.048 41.6667 236.5 33.5 245C40.3333 237.167 51 215.9 39 193.5C27.1963 171.466 9.10344 173.751 1.37677 175.417C1.24953 175.447 1.12392 175.474 1 175.5C1.12267 175.473 1.24829 175.445 1.37677 175.417C11.1745 173.156 30.6051 159.874 31 142.5C31.4 124.9 13.1667 110 5 106C16.1667 108.5 42.2 110.4 49 88C55.6768 66.0057 46.8316 51.5314 41.3025 46.7544C41.1997 46.6696 41.0989 46.5848 41 46.5C41.0996 46.5815 41.2005 46.6663 41.3025 46.7544C50.8939 54.6752 77.0458 62.7262 100 46.5C120.268 32.1729 123.44 15.4036 122.918 5.0595C122.701 3.5978 122.565 2.23362 122.5 1C122.69 2.20076 122.842 3.56288 122.918 5.0595C124.932 18.6064 133.949 40.5285 158.5 44.5C185.7 48.9 205.833 35 212.5 27.5Z" fill="#FFA41C" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M222 144.5C222 192.825 185.5 230 131.5 230C83.1751 230 45 192.825 45 144.5C45 96.1751 83.1751 59 131.5 59C179.825 59 222 91.5 222 144.5Z" fill="#FFE900" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M125 136C124.5 134 123 132 120.501 131.5" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M101 128.321C102.662 127.102 105.094 126.522 107.336 127.734" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M104.001 128.064C101.501 143.064 118 143.564 122.501 133.564" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M116.353 106.607C118.56 105.52 122.48 106.08 124.16 109.44" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="96.72" cy="102.72" r="20.72" fill="#1C0F00"/>
+<mask id="mask0_4420_1488" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="76" y="82" width="42" height="42">
+<circle cx="96.72" cy="102.72" r="20.72" fill="black"/>
+</mask>
+<g mask="url(#mask0_4420_1488)">
+<rect x="106.801" y="79.7603" width="8.96" height="50.4" transform="rotate(30 106.801 79.7603)" fill="white"/>
+<rect x="118" y="86.4802" width="1.95907" height="50.4" transform="rotate(30 118 86.4802)" fill="white"/>
+</g>
+<circle cx="96.72" cy="102.72" r="20.72" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="143.76" cy="117.28" r="20.72" fill="#1C0F00"/>
+<mask id="mask1_4420_1488" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="123" y="96" width="42" height="42">
+<circle cx="143.76" cy="117.28" r="20.72" fill="black"/>
+</mask>
+<g mask="url(#mask1_4420_1488)">
+<rect x="153.84" y="94.3203" width="8.96" height="50.4" transform="rotate(30 153.84 94.3203)" fill="white"/>
+<rect x="165.04" y="101.04" width="1.95907" height="50.4" transform="rotate(30 165.04 101.04)" fill="white"/>
+</g>
+<circle cx="143.76" cy="117.28" r="20.72" stroke="#1C0F00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="156.5" cy="145.5" r="1.5" fill="#1C0F00"/>
+<circle cx="138.5" cy="143.5" r="1.5" fill="#1C0F00"/>
+<circle cx="171.5" cy="136.5" r="1.5" fill="#1C0F00"/>
+<circle cx="162.5" cy="135.5" r="1.5" fill="#1C0F00"/>
+<circle cx="68.5" cy="104.5" r="1.5" fill="#1C0F00"/>
+<circle cx="73.5" cy="115.5" r="1.5" fill="#1C0F00"/>
+<circle cx="65.5" cy="117.5" r="1.5" fill="#1C0F00"/>
+<circle cx="81.5" cy="124.5" r="1.5" fill="#1C0F00"/>
+</svg>

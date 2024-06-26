@@ -260,6 +260,126 @@
   background-color: var(--bg-color);
 }
 
+@keyframes cloud-move-1 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, 7px); }
+  50% { transform: translate(0, 7px); }
+  75% { transform: translate(-10px, -7px); }
+}
+
+@keyframes cloud-move-2 {
+  /* 0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -7px); }
+  50% { transform: translate(-10px, 0); }
+  75% { transform: translate(0, 7px); } */
+  0%, 100% { 
+    transform: translateX(0); 
+  }
+  25% { 
+    transform: translateX(-20px); 
+  }
+  50% { 
+    transform: translateX(0); 
+  }
+  75% { 
+    transform: translateX(20px); 
+  }
+  /* 0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-10px, -7px); }
+  50% { transform: translate(-10px, 7px); }
+  75% { transform: translate(10px, -7px); } */
+}
+
+
+@keyframes cloud-move-3 {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -7px); }
+  50% { transform: translate(-10px, 0); }
+  75% { transform: translate(0, 7px); }
+}
+@keyframes stars-appears {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.animate-stars-appear {  
+  animation: stars-appears 3s ease;
+}
+.animate-cloud-1 {
+  animation: cloud-move-1 10s ease-in-out infinite;
+}
+
+.animate-cloud-2 {
+  animation: cloud-move-2 10s linear  infinite ;
+}
+.animate-cloud-2-reverse {
+  animation: cloud-move-2 15s linear  infinite reverse;
+}
+
+.animate-cloud-3 {
+  animation: cloud-move-3 10s ease-in-out infinite;
+}
+@keyframes cloud-move {
+  0% {
+    transform: translateX(0vw);
+  }
+  
+  54.99% {
+    opacity: 1;
+    transform: translateX(-120vw);
+  }
+  55.01% {
+    opacity: 0;
+    transform: translateX(-120vw);
+  }
+  55.02% { 
+    opacity: 0;
+    transform: translateX(120vw);
+  }
+  55.03% {
+    opacity: 1;
+    transform: translateX(120vw);
+  }
+  100% {
+    transform: translateX(0vw);
+  }
+}
+@keyframes sun-move {
+  0% {
+    /* opacity: 0; */
+    transform: translate(25vw, 90.5vh) rotate(-45deg); 
+    /* transform: translate(25vw, 90.5vh) rotate(-45deg);  */
+  }
+
+  100% {
+    /* opacity: 1; */
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.animate-sun {
+  animation: sun-move 1s ease-in-out forwards;
+  transform-origin: center center;
+}
+ /* @keyframes sun-move {
+  0% {
+    opacity: 0;
+    transform: translate(400px, 900px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+ }
+
+ .animate-sun {
+   z-index: 20;
+   animation: sun-move 2s ease;
+ } */
+.animate-cloud {
+  z-index: 20;
+  animation: cloud-move 22s linear infinite;
+}
 
 @layer base {
 

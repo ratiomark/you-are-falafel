@@ -196,16 +196,58 @@ export default function Home() {
         <Image
           src={cloudsMobileLeft}
           alt="cloud top left"
-          className="absolute left-[-68px] top-[-2px] z-10 w-[230px] md:left-[-70px] md:top-[-15px] md:w-[342px] xl:left-[-25px] xl:top-[-15px] 2xl:left-[-36px] 2xl:top-[-22px]"
+          className="absolute left-[-68px] top-[-2px] z-10 w-[230px] md:hidden"
           // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
         />
         <Image
           src={cloudsMobileRight}
           alt="cloud top right"
-          className="absolute right-[-86px] top-[-2px] z-10  w-[230px] md:right-[-69px]  md:top-[-15px] md:w-[342px] xl:right-[-25px] xl:top-[-15px] 2xl:right-[-36px] 2xl:top-[-22px]"
+          className="absolute right-[-85px] top-[-2px] z-10  w-[230px] md:right-[-69px]  md:top-[-15px] md:w-[342px] xl:right-[-25px] xl:top-[-15px]"
           // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden "
         />
 
+        {/* cloud top md */}
+        <Image
+          src={cloudsMobileRight}
+          alt="cloud top right"
+          // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
+          className="absolute  right-[-69px] top-[-15px] z-10  hidden w-[230px] md:block md:w-[342px] xl:hidden"
+          // className="absolute  md:right-[-69px] md:top-[-15px] z-10  hidden w-[230px]  md:w-[342px] "
+        />
+        <Image
+          src={cloudsMobileLeft}
+          alt="cloud top left"
+          className="absolute  left-[-70px] top-[-15px] z-10 hidden w-[230px] md:block md:w-[342px] xl:hidden"
+          // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+        />
+        {/* cloud top xl */}
+        <Image
+          src={cloudsMobileLeft}
+          alt="cloud top left"
+          className="absolute  left-[-25px] top-[-15px] z-10 hidden w-[230px] md:w-[342px] xl:block 2xl:hidden"
+          // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+        />
+        <Image
+          src={cloudsMobileRight}
+          alt="cloud top right"
+          // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
+          className="absolute  z-10 hidden w-[230px]  md:w-[342px] xl:right-[-25px] xl:top-[-15px] xl:block 2xl:hidden"
+          // className="absolute  right-[-25px] top-[-15px] z-10  hidden w-[230px] md:w-[342px] xl:block 2xl:hidden"
+        />
+        {/* cloud top 2xl */}
+
+        <Image
+          src={cloudsMobileLeft}
+          alt="cloud top left"
+          className="absolute  left-[-36px] top-[-22px] z-10 hidden w-[342px] 2xl:block"
+          // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+        />
+        <Image
+          src={cloudsMobileRight}
+          alt="cloud top right"
+          // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
+          className="absolute  right-[-36px] top-[-22px] z-10  hidden  w-[342px] 2xl:block"
+        />
         {/* stars */}
         <Image
           src={starBlackRightMobile}

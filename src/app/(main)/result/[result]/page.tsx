@@ -127,12 +127,15 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
         <h1 className=" pb-5 text-center font-zt text-[30px] tracking-[-2.4px] md:pb-[64px] md:text-[34px] md:leading-[120%] md:tracking-[-2.72px] xl:pb-[5px] xl:text-[37px] xl:tracking-[-2.96px] 2xl:pb-0 2xl:text-[50px] 2xl:tracking-[-4px]">
           {pageTitle}
         </h1>
-        <div className="mx-auto md:max-w-[calc(541px)] 2xl:hidden">
+        <div className="mx-auto 2xl:hidden">
+        {/* <div className="mx-auto md:max-h-[620px] md:max-w-[calc(541px)] 2xl:hidden"> */}
           <Image
             width={541}
             height={487}
             src={imageUrl}
-            className="ml-auto md:max-w-[541px]"
+            className="ml-auto"
+            // className="ml-auto md:max-h-[480px]"
+            // className="ml-auto md:max-w-[541px]"
             // className="ml-auto md:max-w-[541px]"
             alt="Survey Result"
           />
