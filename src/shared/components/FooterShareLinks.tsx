@@ -78,24 +78,20 @@ const getShareHelper = (index: number) => {
   /* <span className="underline-effect underline-white cursor-pointer">Copy link</span> / Facebook / LinkedIn / Twitter; */
 }
 export const FooterShareLinks = () => {
-  const linkTexts = ['Copy link', 'Facebook', 'LinkedIn', 'Twitter'];
+  const linkTexts = ['Facebook', 'LinkedIn', 'Twitter'];
   return (
     <>
+      <span onClick={() => copyToClipboard({ url, title, description })}>
+        <span className="underline-effect underline-white cursor-pointer">Copy link</span>
+        &nbsp;/&nbsp;
+      </span>
       {linkTexts.map((text, index) => {
-        if (index === 0) {
-          return (
-            <span onClick={() => copyToClipboard({ url, title, description })}>
-              <span className="underline-effect betterhover:underline-white cursor-pointer">{text}</span>
-              &nbsp;/&nbsp;
-            </span>
-          );
-        }
         return (
           <Link
             target="_blank"
-            href={getShareHelper(index - 1)}
+            href={getShareHelper(index)}
           >
-            <p className="underline-effect betterhover:underline-white cursor-pointer">{text}</p>
+            <p className="underline-effect underline-white cursor-pointer">{text}</p>
             {index !== linkTexts.length - 1 && <span>&nbsp;/&nbsp;</span>}
           </Link>
         );
