@@ -89,7 +89,8 @@ export const FooterShareLinks = () => {
         return (
           <Link
             target="_blank"
-            href={getShareHelper(index)}
+						href={getShareHelper(index)}
+						key={text}
           >
             <span className="underline-effect underline-white cursor-pointer">{text}</span>
             {index !== linkTexts.length - 1 && <span>&nbsp;/&nbsp;</span>}
