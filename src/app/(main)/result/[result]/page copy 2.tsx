@@ -133,7 +133,6 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
             height={487}
             src={imageUrl}
             className="ml-auto md:max-w-[541px]"
-            // className="ml-auto md:max-w-[541px]"
             alt="Survey Result"
           />
         </div>

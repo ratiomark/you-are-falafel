@@ -22,7 +22,8 @@ const config = {
       screens: {
         betterhover: { raw: '(hover: hover)' },
         // '2xl': { max: '1535px'}, // изначально используйте 'min'
-        xl: { min: '1440px' },
+				xl: { min: '1440px' },
+				'2xl': { min: '1920px' },
         // lg: { max: '1023px' },
         // md: { max: '767px' },
         // sm: { max: '639px' },
