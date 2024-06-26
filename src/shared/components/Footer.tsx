@@ -175,9 +175,12 @@ export default function Footer() {
           </h3> */}
           </div>
           <div className="flex flex-col items-center justify-center gap-[7vh] pt-[7vh]">
-            <p className="font-zt text-[30px] leading-[120%] tracking-[-1.2px]">
+            <div
+              className="font-zt text-[30px] leading-[120%] tracking-[-1.2px]"
+              // suppressHydrationWarning
+            >
               Share: <br /> <FooterShareLinks />
-            </p>
+            </div>
             <div className="flex w-full flex-col items-center justify-between gap-5 text-center font-libre text-[22px] font-normal leading-7 tracking-[0.44px] ">
               <Link
                 target="_blank"
