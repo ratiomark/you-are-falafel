@@ -151,7 +151,7 @@ export default function Home() {
             <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]   md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
-                className="w-full rounded-full duration-500 border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
+                className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all duration-500 hover:bg-[#FFBAC2] xl:py-5 "
               >
                 Start test
               </Link>
@@ -180,28 +180,6 @@ export default function Home() {
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               />
             </div>
-            {/* <Image
-                src={flowers}
-                alt="flowers"
-                className="absolute right-[50%] top-[-22px] z-10 w-[280px] max-w-[340px] translate-x-1/2  md:hidden"
-                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
-                // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-              /> */}
-            {/* <Image
-                src={flowers}
-                alt="flowers"
-                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  "
-                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
-                className="absolute right-[50%] top-[-25px] z-10  hidden w-[280px] max-w-[340px] translate-x-1/2 md:block"
-              /> */}
-            {/* <div className="  flex w-full pb-[30px] text-center font-libre text-[22px] leading-7  tracking-[0.44px] md:pb-[72px] md:text-[26px] md:leading-8 xl:pb-[6vh] 2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
-              <Link
-                href="/survey"
-                className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all hover:bg-[#FFBAC2] xl:py-5 "
-              >
-                Start test
-              </Link>
-            </div> */}
           </div>
 
           <Image
@@ -304,29 +282,30 @@ export default function Home() {
         />
         {/* cloud top xl */}
         <Image
+          src={cloudsMobileLeft}
+          alt="cloud top left"
+          className="absolute  left-[-25px] top-[-15px] z-10 hidden w-[230px]  md:w-[342px] 2xl:hidden"
+          // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+        />
+        <Image
           src={cloudsMobileRight}
           alt="cloud top right"
           // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
           className="absolute  right-[-25px] top-[-15px] z-10  hidden w-[230px] md:w-[342px] xl:block 2xl:hidden"
         />
-        <Image
-          src={cloudsMobileLeft}
-          alt="cloud top left"
-          className="absolute  left-[-25px] top-[-15px] z-10 hidden w-[230px] md:block md:w-[342px] 2xl:hidden"
-          // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
-        />
         {/* cloud top 2xl */}
-        <Image
-          src={cloudsMobileRight}
-          alt="cloud top right"
-          // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
-          className="absolute  right-[-36px] top-[-22px] z-10  hidden  w-[342px] 2xl:block"
-        />
+
         <Image
           src={cloudsMobileLeft}
           alt="cloud top left"
           className="absolute  left-[-36px] top-[-22px] z-10 hidden w-[230px] md:w-[342px] 2xl:block"
           // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+        />
+        <Image
+          src={cloudsMobileRight}
+          alt="cloud top right"
+          // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden"
+          className="absolute  right-[-36px] top-[-22px] z-10  hidden  w-[342px] 2xl:block"
         />
         {/* stars */}
         <Image

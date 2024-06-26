@@ -2,11 +2,160 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import logo from 'public/logo (2).svg';
+import FacebookIcon from 'public/facebookicon.svg';
+import LinkedInIcon from 'public/instaicon.svg';
+import CopyIcon from 'public/copyicon.svg';
+import TwitterIcon from 'public/twittericon.svg';
+import { FooterShareLinks } from './FooterShareLinks';
+const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
+interface ShareData {
+  url: string;
+  title: string;
+  description: string;
+}
 
+const copyToClipboard = async ({ url, title, description }: ShareData): Promise<void> => {
+  const textToCopy = `${title}${description}\n${url}`;
+  try {
+    await navigator.clipboard.writeText(textToCopy);
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+};
+
+const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
+const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
+
+const description = `Which Falafel Are You?  | Try Now!
+
+Just discovered the most hilarious personality quiz😂🧆 Give it a try and prepare to laugh!
+
+Created by: https://butcher.studio
+
+Take the quiz here:`;
+const shareLinkedIn = ({ url, title, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    url: url,
+    title: title,
+    summary: description,
+  });
+  return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
+};
+
+const shareFacebook = ({ url, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    u: url,
+    quote: description,
+  });
+  return `https://www.facebook.com/sharer/sharer.php?${params.toString()}`;
+};
+const shareTwitter = ({ url, title, description }: ShareData): string => {
+  const params = new URLSearchParams({
+    url: url,
+    text: `${title}\n${description}\n`,
+  });
+  return `https://twitter.com/intent/tweet?${params.toString().trim()}`;
+};
+
+const shareFunctions = [shareFacebook, shareLinkedIn, shareTwitter];
+const getShareHelper = (index: number) => {
+  const shareFn = shareFunctions[index];
+  const result = shareFn({
+    url,
+    title,
+    description,
+  });
+  return result;
+};
+// (
+//   <Link
+//     target="_blank"
+//     href={getShareHelper(index)}
+//     className="underline-effect underline-white cursor-pointer"
+//   >
+//     {text}
+//   </Link>
+// ))
+{
+  /* <span className="underline-effect underline-white cursor-pointer">Copy link</span> / Facebook / LinkedIn / Twitter; */
+}
+// const FooterShareLinks = () => {
+//   const linkTexts = ['Copy link / ', 'Facebook / ', 'LinkedIn /', 'Twitter'];
+//   return (
+//     <>
+//       {linkTexts.map((text, index) => {
+//         if (index === 0) {
+//           return (
+//             <span
+//               className="underline-effect underline-white cursor-pointer"
+//               onClick={() => copyToClipboard({ url, title, description })}
+//             >
+//               {text}
+//             </span>
+//           );
+//         }
+//         return (
+//           <Link
+//             target="_blank"
+//             href={getShareHelper(index-1)}
+//           >
+//             {/* <span className="underline-effect underline-white cursor-pointer"> */}
+//             {text}
+//             {/* </span> */}
+//           </Link>
+//         );
+//       })}
+//     </>
+//   );
+// };
+// const iconsBg = ['#FFBAC2', '#8BE3FF', '#FFE900', '#00B261'];
+// const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: number }) => (
+//   <>
+//     {icons.map((icon, index) => (
+//       <div
+//         key={index}
+//         className="icon-wrapper"
+//         style={{ '--bg-color': iconsBg[index] }}
+//       >
+//         {index === 0 && (
+//           <Image
+//             tabIndex={-1}
+//             src={icon}
+//             alt=""
+//             height={height}
+//             className="icon-image"
+//             onClick={() => {
+//               copyToClipboard({
+//                 url,
+//                 title,
+//                 description,
+//               });
+//             }}
+//           />
+//         )}
+//         {index !== 0 && (
+//           <Link
+//             target="_blank"
+//             // href={shareTwitter('https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/', 'Тайлтл\n \n ОПИСАНИЕ \n\n')}
+//             href={getShareHelper(index - 1)}
+//           >
+//             <Image
+//               tabIndex={-1}
+//               src={icon}
+//               alt=""
+//               height={height}
+//               className="icon-image"
+//             />
+//           </Link>
+//         )}
+//       </div>
+//     ))}
+//   </>
+// );
 export default function Footer() {
   return (
     <>
-      <div
+      <footer
         id="footer"
         className=" bg-primary px-2.5 py-14 text-center font-libre text-[#FFF3E1] md:hidden"
       >
@@ -27,7 +176,7 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center justify-center gap-[7vh] pt-[7vh]">
             <p className="font-zt text-[30px] leading-[120%] tracking-[-1.2px]">
-              Share: <br /> Copy link / Facebook / LinkedIn / Twitter
+              Share: <br /> <FooterShareLinks />
             </p>
             <div className="flex w-full flex-col items-center justify-between gap-5 text-center font-libre text-[22px] font-normal leading-7 tracking-[0.44px] ">
               <Link
@@ -77,9 +226,9 @@ export default function Footer() {
             </Link>
           </div>
         </div>
-      </div>
+      </footer>
 
-      <div
+      <footer
         id="footer"
         className="  hidden bg-primary px-10 py-20 text-center font-libre text-[#FFF3E1] md:block"
       >
@@ -95,9 +244,15 @@ export default function Footer() {
           </h3>
         </div>
         <div className="flex  flex-col items-center justify-center gap-[60px] pt-[60px]">
-          <p className="font-zt text-[50px] leading-[120%] tracking-[-0.7px]">
-            Share: <span className="underline-effect underline-white cursor-pointer">Copy link</span>/ Facebook / LinkedIn / Twitter
+          <div className="font-zt text-[34px] leading-[120%] tracking-[-2.72px] xl:hidden">
+            <p>Share:</p>
+            <FooterShareLinks />
+          </div>
+          <p className="hidden font-zt text-[37px] leading-[120%] tracking-[-2.96px] xl:block 2xl:text-[50px] 2xl:tracking-[-4px]">
+            <span>Share:&nbsp;</span>
+            <FooterShareLinks />
           </p>
+
           <div className="flex w-full items-center  justify-between gap-5">
             <Link
               target="_blank"
@@ -145,7 +300,7 @@ export default function Footer() {
             Ⓒ lolafel by: butcher studio
           </Link>
         </div>
-      </div>
+      </footer>
     </>
   );
 }
