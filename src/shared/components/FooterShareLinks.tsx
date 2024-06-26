@@ -30,7 +30,8 @@ Just discovered the most hilarious personality quiz😂🧆 Give it a try and pr
 
 Created by: https://butcher.studio
 
-Take the quiz here:`;
+Take the quiz here:
+https://you-are-falafel-git-main-ratiomarks-projects.vercel.app`;
 const shareLinkedIn = ({ url, title, description }: ShareData): string => {
   const params = new URLSearchParams({
     url: url,
@@ -49,7 +50,7 @@ const shareFacebook = ({ url, description }: ShareData): string => {
 };
 const shareTwitter = ({ url, title, description }: ShareData): string => {
   const params = new URLSearchParams({
-    url: url,
+    // url: url,
     text: `${title}\n${description}\n`,
   });
   return `https://twitter.com/intent/tweet?${params.toString().trim()}`;
@@ -89,8 +90,8 @@ export const FooterShareLinks = () => {
         return (
           <Link
             target="_blank"
-						href={getShareHelper(index)}
-						key={text}
+            href={getShareHelper(index)}
+            key={text}
           >
             <span className="underline-effect underline-white cursor-pointer">{text}</span>
             {index !== linkTexts.length - 1 && <span>&nbsp;/&nbsp;</span>}
