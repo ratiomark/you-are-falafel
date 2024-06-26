@@ -123,7 +123,7 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
         </h1>
       </div>
 
-      <ul className="relative grid w-full gap-y-2.5 md:grid-cols-2 md:gap-x-5 md:gap-y-5 xl:gap-x-5 xl:gap-y-5 2xl:gap-y-8">
+      <ul className="relative grid w-full gap-y-2.5 z-[6] md:grid-cols-2 md:gap-x-5 md:gap-y-5 xl:gap-x-5 xl:gap-y-5 2xl:gap-y-8">
         {questionData.answers.map(answer => (
           <li
             className="relative w-full bg-background font-libre text-[22px] font-normal leading-[120%] tracking-[-0.7px] md:w-full md:text-[26px] 2xl:text-3xl"

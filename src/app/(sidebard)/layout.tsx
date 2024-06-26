@@ -124,50 +124,52 @@ export default function Layout({
             // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden "
           />
         </main>
-        <Image
-          src={cloud}
-          alt="cloud"
-          className="animate-cloud absolute left-[73vw] top-[10vh] w-[33vw] md:hidden"
-        />
+        <div>
+          <Image
+            src={cloud}
+            alt="cloud"
+            className="animate-cloud absolute left-[73vw]  top-[10vh] z-[7] w-[33vw] md:hidden"
+          />
 
-        <Image
-          src={cloud2}
-          alt="cloud"
-          className="animate-cloud absolute right-[78vw] top-[13vh] w-[33vw] md:hidden "
-        />
-        {/* md */}
-        <Image
-          src={cloud}
-          alt="cloud"
-          className="animate-cloud-2-reverse absolute left-[65vw] top-[55vh] hidden w-[24vw] max-w-[280px] md:block xl:hidden"
-        />
-        <Image
-          src={cloud2}
-          alt="cloud"
-          className="animate-cloud-2 absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] md:block xl:hidden"
-        />
-        <Image
-          src={cloud3}
-          alt="cloud"
-          className="absolute left-[13vw] top-[15vh] hidden w-[33vw] max-w-[180px] md:block  xl:hidden"
-        />
-        {/* xl */}
-        <Image
-          src={cloud}
-          alt="cloud"
-          className="absolute bottom-[13vh] right-[18vw] hidden w-[13.8vw] max-w-[267px] xl:block"
-        />
-        <Image
-          src={cloud2}
-          alt="cloud"
-          // className="absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] xl:block 2xl:hidden"
-          className="absolute bottom-[30vh] left-[38vw] hidden w-[15vw] max-w-[225px] 2xl:max-w-[297px] xl:block"
-        />
-        <Image
-          src={cloud3}
-          alt="cloud"
-          className="absolute bottom-[8vh] left-[18vw] hidden w-[13.3vw] max-w-[190px] xl:block 2xl:max-w-[254px]"
-        />
+          <Image
+            src={cloud2}
+            alt="cloud"
+            className="animate-cloud absolute right-[78vw]  top-[13vh] z-[7] w-[33vw] md:hidden "
+          />
+          {/* md */}
+          <Image
+            src={cloud}
+            alt="cloud"
+            className="animate-cloud-2-reverse absolute left-[65vw]  top-[55vh] z-[7] hidden w-[24vw] max-w-[280px] md:block xl:hidden"
+          />
+          <Image
+            src={cloud2}
+            alt="cloud"
+            className="animate-cloud-2 absolute left-[15vw]  top-[67vh] z-[7] hidden w-[29vw] max-w-[320px] md:block xl:hidden"
+          />
+          <Image
+            src={cloud3}
+            alt="cloud"
+            className="absolute left-[13vw] top-[15vh]  z-[7] hidden w-[33vw] max-w-[180px] md:block  xl:hidden"
+          />
+          {/* xl */}
+          <Image
+            src={cloud}
+            alt="cloud"
+            className="absolute bottom-[13vh] right-[18vw] z-[7] hidden w-[13.8vw] max-w-[267px] xl:block"
+          />
+          <Image
+            src={cloud2}
+            alt="cloud"
+            // className="absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] xl:block 2xl:hidden"
+            className="absolute bottom-[30vh] left-[38vw] z-[7] hidden w-[15vw] max-w-[225px] xl:block 2xl:max-w-[297px]"
+          />
+          <Image
+            src={cloud3}
+            alt="cloud"
+            className="absolute bottom-[8vh] left-[18vw] z-[7] hidden w-[13.3vw] max-w-[190px] xl:block 2xl:max-w-[254px]"
+          />
+        </div>
       </div>
       <Footer />
     </div>
