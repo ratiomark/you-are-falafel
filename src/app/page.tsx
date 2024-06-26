@@ -25,7 +25,9 @@ import falafelWithStars from 'public/falafel1440.svg';
 // import falafelOnly from 'public/onlyFalafel1440.svg';
 import falafelOnly from 'public/falafelMain1440.svg';
 import falafelMain1920 from 'public/falafelMain1920.svg';
-import stars1440 from 'public/stars1440.svg';
+// import stars1440 from 'public/stars1440.svg';
+import stars1440 from 'public/starsMain1440.svg';
+import stars1920 from 'public/starsMain1920.svg';
 
 export default function Home() {
   return (
@@ -55,13 +57,13 @@ export default function Home() {
               src={cloud}
               alt="cloud right"
               // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-              className="absolute right-[50px] top-[-70px] z-20 hidden  w-[189px] md:block xl:right-[155px] xl:top-[-40px] 2xl:right-[230px] 2xl:top-[-50px] 2xl:w-[267px]"
+              className="animate-cloud-2-reverse  absolute right-[50px] top-[-70px] z-20 hidden  w-[189px] md:block xl:right-[155px] xl:top-[-40px] 2xl:right-[230px] 2xl:top-[-50px] 2xl:w-[267px]"
             />
             <Image
               src={cloud2}
               alt="cloud left"
               // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-              className="absolute bottom-[-220px] left-[-15px] z-20 hidden w-[189px] md:block  xl:bottom-[-70px] xl:left-[90px]  2xl:bottom-[-120px] 2xl:w-[297px]"
+              className="animate-cloud-2 absolute bottom-[-220px] left-[-15px] z-20 hidden w-[189px] md:block  xl:bottom-[-70px] xl:left-[90px]  2xl:bottom-[-120px] 2xl:w-[297px]"
             />
           </div>
           <div
@@ -106,7 +108,7 @@ export default function Home() {
                 src={flowerPink}
                 alt="flowers"
                 // className="absolute left-[25%] top-[-18px] z-10 w-[33px] max-w-[340px] md:hidden"
-                className="absolute left-[25%] top-[-18px] z-10 w-[33px] md:top-[-21px] md:w-[44] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
+                className="animate-flower absolute left-[25%] top-[-18px] z-10 w-[33px]  scale-0 md:top-[-21px] md:w-[44] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               />
@@ -114,7 +116,7 @@ export default function Home() {
                 src={flowerBlue}
                 alt="flowers"
                 // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
-                className="absolute right-[20%] top-[-16px] z-10 w-[33px] md:right-[25%] md:top-[-21px] md:w-[44] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
+                className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[25%] md:top-[-21px] md:w-[44] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               />
@@ -125,14 +127,14 @@ export default function Home() {
             src={cloud}
             alt="cloud"
             // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-            className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  md:hidden"
+            className="animate-cloud-2-reverse absolute left-[67vw] top-[6vh] z-10 w-[33vw]  md:hidden"
           />
 
           <Image
             src={cloud2}
             alt="cloud"
             // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-            className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] md:hidden "
+            className="animate-cloud-2 absolute  right-[78vw] top-[30vh] z-10 w-[33vw] md:hidden "
           />
           <Image
             src={falafelMobile}
@@ -158,52 +160,17 @@ export default function Home() {
             className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
-
-          {/* <Image
-            src={falafelWithStars}
-            alt="falafel image"
-            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10 hidden min-w-[768px] max-w-[120vw]  translate-x-1/2 xl:block"
-            // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
-          /> */}
-          {/* md */}
-          {/* <Image
-            src={cloud}
-            alt="cloud right"
-            // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-            className="absolute left-[60vw] top-[0.5vh] z-10 hidden  w-[189px] md:block xl:top-[2.3vh]"
-          /> */}
-          {/* <Image
-            src={cloud}
-            alt="cloud"
-            // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-            className="absolute left-[60vw] top-[0.5vh] z-10 hidden  w-[189px] md:block"
-          /> */}
-
-          {/* <Image
-            src={cloud2}
-            alt="cloud left"
-            // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-            className="absolute left-[3.5vw] top-[25vh] z-[21] hidden w-[189px] md:block  xl:left-[20vw] xl:top-[18vh] 2xl:left-[18vw] 2xl:top-[18vh] 2xl:w-[297px]"
-          /> */}
-          {/* <Image
-            src={cloud2}
-            alt="cloud"
-            // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-            className="absolute left-[3.5vw] top-[25vh] z-[21] hidden w-[189px] md:block  xl:left-[20vw] xl:top-[18vh] 2xl:top-[25vh]"
-          /> */}
         </main>
-        {/* cloud top mobile */}
+        {/* big clouds top  */}
         <Image
           src={cloudsMobileLeft}
           alt="cloud top left"
-          className="absolute left-[-68px] top-[-2px] z-10 w-[230px] md:left-[-70px] md:top-[-15px] md:w-[342px] xl:left-[-25px] xl:top-[-15px] 2xl:left-[-36px] 2xl:top-[-22px]"
-          // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+          className="animate-big-clouds-left absolute left-[-68px] top-[-2px] z-10 w-[230px] md:left-[-70px] md:top-[-15px] md:w-[342px] xl:left-[-25px] xl:top-[-15px] 2xl:left-[-36px] 2xl:top-[-22px]"
         />
         <Image
           src={cloudsMobileRight}
           alt="cloud top right"
-          className="absolute right-[-86px] top-[-2px] z-10  w-[230px] md:right-[-69px]  md:top-[-15px] md:w-[342px] xl:right-[-25px] xl:top-[-15px] 2xl:right-[-36px] 2xl:top-[-22px]"
-          // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden "
+          className="animate-big-clouds-right absolute right-[-86px] top-[-2px] z-10  w-[230px] md:right-[-69px]  md:top-[-15px] md:w-[342px] xl:right-[-25px] xl:top-[-15px] 2xl:right-[-36px] 2xl:top-[-22px]"
         />
 
         {/* stars */}
@@ -213,18 +180,7 @@ export default function Home() {
           // className="absolute right-[10px] top-[308px] z-10 w-[22px] md:hidden"
           className="absolute right-[10px] top-[308px] z-10 w-[22px] md:hidden"
         />
-        {/* <Image
-          src={starsMobileYellow}
-          alt="star"
-          // className="absolute right-[14px] top-[597px] z-10 w-[19px] md:hidden"
-          className="absolute right-[14px] top-[75vh] z-10 w-[19px] md:w-[55px] md:left-[3.4vw]"
-        /> */}
-        {/* <Image
-          src={starsMobileYellow}
-          alt="star"
-          // className="absolute right-[14px] top-[597px] z-10 w-[19px] md:hidden"
-          className="absolute right-[14px] top-[75vh] z-10 w-[19px] "
-        /> */}
+
         <Image
           src={starMiddleMobile}
           alt="star"
@@ -247,9 +203,12 @@ export default function Home() {
         <Image
           src={stars1440}
           alt="stars"
-          className="absolute  right-[50%] top-[0.5vh] z-10 hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
-          // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
-          // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
+          className="animate-stars-appear animate-stars-appear-start absolute left-[40px] top-[18px] z-10 hidden max-h-[723px] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
+        />
+        <Image
+          src={stars1920}
+          alt="stars"
+          className="animate-stars-appear absolute left-[53px]  top-[24px] z-10 hidden max-h-[962px] w-[calc(100%_-_93px)] 2xl:block"
         />
       </div>
       <Footer />

@@ -302,8 +302,13 @@
   to {opacity: 1;}
 }
 
+.animate-stars-appear-start {  
+  opacity: 0;
+}
 .animate-stars-appear {  
-  animation: stars-appears 3s ease;
+  /* opacity: 0; */
+  animation: stars-appears var(--animation-stars-appear) ease forwards;
+  animation-delay: var(--animation-big-clouds-time); 
 }
 .animate-cloud-1 {
   animation: cloud-move-1 10s ease-in-out infinite;
@@ -360,6 +365,49 @@
 .animate-sun {
   animation: sun-move 1s ease-in-out forwards;
   transform-origin: center center;
+}
+@keyframes big-clouds-left {
+  0% {
+    transform: translate(-100px, -100px) ;
+  }
+
+  100% {
+    transform: translate(0, 0) 
+  }
+}
+@keyframes big-clouds-right {
+  0% {
+    transform: translate(100px, -100px) ;
+  }
+
+  100% {
+    transform: translate(0, 0) 
+  }
+}
+
+.animate-big-clouds-left {
+  animation: big-clouds-left  var(--animation-big-clouds-time) ease-in-out forwards;
+  transform-origin: center center;
+}
+.animate-big-clouds-right {
+  animation: big-clouds-right  var(--animation-big-clouds-time) ease-in-out forwards;
+  transform-origin: center center;
+}
+@keyframes flower-gro {
+  0% {
+    transform: scale(0);
+    /* transform: translate(25vw, 90.5vh) rotate(-45deg);  */
+  }
+
+  100% {
+    /* opacity: 1; */
+    transform: scale(1);
+  }
+}
+
+.animate-flower {
+  animation: flower-gro 1s ease-in-out forwards;
+  animation-delay: var(--animation-big-clouds-time);
 }
  /* @keyframes sun-move {
   0% {
@@ -500,6 +548,8 @@
   body {
     @apply bg-background text-primary;
     scrollbar-width: thin;
+    --animation-big-clouds-time: 2s;
+    --animation-stars-appear: 2s;
     --scrollbar-size: 4px;
     --scrollbar-size-2: 8px;
     --header-height: 61px;
