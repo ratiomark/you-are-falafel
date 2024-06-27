@@ -73,7 +73,7 @@ export default function Layout({
       <Image
         src={stars360}
         alt="stars"
-        className="animate-stars-appear absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
+        className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
@@ -82,7 +82,7 @@ export default function Layout({
       <Image
         src={stars768}
         alt="stars"
-        className="animate-stars-appear absolute left-[47px] top-[15vh] z-[5] hidden  w-[calc(100%_-_88px)] md:block xl:hidden  "
+        className="animate-stars-no-delay absolute left-[47px] top-[15vh] z-[5] hidden  w-[calc(100%_-_88px)] md:block xl:hidden  "
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
@@ -90,7 +90,7 @@ export default function Layout({
       <Image
         src={stars1440}
         alt="stars"
-        className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  w-[calc(100%_-_188px)] xl:block  2xl:hidden"
+        className="animate-stars-no-delay absolute left-[85px] top-[15vh] z-[5] hidden  w-[calc(100%_-_188px)] xl:block  2xl:hidden"
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
@@ -99,7 +99,7 @@ export default function Layout({
         src={stars1920}
         alt="stars"
         // className="absolute  left-[144px] top-[15vh] z-[5] hidden   max-w-[86vw]  2xl:block"
-        className="animate-stars-appear absolute left-[114px] top-[15vh] z-[5] hidden   w-[calc(100%_-_251px)] 2xl:block"
+        className="animate-stars-no-delay absolute left-[114px] top-[15vh] z-[5] hidden   w-[calc(100%_-_251px)] 2xl:block"
         // className="animate-stars-appear absolute left-[114px] top-[15vh] z-[5] hidden   w-[1667px] 2xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"

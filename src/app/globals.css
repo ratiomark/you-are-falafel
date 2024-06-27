@@ -310,6 +310,9 @@
   animation: stars-appears var(--animation-stars-appear) ease forwards;
   animation-delay: var(--animation-big-clouds-time); 
 }
+.animate-stars-no-delay {  
+  animation: stars-appears var(--animation-stars-appear) ease forwards;
+}
 .animate-cloud-1 {
   animation: cloud-move-1 10s ease-in-out infinite;
 }
