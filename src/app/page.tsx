@@ -108,7 +108,7 @@ export default function Home() {
                 src={flowerPink}
                 alt="flowers"
                 // className="absolute left-[25%] top-[-18px] z-10 w-[33px] max-w-[340px] md:hidden"
-                className="animate-flower absolute left-[25%] top-[-18px] z-10 w-[33px]  scale-0 md:top-[-21px] md:w-[44] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
+                className="animate-flower absolute left-[25%] top-[-18px] z-10 w-[33px]  scale-0 md:top-[-21px] md:w-[44px] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               />
@@ -116,7 +116,7 @@ export default function Home() {
                 src={flowerBlue}
                 alt="flowers"
                 // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
-                className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[25%] md:top-[-21px] md:w-[44] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
+                className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[25%] md:top-[-21px] md:w-[44px] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
                 // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
                 // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
               />
