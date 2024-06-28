@@ -160,7 +160,7 @@ export default function Home() {
           <Image
             src={falafelMain1920}
             alt="falafel image"
-            className="max-h-[calc(100vh_-_347px_-_20px_-_54px))]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
+            className="max-h-[calc(100vh_-_347px_-_20px_-_54px)]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[950px] max-w-[1322px]  translate-x-1/2 2xl:block"
             // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden max-h-[63vh] min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
