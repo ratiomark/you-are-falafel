@@ -147,19 +147,21 @@ export default function Home() {
           <Image
             src={falafel768}
             alt="falafel image"
-            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10  hidden max-h-[65vh] min-w-[768px] max-w-[122vw]  translate-x-1/2 md:block xl:hidden"
+            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10  hidden max-h-[calc(100vh_-_335px_-_30px)] min-w-[768px] max-w-[122vw]  translate-x-1/2 md:block xl:hidden"
+            // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10  hidden max-h-[65vh] min-w-[768px] max-w-[122vw]  translate-x-1/2 md:block xl:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
           <Image
             src={falafelOnly}
             alt="falafel image"
-            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden min-w-[972px] max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
+            className="h1050:max-h-[100vh] h1050:max-w-[120vw]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden min-w-[972px] max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
           <Image
             src={falafelMain1920}
             alt="falafel image"
-            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden max-h-[63vh] min-w-[1055px] translate-x-1/2 2xl:block"
+            className="max-h-[calc(100vh_-_347px_-_20px_-_54px))]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
+            // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden max-h-[63vh] min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
