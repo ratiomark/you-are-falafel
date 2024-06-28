@@ -209,7 +209,8 @@ export default function Home() {
         <Image
           src={stars768}
           alt="stars"
-          className="animate-stars-appear animate-stars-appear-start absolute left-[23px] top-[165px] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
+          className="animate-stars-appear animate-stars-appear-start absolute left-[23px] top-[16%] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
+          // className="animate-stars-appear animate-stars-appear-start absolute left-[23px] top-[165px] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
         />
         <Image
           src={stars1440}
