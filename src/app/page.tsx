@@ -105,23 +105,24 @@ export default function Home() {
                 Start test
                 <span className="hidden 2xl:block">1920</span>
               </Link> */}
-
-              <Image
-                src={flowerPink}
-                alt="flowers"
-                // className="absolute left-[25%] top-[-18px] z-10 w-[33px] max-w-[340px] md:hidden"
-                className="animate-flower absolute left-[25%] top-[-18px] z-10 w-[33px]  scale-0 md:top-[-21px] md:w-[44px] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
-                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
-                // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-              />
-              <Image
-                src={flowerBlue}
-                alt="flowers"
-                // className="absolute right-[20%] top-[-16px] z-10 w-[33px] max-w-[340px] md:hidden"
-                className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[25%] md:top-[-21px] md:w-[44px] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
-                // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
-                // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
-              />
+              <div className="absolute  right-[50%] z-[11]  h-full w-[300px] translate-x-1/2  ">
+                <Image
+                  src={flowerPink}
+                  alt="flowers"
+                  className="animate-flower absolute left-[20%] top-[-18px] z-[10] w-[33px] scale-0 md:left-[3%]  md:top-[-21px] md:w-[44px] xl:left-[4%] 2xl:left-[-8%] 2xl:top-[-26px] 2xl:w-[64px]"
+                  // className="animate-flower absolute left-[25%] top-[-18px] z-10 w-[33px]  scale-0 md:top-[-21px] md:w-[44px] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
+                  // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
+                  // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
+                />
+                <Image
+                  src={flowerBlue}
+                  alt="flowers"
+                  className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[1%] md:top-[-21px] md:w-[44px] xl:right-[-8%] 2xl:right-[-20%] 2xl:top-[-26px] 2xl:w-[64px]"
+                  // className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[25%] md:top-[-21px] md:w-[44px] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
+                  // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
+                  // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
+                />
+              </div>
             </div>
           </div>
 
@@ -160,7 +161,7 @@ export default function Home() {
           <Image
             src={falafelMain1920}
             alt="falafel image"
-            className="max-h-[calc(100vh_-_347px_-_20px_-_54px)]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[950px] max-w-[1322px]  translate-x-1/2 2xl:block"
+            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_347px_-_20px_-_54px)] min-w-[950px] max-w-[1322px]  translate-x-1/2 2xl:block"
             // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden max-h-[63vh] min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
