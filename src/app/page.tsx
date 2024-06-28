@@ -208,7 +208,7 @@ export default function Home() {
         <Image
           src={stars1920}
           alt="stars"
-          className="animate-stars-appear absolute left-[53px]  top-[24px] z-10 hidden max-h-[962px] w-[calc(100%_-_93px)] 2xl:block"
+          className="animate-stars-appear animate-stars-appear-start absolute left-[53px]  top-[24px] z-10 hidden max-h-[962px] w-[calc(100%_-_93px)] 2xl:block"
         />
       </div>
       <Footer />
