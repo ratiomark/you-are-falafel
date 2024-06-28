@@ -155,7 +155,8 @@ export default function Home() {
           <Image
             src={falafelOnly}
             alt="falafel image"
-            className="h1050:max-h-[100vh] h1050:max-w-[120vw]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden min-w-[972px] max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
+            className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_256px_-_5px_-_30px)]  max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
+            // className="h1050:max-h-[100vh] h1050:max-w-[100vw]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden min-w-[972px] max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
           <Image
@@ -215,7 +216,8 @@ export default function Home() {
         <Image
           src={stars1440}
           alt="stars"
-          className="animate-stars-appear animate-stars-appear-start absolute left-[40px] top-[18px] z-10 hidden max-h-[723px] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
+          className="animate-stars-appear animate-stars-appear-start absolute left-[40px] top-[1.9%] z-10 hidden h-[78.2%] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
+          // className="animate-stars-appear animate-stars-appear-start absolute left-[40px] top-[2%] z-10 hidden max-h-[723px] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
         />
         <Image
           src={stars1920}
