@@ -7,7 +7,8 @@ import cloud2 from 'public/cloud2.svg';
 import cloud3 from 'public/cloud3.svg';
 // import falafelMobile from 'public/falMobile.svg';
 import falafelMobile from 'public/falafMobile.svg';
-import falafel768 from 'public/falaf768.svg';
+// import falafel768 from 'public/falaf768.svg';
+import falafel768 from 'public/falafelMain768.svg';
 // import falafelMobile from 'public/falafelMobile.png';
 // import flowers from 'public/flowerMobile.png';
 import flowers from 'public/flowerMobile.svg';
@@ -145,7 +146,7 @@ export default function Home() {
           <Image
             src={falafel768}
             alt="falafel image"
-            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10 hidden min-w-[768px] max-w-[120vw]  translate-x-1/2 md:block xl:hidden"
+            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10  hidden max-h-[65vh] min-w-[768px] max-w-[122vw]  translate-x-1/2 md:block xl:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
           <Image
@@ -157,7 +158,8 @@ export default function Home() {
           <Image
             src={falafelMain1920}
             alt="falafel image"
-            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
+            className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden max-h-[63vh] min-w-[1055px] translate-x-1/2 2xl:block"
+            // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_54px)] right-[50%] z-10 hidden min-w-[1055px] translate-x-1/2 2xl:block"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
         </main>
