@@ -27,6 +27,7 @@ import falafelWithStars from 'public/falafel1440.svg';
 import falafelOnly from 'public/falafelMain1440.svg';
 import falafelMain1920 from 'public/falafelMain1920.svg';
 // import stars1440 from 'public/stars1440.svg';
+import stars768 from 'public/starsMain768.svg';
 import stars1440 from 'public/starsMain1440.svg';
 import stars1920 from 'public/starsMain1920.svg';
 
@@ -189,12 +190,12 @@ export default function Home() {
           // className="absolute right-[50%] top-[108px] z-10 w-[12px] translate-x-1/2 md:hidden"
           className="absolute right-[50%] top-[108px] z-10 w-[12px] translate-x-1/2 md:hidden  "
         />
-        <Image
+        {/* <Image
           src={starMdTop}
           alt="star"
           // className="absolute right-[50%] top-[108px] z-10 w-[12px] translate-x-1/2 md:hidden"
           className="absolute left-[22.5vh] top-[15.5vh] z-10  hidden w-[34px] md:block xl:hidden"
-        />
+        /> */}
         <Image
           src={starMiddleMobile}
           alt="star"
@@ -202,6 +203,11 @@ export default function Home() {
           className="absolute left-[10px] top-[465px] z-10 w-[12px] md:hidden"
         />
         {/* stars  1440 */}
+        <Image
+          src={stars768}
+          alt="stars"
+          className="animate-stars-appear animate-stars-appear-start absolute left-[23px] top-[165px] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
+        />
         <Image
           src={stars1440}
           alt="stars"
