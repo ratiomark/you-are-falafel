@@ -94,7 +94,7 @@ export default function Home() {
             <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]   md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
               <Link
                 href="/survey"
-                className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all duration-500 hover:bg-[#FFBAC2] xl:py-5 "
+                className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all duration-500 hover:bg-[#FFBAC2] 2xl:py-5 "
               >
                 Start test
               </Link>
