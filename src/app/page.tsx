@@ -105,7 +105,7 @@ export default function Home() {
                 Start test
                 <span className="hidden 2xl:block">1920</span>
               </Link> */}
-              <div className="absolute  right-[50%] z-[11]  h-full w-[300px] translate-x-1/2  ">
+              <div className="absolute  right-[50%] z-[11]  h-fit w-[300px] translate-x-1/2  ">
                 <Image
                   src={flowerPink}
                   alt="flowers"
