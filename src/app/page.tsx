@@ -111,16 +111,12 @@ export default function Home() {
                   alt="flowers"
                   className="animate-flower absolute left-[20%] top-[-18px] z-[10] w-[33px] scale-0 md:left-[3%]  md:top-[-21px] md:w-[44px] xl:left-[4%] 2xl:left-[-8%] 2xl:top-[-26px] 2xl:w-[64px]"
                   // className="animate-flower absolute left-[25%] top-[-18px] z-10 w-[33px]  scale-0 md:top-[-21px] md:w-[44px] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
-                  // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
-                  // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
                 />
                 <Image
                   src={flowerBlue}
                   alt="flowers"
                   className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[1%] md:top-[-21px] md:w-[44px] xl:right-[-8%] 2xl:right-[-20%] 2xl:top-[-26px] 2xl:w-[64px]"
                   // className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[25%] md:top-[-21px] md:w-[44px] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
-                  // className="absolute right-[50%] top-[-16px] z-10   w-[57vw] translate-x-1/2  md:hidden"
-                  // className="absolute right-[50%] top-[-16px] z-10  w-[57vw] max-w-[340px] translate-x-1/2 "
                 />
               </div>
             </div>
