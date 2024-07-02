@@ -158,15 +158,15 @@ export default function Layout({
             alt="cloud"
             className="absolute bottom-[13vh] right-[18vw] z-[7] hidden w-[13.8vw] max-w-[267px] xl:block"
           />
-          <Image
+          {/* <Image
             src={cloud2}
-            alt="cloud"
+            alt="cloud2"
             // className="absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] xl:block 2xl:hidden"
             className="absolute bottom-[30vh] left-[38vw] z-[7] hidden w-[15vw] max-w-[225px] xl:block 2xl:max-w-[297px]"
-          />
+          /> */}
           <Image
             src={cloud3}
-            alt="cloud"
+            alt="cloud3"
             className="absolute bottom-[8vh] left-[18vw] z-[7] hidden w-[13.3vw] max-w-[190px] xl:block 2xl:max-w-[254px]"
           />
         </div>

@@ -5,7 +5,7 @@ import { cn } from '@/shared/utils/cn';
 import Image from 'next/image';
 import nextArrow from 'public/nextArrow.svg';
 import prevArrow from 'public/previousArrow.svg';
-
+import cloud2 from 'public/cloud2.svg';
 import Transition from '@/shared/components/Transition';
 import { AnimatePresence } from 'framer-motion';
 interface SurveyAnswer {
@@ -123,8 +123,8 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
         </h1>
       </div>
 
-      <ul className="relative grid w-full gap-y-2.5 z-[6] md:grid-cols-2 md:gap-x-5 md:gap-y-5 xl:gap-x-5 xl:gap-y-5 2xl:gap-y-8">
-        {questionData.answers.map(answer => (
+      <ul className="relative z-[6] grid w-full gap-y-2.5 md:grid-cols-2 md:gap-x-5 md:gap-y-5 xl:gap-x-5 xl:gap-y-5 2xl:gap-y-8">
+        {questionData.answers.map((answer, index) => (
           <li
             className="relative w-full bg-background font-libre text-[22px] font-normal leading-[120%] tracking-[-0.7px] md:w-full md:text-[26px] 2xl:text-3xl"
             key={answer.value}
@@ -138,6 +138,14 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
             >
               ({answer.value}) {answer.text}
             </Link>
+            {index === 2 && (
+              <Image
+                src={cloud2}
+                alt="cloud2"
+                // className="absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] xl:block 2xl:hidden"
+                className="absolute bottom-[-100px] 2xl:bottom-[-130px] right-[-20px] z-[7] hidden w-[15vw] max-w-[225px] xl:block 2xl:max-w-[297px]"
+              />
+            )}
           </li>
         ))}
       </ul>

@@ -40,7 +40,7 @@ export default function Home() {
         {/* <div className="h-9"></div> */}
         <Header />
         {/* </div> */}
-        <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col   px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[60px] 2xl:pt-[76px]">
+        <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col   px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-5 2xl:px-10 xl:pt-[60px] 2xl:pt-[76px]">
           {/* <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]"> */}
 
           <div className=" relative z-20 mx-auto flex flex-col items-center  justify-center gap-[2vh] text-center  md:max-w-fit xl:gap-0">
@@ -109,13 +109,13 @@ export default function Home() {
                 <Image
                   src={flowerPink}
                   alt="flowers"
-                  className="animate-flower absolute left-[20%] top-[-18px] z-[10] w-[33px] scale-0 md:left-[3%]  md:top-[-21px] md:w-[44px] xl:left-[4%] 2xl:left-[-8%] 2xl:top-[-26px] 2xl:w-[64px]"
+                  className="animate-flower absolute left-[20%] top-[-18px] z-[10] w-[33px] scale-0 md:left-[3%] md:top-[-21px]  md:w-[44px] xl:left-[4%] xl:w-[47px]  2xl:left-[-8%] 2xl:top-[-26px] 2xl:w-[64px]"
                   // className="animate-flower absolute left-[25%] top-[-18px] z-10 w-[33px]  scale-0 md:top-[-21px] md:w-[44px] xl:left-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
                 />
                 <Image
                   src={flowerBlue}
                   alt="flowers"
-                  className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[1%] md:top-[-21px] md:w-[44px] xl:right-[-8%] 2xl:right-[-20%] 2xl:top-[-26px] 2xl:w-[64px]"
+                  className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[1%] md:top-[-21px] md:w-[44px] xl:right-[-8%] xl:w-[47px] 2xl:right-[-20%] 2xl:top-[-26px] 2xl:w-[64px]"
                   // className="animate-flower absolute right-[20%] top-[-16px] z-10 w-[33px] scale-0 md:right-[25%] md:top-[-21px] md:w-[44px] xl:right-[40%] 2xl:top-[-26px] 2xl:w-[64px]"
                 />
               </div>
@@ -151,7 +151,7 @@ export default function Home() {
           <Image
             src={falafelOnly}
             alt="falafel image"
-            className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_256px_-_5px_-_30px)]  max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
+            className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_256px_-_5px_-_30px)] w-[67vw]  translate-x-1/2 xl:block 2xl:hidden"
             // className="h1050:max-h-[100vh] h1050:max-w-[100vw]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden min-w-[972px] max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
