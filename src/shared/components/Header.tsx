@@ -120,7 +120,7 @@ import { HeaderShareLinksDesktop, HeaderShareLinksMobile } from './HeaderShareLi
 export const Header = () => {
   return (
     <>
-      <header className="relative z-20  hidden min-h-[var(--header-height)] w-full items-center justify-center bg-transparent px-[26px] font-creato  text-lg xl:flex ">
+      <header className="relative z-20  hidden min-h-[var(--header-height)] w-full items-center justify-center bg-transparent px-[26px] font-creato text-[14px]  xl:flex 2xl:text-lg ">
         <nav>
           <ul className="flex items-center justify-center gap-10  uppercase">
             <li>
