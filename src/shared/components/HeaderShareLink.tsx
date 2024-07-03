@@ -52,16 +52,64 @@ const IconsWithHoverBackground = ({ icons, height }: { icons: string[]; height: 
   </>
 );
 
-
-export const HeaderShareLinksMobile = () => { 
-	return (
+export const HeaderShareLinksMobile = () => {
+  return (
     <Popover>
       <PopoverTrigger asChild>
         <p className="underline-effect underline-pink cursor-pointer">Share</p>
       </PopoverTrigger>
-      <PopoverContent className="rounded-[40px] border-2 border-primary bg-[#FFF3E1] md:p-[30px] md:pt-5 2xl:p-10 2xl:pt-[30px]">
+      <PopoverContent className="rounded-[30px] border-2 border-primary bg-[#FFF3E1] p-5  2xl:p-10 2xl:pt-[30px]">
         <div className="flex w-full justify-between">
-          <p className="font-libre text-[26px] leading-[120%] tracking-[-0.52px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">Share:</p>
+          <p className="font-libre text-[22px] leading-[120%] tracking-[-0.52px] md:text-[26px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">Share:</p>
+          <PopoverClose
+            className="cursor-pointer outline-none"
+            aria-label="Close"
+          >
+            {/* <Image
+              src={CloseIcon}
+              alt=""
+              height={30}
+              className="md:hidden 2xl:block"
+            /> */}
+            <Image
+              src={CloseIcon}
+              alt=""
+              height={24}
+              className="2xl:hidden"
+            />
+          </PopoverClose>
+        </div>
+        <div className="flex gap-2.5 pt-5">
+          <IconsWithHoverBackground
+            height={56}
+            icons={icons}
+          />
+        </div>
+        {/* <div className="hidden gap-5 pt-5 md:flex 2xl:hidden">
+          <IconsWithHoverBackground
+            height={61}
+            icons={icons}
+          />
+        </div> */}
+        {/* <div className="hidden gap-5 pt-5 2xl:flex">
+          <IconsWithHoverBackground
+            height={82}
+            icons={icons}
+          />
+        </div> */}
+      </PopoverContent>
+    </Popover>
+  );
+};
+export const HeaderShareLinksDesktop = () => {
+  return (
+    <Popover>
+      <PopoverTrigger asChild>
+        <p className="underline-effect underline-pink cursor-pointer">Share</p>
+      </PopoverTrigger>
+      <PopoverContent className="rounded-[30px] border-2 border-primary bg-[#FFF3E1] p-[30px] pt-5 2xl:rounded-[40px] 2xl:p-10 2xl:pt-[30px]"> 
+        <div className="flex w-full justify-between">
+          <p className="font-libre text-[22px] leading-[120%] tracking-[-0.52px] md:text-[26px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">Share:</p>
           <PopoverClose
             className="cursor-pointer outline-none"
             aria-label="Close"
@@ -76,13 +124,13 @@ export const HeaderShareLinksMobile = () => {
               src={CloseIcon}
               alt=""
               height={24}
-              className="2xl:hidden"
+              className=" 2xl:hidden"
             />
           </PopoverClose>
         </div>
-        <div className="hidden gap-5 pt-5 2xl:flex">
+        {/* <div className="flex gap-2.5 pt-5 md:hidden">
           <IconsWithHoverBackground
-            height={82}
+            height={56}
             icons={icons}
           />
         </div>
@@ -91,44 +139,20 @@ export const HeaderShareLinksMobile = () => {
             height={61}
             icons={icons}
           />
-        </div>
-      </PopoverContent>
-    </Popover>
-  );
-}
-export const HeaderShareLinksDesktop = () => { 
-	return (
-    <Popover>
-      <PopoverTrigger asChild>
-        <p className="underline-effect underline-pink cursor-pointer">Share</p>
-      </PopoverTrigger>
-      <PopoverContent className="rounded-[30px] border-2 border-primary bg-[#FFF3E1] p-5 md:p-[30px] md:pt-5">
-        <div className="flex w-full justify-between">
-          <p className="font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:text-[26px] md:tracking-[-0.52px]">Share:</p>
-          <PopoverClose
-            className="cursor-pointer outline-none"
-            aria-label="Close"
-          >
-            <Image
-              src={CloseIcon}
-              alt=""
-              height={24}
-            />
-          </PopoverClose>
-        </div>
-        <div className="flex gap-2.5 pt-[32px] md:hidden">
-          <IconsWithHoverBackground
-            height={56}
-            icons={icons}
-          />
-        </div>
-        <div className="hidden gap-5 pt-5 md:flex">
+        </div> */}
+        <div className="hidden gap-5 pt-5 xl:flex 2xl:hidden">
           <IconsWithHoverBackground
             height={61}
             icons={icons}
           />
         </div>
+        <div className="hidden gap-5 pt-5 2xl:flex">
+          <IconsWithHoverBackground
+            height={82}
+            icons={icons}
+          />
+        </div>
       </PopoverContent>
     </Popover>
   );
-}
+};

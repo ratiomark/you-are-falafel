@@ -128,7 +128,7 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
           {pageTitle}
         </h1>
         <div className="mx-auto 2xl:hidden">
-        {/* <div className="mx-auto md:max-h-[620px] md:max-w-[calc(541px)] 2xl:hidden"> */}
+          {/* <div className="mx-auto md:max-h-[620px] md:max-w-[calc(541px)] 2xl:hidden"> */}
           <Image
             width={541}
             height={487}
@@ -150,10 +150,11 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
           />
         </div>
         <p className="pt-[30px] text-center font-creato text-[14px] uppercase md:pt-[25px] 2xl:pt-10 2xl:text-[18px]">{pageDescription}</p>
-        <div className="flex gap-2.5 pb-2.5 pt-[30px] text-center font-libre text-[22px] tracking-[2%] md:gap-5 md:pb-[56px] md:pt-[25px] md:text-[26px] xl:pb-[40px]  2xl:pb-[94px] 2xl:pt-[40px] 2xl:text-[35px]">
+        <div className="flex gap-2.5 pb-2.5 pt-[30px] text-center font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:gap-5 md:pb-[56px] md:pt-[25px] md:text-[26px]  md:tracking-[-0.52px] xl:pb-[40px] 2xl:pb-[94px] 2xl:pt-[40px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">
           <Link
-            className="basis-full rounded-full  border-2 bg-[#FFBAC2] py-[15px] transition-all md:bg-background md:hover:bg-[#FFBAC2]"
+            className=" basis-full rounded-full  border-2 bg-[#FFBAC2] py-[15px]  transition-all  md:bg-background md:hover:bg-[#FFBAC2]"
             href="/survey"
+            //  <p className="font-libre text-[26px] leading-[120%]  tracking-[-0.44px] md:tracking-[-0.52px] 2xl:tracking-[-0.7px] md:text-[26px] md:tracking-[-0.52px] 2xl:text-[35px] 2xl:tracking-[-0.7px]"></p>
           >
             Restart
           </Link>
@@ -182,8 +183,8 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
   const { metaTitle, metaDescription, imageUrl } = getDataFromResult(params);
   return {
     title: metaTitle,
-		description: metaDescription,
-		
+    description: metaDescription,
+
     twitter: {
       card: 'summary_large_image',
       site: 'LoLafel by Butcher.studio',
@@ -202,12 +203,12 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
       siteName: 'LoLafel by Butcher.studio',
       title: metaTitle,
       description: metaDescription,
-			type: 'website',
-			url: 'https://lolafel.fun',
+      type: 'website',
+      url: 'https://lolafel.fun',
       images: [
         {
-					url: imageUrl,
-					
+          url: imageUrl,
+
           // width: 1000,
           // height: 1000,
         },

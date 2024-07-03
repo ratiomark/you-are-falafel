@@ -16,7 +16,8 @@ import falafelWithStars from 'public/falafel1440.svg';
 import falafelOnly from 'public/falafelMain1440.svg';
 import falafelMain1920 from 'public/falafelMain1920.svg';
 // import stars1440 from 'public/stars1440.svg';
-import stars360 from 'public/starsSurvey360.svg';
+// import stars360 from 'public/starsSurvey360.svg';
+import stars360 from 'public/starsSurve360.svg';
 import stars768 from 'public/starsSurvey768.svg';
 import stars1440 from 'public/starsSurvey1440.svg';
 import stars1920 from 'public/startSurvey1920.svg';
@@ -73,7 +74,8 @@ export default function Layout({
       <Image
         src={stars360}
         alt="stars"
-        className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
+        className="animate-stars-no-delay absolute right-[9.58px] top-[134px] z-[5] w-[calc(100%_-_177.68px)]  md:hidden "
+        // className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
@@ -127,15 +129,17 @@ export default function Layout({
         <div>
           <Image
             src={cloud}
-            alt="cloud"
-            className="animate-cloud absolute left-[73vw]  top-[10vh] z-[7] w-[33vw] md:hidden"
+            alt="cloud right"
+            // className="animate-cloud absolute left-[73vw]  top-[10vh] z-[7] w-[33vw] md:hidden"
+            className="animate-cloud-2  absolute left-[73vw]  top-[10vh] z-[7] w-[33vw] md:hidden"
           />
 
           <Image
             src={cloud2}
-            alt="cloud"
-            className="animate-cloud absolute right-[78vw]  top-[13vh] z-[7] w-[33vw] md:hidden "
-          />
+            alt="cloud left"
+            className="animate-cloud-2  absolute right-[78vw]  top-[13vh] z-[7] w-[33vw] md:hidden "
+					/>
+					
           {/* md */}
           <Image
             src={cloud}

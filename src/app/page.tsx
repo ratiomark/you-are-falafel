@@ -40,7 +40,7 @@ export default function Home() {
         {/* <div className="h-9"></div> */}
         <Header />
         {/* </div> */}
-        <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col   px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-5 2xl:px-10 xl:pt-[60px] 2xl:pt-[76px]">
+        <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col   px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-5 xl:pt-[60px] 2xl:px-10 2xl:pt-[76px]">
           {/* <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]"> */}
 
           <div className=" relative z-20 mx-auto flex flex-col items-center  justify-center gap-[2vh] text-center  md:max-w-fit xl:gap-0">
@@ -48,7 +48,7 @@ export default function Home() {
               What kind of...
             </h1>
             <div className="relative">
-              <h2 className=" z-20 font-zt text-[60px] leading-[54px] tracking-[-4.8px] md:text-[64px]  xl:pt-0 xl:text-[100px] xl:leading-[120%]  xl:tracking-[-8px] 2xl:text-[140px] 2xl:tracking-[-11.2px] ">
+              <h2 className="relative z-20 font-zt text-[60px] leading-[54px] tracking-[-4.8px] md:text-[64px]  xl:pt-0 xl:text-[100px] xl:leading-[120%]  xl:tracking-[-8px] 2xl:text-[140px] 2xl:tracking-[-11.2px] ">
                 Falafel are you today?
               </h2>
               <h2 className="absolute left-0 top-0 z-30 font-zt text-[60px] leading-[54px] tracking-[-4.8px] opacity-0 transition-opacity duration-1000 hover:opacity-100 md:text-[64px] xl:pt-0 xl:text-[100px]  xl:leading-[120%] xl:tracking-[-8px] 2xl:text-[140px] 2xl:tracking-[-11.2px]">
@@ -59,20 +59,21 @@ export default function Home() {
               src={cloud}
               alt="cloud right"
               // className="absolute left-[67vw] top-[6vh] z-10 w-[33vw]  "
-              className="animate-cloud-2-reverse  absolute right-[50px] top-[-70px] z-20 hidden  w-[189px] md:block xl:right-[155px] xl:top-[-40px] 2xl:right-[230px] 2xl:top-[-50px] 2xl:w-[267px]"
+              className="animate-cloud-2-reverse  absolute right-[50px] top-[-70px] z-10 hidden  w-[189px] md:block xl:right-[155px] xl:top-[-40px] xl:w-[201px] 2xl:right-[230px] 2xl:top-[-50px] 2xl:w-[267px]"
             />
             <Image
               src={cloud2}
               alt="cloud left"
               // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-              className="animate-cloud-2 absolute bottom-[-220px] left-[-15px] z-20 hidden w-[189px] md:block  xl:bottom-[-70px] xl:left-[90px]  2xl:bottom-[-120px] 2xl:w-[297px]"
+              className="animate-cloud-2 absolute bottom-[-220px] left-[-15px] z-20 hidden w-[189px] md:block  xl:bottom-[-70px] xl:left-[90px] xl:w-[225px] 2xl:bottom-[-120px] 2xl:w-[297px]"
             />
           </div>
           <div
             id="content"
             className="flex grow  flex-col justify-between"
           >
-            <div className="relative z-20  hidden items-center justify-center font-creato text-[14px] uppercase xl:flex  xl:pt-[22vh]  2xl:text-[18px]">
+            <div className="relative z-20  hidden items-center justify-center font-creato text-[14px] uppercase xl:flex  xl:pt-[192px] 2xl:pt-[225px] 2xl:text-[18px]">
+            {/* <div className="relative z-20  hidden items-center justify-center font-creato text-[14px] uppercase xl:flex  xl:pt-[20.5vh] 2xl:pt-[19vh] 2xl:text-[18px]"> */}
               {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
               <div className="flex w-full max-w-[1080px] items-center justify-between 2xl:max-w-[1420px]">
                 <p className="max-w-[142px] text-center leading-[120%]">This is an entertainment website</p>
@@ -206,19 +207,22 @@ export default function Home() {
         <Image
           src={stars768}
           alt="stars"
-          className="animate-stars-appear animate-stars-appear-start absolute left-[23px] top-[16%] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
+          className="absolute left-[23px] top-[16%] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
+          // className="animate-stars-appear animate-stars-appear-start absolute left-[23px] top-[16%] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
           // className="animate-stars-appear animate-stars-appear-start absolute left-[23px] top-[165px] z-10 hidden max-h-[620px] w-[calc(100%_-_54px)] md:block xl:hidden"
         />
         <Image
           src={stars1440}
           alt="stars"
-          className="animate-stars-appear animate-stars-appear-start absolute left-[40px] top-[1.9%] z-10 hidden h-[78.2%] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
+          className="absolute left-[40px] top-[1.9%] z-10 hidden h-[78.2%] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
+          // className="animate-stars-appear animate-stars-appear-start absolute left-[40px] top-[1.9%] z-10 hidden h-[78.2%] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
           // className="animate-stars-appear animate-stars-appear-start absolute left-[40px] top-[2%] z-10 hidden max-h-[723px] w-[calc(100%_-_71px)] xl:block 2xl:hidden"
         />
         <Image
           src={stars1920}
           alt="stars"
-          className="animate-stars-appear animate-stars-appear-start absolute left-[53px]  top-[24px] z-10 hidden max-h-[962px] w-[calc(100%_-_93px)] 2xl:block"
+          className="absolute left-[53px]  top-[24px] z-10 hidden max-h-[962px] w-[calc(100%_-_93px)] 2xl:block"
+          // className="animate-stars-appear animate-stars-appear-start absolute left-[53px]  top-[24px] z-10 hidden max-h-[962px] w-[calc(100%_-_93px)] 2xl:block"
         />
       </div>
       <Footer />

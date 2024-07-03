@@ -273,17 +273,17 @@
   50% { transform: translate(-10px, 0); }
   75% { transform: translate(0, 7px); } */
   0%, 100% { 
-    transform: translateX(0); 
-  }
-  25% { 
     transform: translateX(-20px); 
   }
+  /* 25% { 
+    transform: translateX(-20px); 
+  } */
   50% { 
-    transform: translateX(0); 
-  }
-  75% { 
     transform: translateX(20px); 
   }
+  /* 75% {  */
+    /* transform: translateX(20px);  */
+  /* } */
   /* 0%, 100% { transform: translate(0, 0); }
   25% { transform: translate(-10px, -7px); }
   50% { transform: translate(-10px, 7px); }
@@ -314,18 +314,18 @@
   animation: stars-appears var(--animation-stars-appear) ease forwards;
 }
 .animate-cloud-1 {
-  animation: cloud-move-1 10s ease-in-out infinite;
+  animation: cloud-move-1 10s ease infinite;
 }
 
 .animate-cloud-2 {
-  animation: cloud-move-2 10s linear  infinite ;
+  animation: cloud-move-2 10s  ease  infinite ;
 }
 .animate-cloud-2-reverse {
-  animation: cloud-move-2 15s linear  infinite reverse;
+  animation: cloud-move-2 15s  ease  infinite reverse;
 }
 
 .animate-cloud-3 {
-  animation: cloud-move-3 10s ease-in-out infinite;
+  animation: cloud-move-3 10s ease infinite;
 }
 @keyframes cloud-move {
   0% {

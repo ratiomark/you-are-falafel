@@ -138,7 +138,7 @@ export const Header = () => {
                 </PopoverTrigger>
                 <PopoverContent className="rounded-[40px] border-2 border-primary bg-[#FFF3E1] md:p-[30px] md:pt-5 2xl:p-10 2xl:pt-[30px]">
                   <div className="flex w-full justify-between">
-                    <p className="font-libre text-[26px] leading-[120%] tracking-[-0.52px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">Share:</p>
+                    <p className="font-libre text-[26px] leading-[120%]  tracking-[-0.52px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">Share:</p>
                     <PopoverClose
                       className="cursor-pointer outline-none"
                       aria-label="Close"

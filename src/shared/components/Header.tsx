@@ -133,7 +133,8 @@ export const Header = () => {
             </li>
 
             <li>
-              <HeaderShareLinksMobile />
+              <HeaderShareLinksDesktop />
+              {/* <HeaderShareLinksMobile /> */}
               {/* <Popover>
                 <PopoverTrigger asChild>
                   <p className="underline-effect underline-pink cursor-pointer">Share</p>
@@ -216,7 +217,8 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              <HeaderShareLinksDesktop />
+              {/* <HeaderShareLinksDesktop /> */}
+              <HeaderShareLinksMobile />
               {/* <Popover>
                 <PopoverTrigger asChild>
                   <p className="underline-effect underline-pink cursor-pointer">Share</p>
