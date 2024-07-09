@@ -12,7 +12,7 @@ const results = ['angel', 'demon', 'king', 'sushi', 'artist', 'alien'] as const;
 
 const resultData = {
   king: {
-    pageTitle: 'You are a falafel king',
+    pageTitle: 'You are - a falafel king!',
     pageDescription: `Wow! What a star we have here! It's the boss of all bosses, the ultimate chief of chiefs. Well, hello there, king of the world! 👑`,
     metaTitle: "I'm the Falafel King! Which quirky food are you? Butcher.Studio quiz",
     metaDescription:
