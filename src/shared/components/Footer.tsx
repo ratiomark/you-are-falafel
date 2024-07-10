@@ -57,7 +57,35 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="items relative flex w-full flex-col justify-between gap-5  pt-20 font-creato text-[14px] uppercase leading-4">
+          <div className="items relative flex w-full  justify-between pt-[60px] font-creato text-[14px] uppercase leading-4">
+            <p className="text-left">
+              idea&design&illustration:
+              <br />
+              <Link
+                target="_blank"
+                href="https://www.instagram.com/margaritagolubev.a"
+                className="text-left"
+              >
+                <span> margarita golubeva</span>
+              </Link>
+            </p>
+
+            {/* <p className="text-center">.2024</p> */}
+
+            <p className="relative text-right">
+              Ⓒ lolafel
+              <br />
+              <Link
+                target="_blank"
+                href="https://butcher.studio"
+                className=" whitespace-nowrap text-right"
+              >
+                by: butcher studio
+              </Link>
+              <span className="absolute left-[8%] top-0 text-center">.2024</span>
+            </p>
+          </div>
+          {/* <div className="items relative flex w-full flex-col justify-between gap-5  pt-20 font-creato text-[14px] uppercase leading-4">
             <p className="">
               idea&design&illustration:
               <br />
@@ -79,7 +107,7 @@ export default function Footer() {
             >
               Ⓒ lolafel by: butcher studio
             </Link>
-          </div>
+          </div> */}
         </div>
       </footer>
 
