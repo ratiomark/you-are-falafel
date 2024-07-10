@@ -24,7 +24,8 @@ export default function Layout({
     <div className=" custom-scrollbar-2 relative w-full  pt-[30px] ">
       <div className="relative overflow-hidden">
         <Header />
-        <main className="custom-scrollbar-2 relative mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 md:px-5 xl:px-10">
+        <main className="custom-scrollbar-2 relative mx-auto flex  flex-col px-2.5 md:px-5 xl:px-10">
+        {/* <main className="custom-scrollbar-2 relative mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 md:px-5 xl:px-10"> */}
           {children}
         </main>
        

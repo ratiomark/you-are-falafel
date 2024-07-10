@@ -44,7 +44,7 @@ export default function Home() {
           {/* <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col border-2 border-red-500  px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-10 xl:pt-[76px]"> */}
 
           <div className=" relative z-20 mx-auto flex flex-col items-center  justify-center gap-[2vh] text-center  md:max-w-fit xl:gap-0">
-            <h1 className="font-libre text-[22px] leading-7 tracking-[0.44px] xl:text-[22px] xl:leading-[120%] xl:tracking-[-0.7px] 2xl:text-[35px]">
+            <h1 className="font-libre text-[22px] leading-7 tracking-[0.44px] xl:text-[26px] xl:leading-[120%] xl:tracking-[-0.7px] 2xl:text-[35px]">
               What kind of...
             </h1>
             <div className="relative">
@@ -92,7 +92,7 @@ export default function Home() {
             </div>
 
             {/* <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]  md:relative md:bottom-0  md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]"> */}
-            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[0.44px]   md:text-[26px] md:leading-8  2xl:text-[35px] 2xl:leading-[120%] 2xl:tracking-[-0.7px]">
+            <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[-0.44px]    md:text-[26px]  md:leading-8 md:tracking-[-0.52px] 2xl:text-[35px]  2xl:leading-[120%] 2xl:tracking-[-0.7px] ">
               <Link
                 href="/survey"
                 className="w-full rounded-full border-2 border-primary bg-[#FFE900] py-[15px] transition-all duration-500 hover:bg-[#FFBAC2] 2xl:py-5 "

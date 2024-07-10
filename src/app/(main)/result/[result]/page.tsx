@@ -120,7 +120,9 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
   const { pageTitle, result, pageDescription, imageUrl } = getDataFromResult(params);
   return (
     <>
-      <div className="flex grow flex-col justify-end border-2 border-red-500">
+      <div className="flex flex-col  justify-end pt-[8.5vh] ">
+        {/* <div className="flex pt-[8.5vh]  flex-col justify-end border-2 border-red-500"> */}
+        {/* <div className="flex grow flex-col justify-end border-2 border-red-500"> */}
         <p className=" pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-8%] md:pb-[30px] md:text-[26px] 2xl:text-[35px]">
           Your result:
         </p>
@@ -150,7 +152,8 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
           />
         </div>
         <p className="pt-[30px] text-center font-creato text-[14px] uppercase md:pt-[25px] 2xl:pt-10 2xl:text-[18px]">{pageDescription}</p>
-        <div className="flex gap-2.5 pb-2.5 pt-[30px] text-center font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:gap-5 md:pb-[56px] md:pt-[25px] md:text-[26px]  md:tracking-[-0.52px] xl:pb-[40px] 2xl:pb-[94px] 2xl:pt-[40px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">
+        <div className="flex gap-2.5 pb-[3.9vh] pt-[30px] text-center font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:gap-5 md:pb-[56px] md:pt-[25px] md:text-[26px]  md:tracking-[-0.52px] xl:pb-[40px] 2xl:pb-[94px] 2xl:pt-[40px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">
+          {/* <div className="flex gap-2.5 pb-2.5 pt-[30px] text-center font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:gap-5 md:pb-[56px] md:pt-[25px] md:text-[26px]  md:tracking-[-0.52px] xl:pb-[40px] 2xl:pb-[94px] 2xl:pt-[40px] 2xl:text-[35px] 2xl:tracking-[-0.7px]"> */}
           <Link
             className=" basis-full rounded-full  border-2 bg-[#FFBAC2] py-[15px]  transition-all  md:bg-background md:hover:bg-[#FFBAC2]"
             href="/survey"
