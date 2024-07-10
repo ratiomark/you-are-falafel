@@ -123,11 +123,21 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
       <div className="flex flex-col   pt-[8.5vh] ">
         {/* <div className="flex pt-[8.5vh]  flex-col justify-end border-2 border-red-500"> */}
         {/* <div className="flex grow flex-col justify-end border-2 border-red-500"> */}
-        <p className=" pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-8%] md:pb-[30px] md:text-[26px] 2xl:text-[35px]">
+        {params.result === 'sushi' && (
+          <p className=" pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-8%] md:pb-[30px] md:text-[26px] 2xl:text-[35px]">
+            Do you think you know yourself?
+          </p>
+        )}
+        {params.result !== 'sushi' && (
+          <p className=" pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-8%] md:pb-[30px] md:text-[26px] 2xl:text-[35px]">
+            Your result:
+          </p>
+        )}
+        {/* <p className=" pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-8%] md:pb-[30px] md:text-[26px] 2xl:text-[35px]">
           Your result:
-        </p>
-        <h1 className=" pb-5 text-center mx-auto max-w-[300px] md:max-w-[100%] font-zt text-[30px] tracking-[-2.4px] md:pb-[64px] md:text-[34px] md:leading-[120%] md:tracking-[-2.72px] xl:pb-[5px] xl:text-[37px] xl:tracking-[-2.96px] 2xl:pb-0 2xl:text-[50px] 2xl:tracking-[-4px]">
-        {/* <h1 className=" pb-5 text-center max-w-[300px] md:max-w-[100%] font-zt text-[30px] tracking-[-2.4px] md:pb-[64px] md:text-[34px] md:leading-[120%] md:tracking-[-2.72px] xl:pb-[5px] xl:text-[37px] xl:tracking-[-2.96px] 2xl:pb-0 2xl:text-[50px] 2xl:tracking-[-4px]"> */}
+        </p> */}
+        <h1 className=" mx-auto max-w-[300px] pb-5 text-center font-zt text-[30px] leading-[90%] tracking-[-2.4px] md:max-w-[100%] md:pb-[64px] md:text-[34px] md:leading-[120%] md:tracking-[-2.72px] xl:pb-[5px] xl:text-[37px] xl:tracking-[-2.96px] 2xl:pb-0 2xl:text-[50px] 2xl:tracking-[-4px]">
+          {/* <h1 className=" pb-5 text-center max-w-[300px] md:max-w-[100%] font-zt text-[30px] tracking-[-2.4px] md:pb-[64px] md:text-[34px] md:leading-[120%] md:tracking-[-2.72px] xl:pb-[5px] xl:text-[37px] xl:tracking-[-2.96px] 2xl:pb-0 2xl:text-[50px] 2xl:tracking-[-4px]"> */}
           {pageTitle}
         </h1>
         <div className="mx-auto 2xl:hidden">

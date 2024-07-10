@@ -117,9 +117,9 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
   return (
     <Transition className="flex w-full flex-col items-stretch justify-stretch">
       {/* <div className="flex w-full flex-col items-stretch justify-stretch"> */}
-      <div className="flex flex-col items-center justify-stretch gap-7 pb-5 text-center md:pb-7 xl:gap-[30px] xl:pb-[30px] 2xl:gap-[40px] 2xl:pb-14">
+      <div className="flex flex-col items-center justify-stretch gap-5 pb-5 text-center md:pb-7 xl:gap-[30px] xl:pb-[30px] 2xl:gap-[40px] 2xl:pb-14">
         <h2 className="font-libre text-[22px] leading-[120%] md:text-[26px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">Question {currentQuestionIndex + 1}</h2>
-        <h1 className="font-zt text-[30px] tracking-[-2.4px] md:text-[34px] md:leading-[120%] md:tracking-[-2px] xl:text-[37px] 2xl:text-[50px]">
+        <h1 className="font-zt text-[30px] leading-[90%] tracking-[-2.4px] md:text-[34px] md:leading-[120%] md:tracking-[-2px] xl:text-[37px] 2xl:text-[50px]">
           {questionData.question}
         </h1>
       </div>
@@ -127,7 +127,7 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
       <ul className="relative z-[6] grid w-full gap-y-2.5 md:grid-cols-2 md:gap-x-5 md:gap-y-5 xl:gap-x-5 xl:gap-y-5 2xl:gap-y-8">
         {questionData.answers.map((answer, index) => (
           <li
-            className="relative z-[6] w-full bg-transparent font-libre text-[22px] font-normal leading-[120%] tracking-[-0.7px] md:w-full md:text-[26px] 2xl:text-3xl"
+            className="relative z-[6] w-full bg-transparent text-center font-libre text-[22px] font-normal leading-[120%] tracking-[-0.7px] md:w-full md:text-[26px] 2xl:text-3xl"
             key={answer.value}
           >
             <Link
@@ -137,16 +137,16 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
               )}
               href={`?state=${handleAnswer(answer)}`}
             >
-              ({answer.value}) {answer.text}
+              {answer.text}
             </Link>
-            {index === 1 && (
+            {/* {index === 1 && (
               <Image
                 src={YellowStar}
                 alt="cloud2"
                 // className="absolute left-[15vw] top-[67vh] hidden w-[29vw] max-w-[320px] xl:block 2xl:hidden"
                 className="absolute top-[0px] right-[-2px] z-[7] md:hidden w-[19px]"
               />
-            )}
+            )} */}
             {index === 2 && (
               <Image
                 src={cloud2}
@@ -258,7 +258,7 @@ export default function SurveyPage() {
 
   return (
     // <div className="flex h-full w-full grow flex-col items-center justify-around md:h-[calc(100vh_-_var(--header-height)_-_30px_-_19vh)] md:justify-start xl:h-[calc(100vh_-_var(--header-height)_-_30px_-_19vh)] xl:items-stretch">
-    <div className="z-[6] flex     h-[calc(100vh_-_var(--header-height)_-_10px)] w-full grow flex-col items-center justify-around md:h-[calc(100vh_-_var(--header-height)_-_30px)] md:justify-start xl:h-[calc(100vh_-_var(--header-height)_-_30px)] xl:items-stretch">
+    <div className="z-[6] flex   pt-[100px]   w-full grow flex-col items-center justify-around md:h-[calc(100vh_-_var(--header-height)_-_30px)] md:justify-start xl:h-[calc(100vh_-_var(--header-height)_-_30px)] xl:items-stretch">
       <div className="flex w-full flex-col items-center justify-center gap-5  md:h-full md:justify-between md:gap-0 md:pb-[5.5vh] md:pt-[19vh] xl:pb-[4.8vh] xl:pt-[19vh] 2xl:pb-[4vh]">
         <AnimatePresence mode="wait">
           <QuestionComponent

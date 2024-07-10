@@ -141,21 +141,21 @@ export default function Footer() {
               target="_blank"
               href="https://www.behance.net/butcher_studio"
               // className="underline-effect underline-pink"
-              className="behance w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]"
+              className="behance w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-[15px] xl:text-[26px] 2xl:text-[30px] 2xl:py-5"
             >
               Behance
             </Link>
             <Link
               target="_blank"
               href="https://www.instagram.com/butcherwebstudio"
-              className="insta  w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]"
+              className="insta  w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-[15px] xl:text-[26px] 2xl:text-[30px] 2xl:py-5"
             >
               Instagram
             </Link>
             <Link
               target="_blank"
               href="https://www.linkedin.com/company/butcher-studio/"
-              className="linkedin w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-5 text-[30px]"
+              className="linkedin w-full rounded-full border-2 border-[#FFF3E1] px-[10px] py-[15px] xl:text-[26px] 2xl:text-[30px] 2xl:py-5"
             >
               LinkedIn
             </Link>

@@ -72,7 +72,7 @@ export default function Home() {
             id="content"
             className="flex grow  flex-col justify-between"
           >
-            <div className="relative z-20  hidden items-center justify-center font-creato text-[14px] uppercase xl:flex  xl:pt-[192px] 2xl:pt-[225px] 2xl:text-[18px]">
+            <div className="relative z-20  hidden items-center justify-center font-creato text-[14px] uppercase xl:flex  xl:pt-[24vh] 2xl:pt-[225px] 2xl:text-[18px]">
               {/* <div className="relative z-20  hidden items-center justify-center font-creato text-[14px] uppercase xl:flex  xl:pt-[20.5vh] 2xl:pt-[19vh] 2xl:text-[18px]"> */}
               {/* <div className="hidden items-center justify-center font-creato uppercase  xl:flex xl:pt-[255px]"> */}
               <div className="flex w-full max-w-[1080px] items-center justify-between 2xl:max-w-[1420px]">

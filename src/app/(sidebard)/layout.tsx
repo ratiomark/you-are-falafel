@@ -17,7 +17,10 @@ import falafelOnly from 'public/falafelMain1440.svg';
 import falafelMain1920 from 'public/falafelMain1920.svg';
 // import stars1440 from 'public/stars1440.svg';
 // import stars360 from 'public/starsSurvey360.svg';
-import stars360 from 'public/starsSurve360.svg';
+// import stars360 from 'public/starsSurve360.svg';
+import stars360 from 'public/startSurveyMobile.svg';
+import starsBottomSurveyMobile from 'public/starBottomSurveyMobile.svg';
+import starSurveyTopMobile from 'public/starSurveyTopMobile.svg';
 import stars768 from 'public/starsSurvey768.svg';
 import stars1440 from 'public/starsSurvey1440.svg';
 import stars1920 from 'public/startSurvey1920.svg';
@@ -72,14 +75,27 @@ export default function Layout({
       {/* </Transition2> */}
 
       <Image
-        src={stars360}
+        src={starSurveyTopMobile}
         alt="stars"
-        className="animate-stars-no-delay absolute right-[9.58px] top-[134px] z-[5] w-[calc(100%_-_177.68px)]  md:hidden "
+        // className="animate-stars-no-delay absolute left-1/2 top-[143px]"
+        className="animate-stars-no-delay absolute left-[60%] top-[134px] z-[5] md:hidden "
+        // className="animate-stars-no-delay absolute right-[9.58px] top-[134px] z-[5] w-[calc(100%_-_177.68px)]  md:hidden "
         // className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
       />
+      {/* <Image
+        src={stars360}
+        alt="stars"
+        // className="animate-stars-no-delay absolute left-1/2 top-[143px]"
+        className="animate-stars-no-delay absolute left-[47%] top-[134px] z-[5] md:hidden "
+        // className="animate-stars-no-delay absolute right-[9.58px] top-[134px] z-[5] w-[calc(100%_-_177.68px)]  md:hidden "
+        // className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
+        // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
+        // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
+        // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
+      /> */}
 
       <Image
         src={stars768}
@@ -111,7 +127,6 @@ export default function Layout({
       <div className="relative overflow-hidden">
         <Header />
         <main className=" custom-scrollbar-2 relative mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col  px-2.5 md:px-5 xl:px-10">
-          {/* <main className=" custom-scrollbar-2 relative border-2 border-pink-400 justify-end pb-[90px] md:pb-[0px] mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 md:px-5 xl:px-10"> */}
           {children}
           <Image
             src={cloudsMobileLeft}
@@ -124,6 +139,17 @@ export default function Layout({
             alt="cloud top right"
             className=" absolute bottom-[-2px] left-[-86px] z-10 w-[230px]  rotate-180 md:bottom-[-15px]  md:left-[-69px] md:w-[342px] xl:bottom-[-15px] xl:left-[-25px] 2xl:bottom-[-22px] 2xl:left-[-36px]"
             // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden "
+          />
+          <Image
+            src={starsBottomSurveyMobile}
+            alt="stars"
+            // className="animate-stars-no-delay absolute left-1/2 top-[143px]"
+            className="animate-stars-no-delay absolute bottom-[20px] left-[47%] z-[5] md:hidden "
+            // className="animate-stars-no-delay absolute right-[9.58px] top-[134px] z-[5] w-[calc(100%_-_177.68px)]  md:hidden "
+            // className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
+            // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
+            // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
+            // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
           />
         </main>
         <div>
@@ -138,8 +164,8 @@ export default function Layout({
             src={cloud2}
             alt="cloud left"
             className="animate-cloud-2  absolute right-[78vw]  top-[13vh] z-[7] w-[33vw] md:hidden "
-					/>
-					
+          />
+
           {/* md */}
           <Image
             src={cloud}
@@ -204,4 +230,3 @@ export default function Layout({
     // </div>
   );
 }
-
