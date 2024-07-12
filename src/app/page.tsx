@@ -36,8 +36,8 @@ export default function Home() {
     <>
       {/* <div className="custom-scrollbar-2 h-[calc(100vh_-_30px)] w-full pt-[30px] "> */}
       <div className="custom-scrollbar-2 relative z-[11] h-screen w-full overflow-clip pt-[30px] md:w-auto md:overflow-hidden">
-        {/* <div className="pt-[30px]"> */}
-        {/* <div className="h-9"></div> */}
+        
+        
         <Header />
         {/* </div> */}
         <main className="custom-scrollbar-2 relative mx-auto flex h-[calc(100vh_-30px_-_var(--header-height))] flex-col   px-2.5 pb-[var(--main-page-padding-bottom)] pt-[7vh] xl:px-5 xl:pt-[60px] 2xl:px-10 2xl:pt-[76px]">
@@ -153,6 +153,7 @@ export default function Home() {
             src={falafelOnly}
             alt="falafel image"
             className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_256px_-_5px_-_30px)] w-[67vw]  translate-x-1/2 xl:block 2xl:hidden"
+            // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_256px_-_5px_-_30px)]  w-[67vw]  translate-x-1/2 xl:block 2xl:hidden"
             // className="h1050:max-h-[100vh] h1050:max-w-[100vw]  absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden min-w-[972px] max-w-[100vw]  translate-x-1/2 xl:block 2xl:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           />
