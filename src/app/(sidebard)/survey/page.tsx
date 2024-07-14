@@ -1,5 +1,6 @@
 'use client';
 import { redirect, useSearchParams } from 'next/navigation';
+import posthog from 'posthog-js';
 import Link from 'next/link';
 import { cn } from '@/shared/utils/cn';
 import Image from 'next/image';
@@ -111,6 +112,7 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
       ],
     };
     console.log('newState', newState);
+    posthog.capture('answer event', { property: answer });
     return serializeStateToBase64(newState);
   };
 
@@ -258,7 +260,7 @@ export default function SurveyPage() {
 
   return (
     // <div className="flex h-full w-full grow flex-col items-center justify-around md:h-[calc(100vh_-_var(--header-height)_-_30px_-_19vh)] md:justify-start xl:h-[calc(100vh_-_var(--header-height)_-_30px_-_19vh)] xl:items-stretch">
-    <div className="z-[6] flex   pt-[100px]   w-full grow flex-col items-center justify-around md:h-[calc(100vh_-_var(--header-height)_-_30px)] md:justify-start xl:h-[calc(100vh_-_var(--header-height)_-_30px)] xl:items-stretch">
+    <div className="z-[6] flex   w-full   grow flex-col items-center justify-around pt-[100px] md:h-[calc(100vh_-_var(--header-height)_-_30px)] md:justify-start xl:h-[calc(100vh_-_var(--header-height)_-_30px)] xl:items-stretch">
       <div className="flex w-full flex-col items-center justify-center gap-5  md:h-full md:justify-between md:gap-0 md:pb-[5.5vh] md:pt-[19vh] xl:pb-[4.8vh] xl:pt-[19vh] 2xl:pb-[4vh]">
         <AnimatePresence mode="wait">
           <QuestionComponent

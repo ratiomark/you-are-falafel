@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 // import { Inter } from 'next/font/google'
 import { Inter as FontSans } from 'next/font/google';
 import './globals.css';
-import { Providers } from './providers';
+import { PHProvider } from './providers';
 import NavBar from '@/shared/components/NavBar';
 import { headers } from 'next/headers';
 import { cn } from '@/shared/utils/cn';
@@ -10,10 +10,12 @@ import { Toaster } from '@/shared/ui/toaster';
 import Head from 'next/head';
 import backgroundImage from 'public/background.png';
 import Image from 'next/image';
-// const inter = FontSans({
-// 	subsets: ['latin'],
-// 	variable: '--font-inter',
-// })
+import dynamic from 'next/dynamic';
+
+const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
+  ssr: false,
+});
+
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -90,6 +92,8 @@ export function generateMetadata() {
   return metadata;
 }
 
+
+
 // const metaSocial = {
 //   title: 'Falafel social title',
 //   description: 'This is falafel website social description',
@@ -165,15 +169,17 @@ export default function RootLayout({
             content="#ffffff"
           /> */}
         {/* </Head> */}
-        <body
-          // className={inter.className}
-          // className={cn('min-h-screen bg-background font-sans antialiased', inter.className)}
-          className={cn('custom-scrollbar-2 min-h-screen bg-background font-sans antialiased', fontSans.variable)}
-          // className={cn('min-h-screen bg-background font-sans antialiased', inter.variable, inter.className)}
-          suppressHydrationWarning
-        >
-          {children}
-          {/* <Image
+        <PHProvider>
+          <body
+            // className={inter.className}
+            // className={cn('min-h-screen bg-background font-sans antialiased', inter.className)}
+            className={cn('custom-scrollbar-2 min-h-screen bg-background font-sans antialiased', fontSans.variable)}
+            // className={cn('min-h-screen bg-background font-sans antialiased', inter.variable, inter.className)}
+            suppressHydrationWarning
+          >
+            <PostHogPageView />
+            {children}
+            {/* <Image
             src={backgroundImage}
             alt=""
             placeholder="blur"
@@ -183,8 +189,9 @@ export default function RootLayout({
               zIndex: -1,
             }}
           /> */}
-          <Toaster />
-        </body>
+            <Toaster />
+          </body>
+        </PHProvider>
       </html>
     </>
   );
