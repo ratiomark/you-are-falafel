@@ -8,6 +8,7 @@ import TwitterIcon from 'public/twittericon.svg';
 // import { url } from 'inspector';
 // import { title } from 'process';
 import { copyToClipboard, getShareHelper } from '../lib/shareHelpers';
+import { usePostHog } from 'posthog-js/react';
 // const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
 // interface ShareData {
 //   url: string;
@@ -81,11 +82,20 @@ import { copyToClipboard, getShareHelper } from '../lib/shareHelpers';
 {
   /* <span className="underline-effect underline-white cursor-pointer">Copy link</span> / Facebook / LinkedIn / Twitter; */
 }
+
+const socialTitleList = ['facebook', 'linkedIn', 'twitter'];
+
 export const FooterShareLinks = () => {
+  const posthog = usePostHog();
   const linkTexts = ['Facebook', 'LinkedIn', 'Twitter'];
   return (
     <>
-      <span onClick={() => copyToClipboard()}>
+      <span
+        onClick={() => {
+          posthog.capture('share_copied_to_clipboard', { from: 'footer' });
+          copyToClipboard();
+        }}
+      >
         <span className="underline-effect underline-white cursor-pointer">Copy link</span>
         &nbsp;/&nbsp;
       </span>
@@ -95,6 +105,9 @@ export const FooterShareLinks = () => {
             target="_blank"
             href={getShareHelper(index)}
             key={text}
+            onClick={() => {
+              posthog.capture(`share_${socialTitleList[index]}`, { from: 'footer' });
+            }}
           >
             <span className="underline-effect underline-white cursor-pointer">{text}</span>
             {index !== linkTexts.length - 1 && <span>&nbsp;/&nbsp;</span>}

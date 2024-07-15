@@ -3,7 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from 'public/logo (2).svg';
 import { FooterShareLinks } from './FooterShareLinks';
-
+// import { usePostHog } from 'posthog-js/react';
+// const posthog = usePostHog();
+// posthog.capture(`share_${socialTitleList[index - 1]}`);
 export default function Footer() {
   return (
     <>
