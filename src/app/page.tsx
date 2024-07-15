@@ -57,7 +57,7 @@ export default function Home() {
                 src={cloud2}
                 alt="cloud left"
                 // className="absolute right-[78vw] top-[30vh] z-10 w-[33vw] "
-                className="animate-cloud-2 absolute bottom-[-220px] left-[-15px] z-20 hidden w-[189px] md:block  xl:bottom-[-70px] xl:left-[90px] xl:w-[225px] 2xl:bottom-[-120px] 2xl:w-[297px]"
+                className="animate-cloud-2 absolute bottom-[-180px] left-[-15px] z-20 hidden w-[189px] md:block  xl:bottom-[-70px] xl:left-[90px] xl:w-[225px] 2xl:bottom-[-120px] 2xl:w-[297px]"
               />
               <div className="relative z-20 flex flex-col items-center justify-center pt-[15px] font-creato text-[14px] uppercase leading-4 md:flex-row md:gap-[2vw] md:pt-[3vh] xl:hidden">
                 <p className="">This is an entertainment website</p>
@@ -122,7 +122,7 @@ export default function Home() {
             <Image
               src={falafel768}
               alt="falafel image"
-              className=" z-10 mx-auto hidden  min-w-[118vw]  max-w-[122vw] md:block xl:hidden"
+              className=" z-10 mx-auto hidden max-h-[65vh] min-w-[118vw]  max-w-[122vw] md:block xl:hidden"
               // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10  hidden max-h-[65vh] min-w-[768px] max-w-[122vw]  translate-x-1/2 md:block xl:hidden"
               // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
             />
@@ -134,7 +134,7 @@ export default function Home() {
               // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
             />
             {/* </div> */}
-            <div className=" absolute bottom-[15px] md:bottom-[35px] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[-0.44px]    md:text-[26px]  md:leading-8 md:tracking-[-0.52px] 2xl:text-[35px]  2xl:leading-[120%] 2xl:tracking-[-0.7px] ">
+            <div className=" absolute bottom-[15px] z-20 flex w-full text-center font-libre  text-[22px] leading-7 tracking-[-0.44px] md:bottom-[35px]    md:text-[26px]  md:leading-8 md:tracking-[-0.52px] 2xl:text-[35px]  2xl:leading-[120%] 2xl:tracking-[-0.7px] ">
               {/* <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[-0.44px]    md:text-[26px]  md:leading-8 md:tracking-[-0.52px] 2xl:text-[35px]  2xl:leading-[120%] 2xl:tracking-[-0.7px] "> */}
               <Link
                 href="/survey"
