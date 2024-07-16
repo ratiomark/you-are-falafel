@@ -2,6 +2,16 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import ShareLink from './shareLink';
+import starsUnique from 'public/resultStarsUnique.svg';
+import starsResultSpecialLeft from 'public/starsResultSpecialLeft.svg';
+import starsResultSpecialRight from 'public/starsResultSpecialRight.svg';
+import starsResultLeft from 'public/starsResultSpecialLeft.svg';
+import starsResultRight from 'public/starsResultRight.svg';
+import starsResultLeftXl from 'public/starsResultLeftXl.svg';
+import starsResultRightXl from 'public/starsResultRightXl.svg';
+
+import { ShareDialog } from '@/shared/components/ShareModal';
+import { resultData } from '@/shared/consts/resultData';
 interface SurveyResultProps {
   result: string;
   title: string;
@@ -10,126 +20,22 @@ interface SurveyResultProps {
 }
 const results = ['angel', 'demon', 'king', 'sushi', 'artist', 'alien'] as const;
 
-const resultData = {
-  king: {
-    pageTitle: 'You are - a falafel king!',
-    pageDescription: `Wow! What a star we have here! It's the boss of all bosses, the ultimate chief of chiefs. Well, hello there, king of the world! 👑`,
-    metaTitle: "I'm the Falafel King! Which quirky food are you? Butcher.Studio quiz",
-    metaDescription:
-      "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_king.svg',
-    copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
-I'm the Falafel King! Which food royalty are you? Take the quiz! \n
-Bow down to the Falafel King! 👑🧆 This quirky quiz from Butcher Studio crowned me as culinary royalty. Curious about your food kingdom? Take the test and rule your flavor empire! \n
-Check out Butcher Studio: https://butcher.studio \n
-Take the quiz here: https://lolafel.fun`,
-    twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-👑🧆 I'm the Falafel King! This quirky quiz crowned me as culinary royalty. Which food ruler are you? Take the test and claim your flavor throne! \n
-Test your taste: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
-  },
-  angel: {
-    pageTitle: 'You are a falafel angel',
-    pageDescription: `Oh là là, we've got the embodiment of tenderness and kindness right here! 😇 A walking ray of sunshine, warming hearts all around. Meet the Falafel Angel! 💖`,
-    metaTitle: "I'm an Angel Falafel! Discover your food persona. Butcher.Studio quiz",
-    metaDescription:
-      "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_angel.svg',
-    copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
-I'm an Angel Falafel! What's your heavenly flavor? Find out now! \n
-Turns out I'm a divine Angel Falafel! 😇🧆 This fun quiz by Butcher Studio revealed my celestial taste. Wonder about your foodie halo? Discover your angelic flavor now! \n
-Check out Butcher Studio: https://butcher.studio \n
-Take the quiz here: https://lolafel.fun`,
-    twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-😇🧆 Heavenly news! I'm an Angel Falafel! This divine quiz revealed my celestial taste. Curious about your foodie halo? Discover your angelic flavor now! \n
-Test your taste: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
-  },
-  demon: {
-    pageTitle: 'You are a falafel demon',
-    pageDescription: `Attention, mortals! 🚨 From the depths of the underworld rises the true lord of chaos! Bold, rebellious, irresistible - Falafel Lucifer! 👹`,
-    metaTitle: 'Devilish Falafel here! Find your tasty alter ego: Butcher.Studio quiz',
-    metaDescription:
-      "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_demon.svg',
-    copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
-I'm a Devil Falafel! What's your spicy alter ego? Try the quiz! \n
-Hot news: I'm a devilishly tasty Falafel! 😈🧆 This spicy quiz from Butcher Studio unveiled my fiery food soul. Curious about your culinary dark side? Find out now! \n
-Check out Butcher Studio: https://butcher.studio \n
-Take the quiz here: https://lolafel.fun`,
-    twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-😈🧆 Hot take: I'm a Devil Falafel! This spicy quiz unveiled my fiery food soul. What's your culinary dark side? Dare to find out! \n
-Unleash your inner food demon: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
-  },
-  alien: {
-    pageTitle: 'You are a falafel alien',
-    pageDescription: `Alien Falafel, you're a mystery of the Universe! 🛸 Your unique perspective and otherworldly charm are conquering the planet. Continue your mission!`,
-    metaTitle: "Alien Falafel reporting! What's your flavor? Butcher.Studio quiz",
-    metaDescription:
-      "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_alien.svg',
-    copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
-I'm an Alien Falafel! What's your cosmic flavor? Take the test! \n
-Greetings, Earthlings! I'm an otherworldly Alien Falafel! 👽🧆 This cosmic quiz by Butcher Studio revealed my extraterrestrial taste. What's your space food persona? \n
-Check out Butcher Studio: https://butcher.studio \n
-Take the quiz here: https://lolafel.fun`,
-    twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-👽🧆 Greetings, Earthlings! I'm an Alien Falafel! This cosmic quiz revealed my extraterrestrial taste. What's your space food persona? \n
-Beam up to the quiz: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
-  },
-  artist: {
-    pageTitle: 'You are a falafel artist',
-    pageDescription: `Falafel Virtuoso, you turn ordinary moments into magic! 🎩 Your talent and charisma are worthy of admiration. Create, wizard, create!`,
-    metaTitle: 'Artistic Falafel masterpiece! Your food twin? Butcher.Studio quiz',
-    metaDescription:
-      "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_artist.svg',
-    copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
-I'm an Artist Falafel! What's your creative flavor? Discover now! \n
-Voila! I'm a masterpiece Artist Falafel! 🎨🧆 This colorful quiz from Butcher Studio painted my flavorful portrait. Want to discover your culinary canvas? Create now! \n
-Check out Butcher Studio: https://butcher.studio \n
-Take the quiz here: https://lolafel.fun`,
-    twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-🎨🧆 Voila! I'm an Artist Falafel masterpiece! This colorful quiz painted my flavorful portrait. Ready to discover your culinary canvas? \n
-Create your food art: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
-  },
-  sushi: {
-    pageTitle: 'We discovered that you are sushi!',
-    pageDescription: `Wow, what a surprise! 😄 Among all the falafels, a real little Sushi has snuck in - small but mighty! 💪 Your uniqueness deserves a round of applause!`,
-    metaTitle: "Surprise! I'm Sushi Falafel! Your food shock? Butcher.Studio quiz",
-    metaDescription:
-      "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_sushi.svg',
-    copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
-Surprise! I'm Sushi Falafel! What's your food plot twist? Quiz time! \n
-Plot twist: I'm a Sushi Falafel fusion! 🍣🧆 This quirky quiz by Butcher Studio rolled up my unexpected food identity. Curious about your culinary surprise? Uncover now! \n
-Check out Butcher Studio: https://butcher.studio \n
-Take the quiz here: https://lolafel.fun`,
-    twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-🍣🧆 Plot twist: I'm a Sushi Falafel fusion! This quirky quiz rolled up my unexpected food identity. Curious about your culinary surprise? \n
-Uncover your food shock: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
-  },
-};
 type ResultType = (typeof results)[number];
 
 function SurveyResult({ params }: { params: { result: ResultType } }) {
   const { pageTitle, result, pageDescription, imageUrl } = getDataFromResult(params);
   return (
     <>
-      <div className="flex flex-col   pt-[8.5vh] ">
+      <div className="flex flex-col  pt-[83px] md:pt-[57px] xl:pt-[55px]  2xl:pt-[60px]">
         {/* <div className="flex pt-[8.5vh]  flex-col justify-end border-2 border-red-500"> */}
         {/* <div className="flex grow flex-col justify-end border-2 border-red-500"> */}
         {params.result === 'sushi' && (
-          <p className=" pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-8%] md:pb-[30px] md:text-[26px] 2xl:text-[35px]">
+          <p className="pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-0.44px] md:pb-[30px] md:text-[26px] md:tracking-[-0.52px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">
             Do you think you know yourself?
           </p>
         )}
         {params.result !== 'sushi' && (
-          <p className=" pb-5 text-center font-libre text-[22px] font-normal  leading-7 tracking-[-8%] md:pb-[30px] md:text-[26px] 2xl:text-[35px]">
+          <p className=" pb-5 text-center font-libre text-[22px] font-normal leading-7 tracking-[-0.44px] md:pb-[30px] md:text-[26px] md:tracking-[-0.52px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">
             Your result:
           </p>
         )}
@@ -140,28 +46,78 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
           {/* <h1 className=" pb-5 text-center max-w-[300px] md:max-w-[100%] font-zt text-[30px] tracking-[-2.4px] md:pb-[64px] md:text-[34px] md:leading-[120%] md:tracking-[-2.72px] xl:pb-[5px] xl:text-[37px] xl:tracking-[-2.96px] 2xl:pb-0 2xl:text-[50px] 2xl:tracking-[-4px]"> */}
           {pageTitle}
         </h1>
-        <div className="mx-auto 2xl:hidden">
+        <div className=" relative mx-auto 2xl:hidden">
           {/* <div className="mx-auto md:max-h-[620px] md:max-w-[calc(541px)] 2xl:hidden"> */}
           <Image
             width={541}
             height={487}
             src={imageUrl}
-            className="ml-auto"
+            className="max-h-[50vh] "
             // className="ml-auto md:max-h-[480px]"
             // className="ml-auto md:max-w-[541px]"
             // className="ml-auto md:max-w-[541px]"
             alt="Survey Result"
           />
+
+          {(result === 'alien' || result === 'king') && (
+            <>
+              <Image
+                src={starsResultSpecialLeft}
+                className="absolute left-[7px] top-[-12px] xl:hidden"
+                // className="ml-auto md:max-h-[480px]"
+                // className="ml-auto md:max-w-[541px]"
+                // className="ml-auto md:max-w-[541px]"
+                alt="start unique left"
+              />
+              <Image
+                src={starsResultSpecialRight}
+                className="absolute right-0 top-[-12px] xl:hidden"
+                // className="ml-auto md:max-h-[480px]"
+                // className="ml-auto md:max-w-[541px]"
+                // className="ml-auto md:max-w-[541px]"
+                alt="start unique right"
+              />
+            </>
+          )}
+          {result !== 'alien' && result !== 'king' && (
+            <>
+              <Image
+                src={starsResultLeft}
+                className="absolute left-0 top-[-70px] xl:hidden"
+                // className="ml-auto md:max-h-[480px]"
+                // className="ml-auto md:max-w-[541px]"
+                // className="ml-auto md:max-w-[541px]"
+                alt="start unique left"
+              />
+              <Image
+                src={starsResultRight}
+                className="absolute right-0 top-[-45px] xl:hidden"
+                // className="ml-auto md:max-h-[480px]"
+                // className="ml-auto md:max-w-[541px]"
+                // className="ml-auto md:max-w-[541px]"
+                alt="start unique right"
+              />
+            </>
+          )}
         </div>
-        <div className="mx-auto hidden md:max-w-[calc(10%_+_541px)] 2xl:block">
+        <div className="mx-auto hidden md:max-h-[calc(10%_+_685px)] 2xl:block">
           <Image
             width={757}
             height={672}
             src={imageUrl}
-            className="ml-auto md:max-w-[541px]"
+            className=" md:max-h-[685px] "
             alt="Survey Result"
           />
         </div>
+        {/* <div className="mx-auto hidden md:max-w-[calc(10%_+_541px)] 2xl:block">
+          <Image
+            width={757}
+            height={672}
+            src={imageUrl}
+            className=" md:max-w-[541px]"
+            alt="Survey Result"
+          />
+        </div> */}
         <p className="pt-[30px] text-center font-creato text-[14px] uppercase md:pt-[25px] 2xl:pt-10 2xl:text-[18px]">{pageDescription}</p>
         <div className="flex gap-2.5 pb-[3.9vh] pt-[30px] text-center font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:gap-5 md:pb-[56px] md:pt-[25px] md:text-[26px]  md:tracking-[-0.52px] xl:pb-[40px] 2xl:pb-[94px] 2xl:pt-[40px] 2xl:text-[35px] 2xl:tracking-[-0.7px]">
           {/* <div className="flex gap-2.5 pb-2.5 pt-[30px] text-center font-libre text-[22px] leading-[120%] tracking-[-0.44px] md:gap-5 md:pb-[56px] md:pt-[25px] md:text-[26px]  md:tracking-[-0.52px] xl:pb-[40px] 2xl:pb-[94px] 2xl:pt-[40px] 2xl:text-[35px] 2xl:tracking-[-0.7px]"> */}
@@ -172,7 +128,13 @@ function SurveyResult({ params }: { params: { result: ResultType } }) {
           >
             Restart
           </Link>
-          <ShareLink result={result} />
+          <ShareDialog
+            result={result}
+            imageUrl={imageUrl}
+            title={pageTitle}
+            description={pageDescription}
+          />
+          {/* <ShareLink result={result} /> */}
         </div>
       </div>
     </>

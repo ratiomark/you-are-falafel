@@ -9,6 +9,11 @@ import cloud from 'public/cloud.svg';
 import cloud2 from 'public/cloud2.svg';
 import cloud3 from 'public/cloud3.svg';
 import falafelResult from 'public/falafelResult.webp';
+import starSurveyTopMobile from 'public/starSurveyTopMobile.svg';
+import cloudsMobileRight from 'public/cloudsRight.svg';
+import cloudsMobileLeft from 'public/cloudsLeft.svg';
+import starsResultLeftXl from 'public/starsResultLeftXl.svg';
+import starsResultRightXl from 'public/starsResultRightXl.svg';
 export default function Layout({
   children,
 }: Readonly<{
@@ -21,16 +26,48 @@ export default function Layout({
     //     {children}
     //   </main>
     // </div>
-    <div className=" custom-scrollbar-2 relative w-full  pt-[30px] ">
+    <div className="custom-scrollbar-2 relative  w-full overflow-clip pt-[30px] ">
       <div className="relative overflow-hidden">
         <Header />
         <main className="custom-scrollbar-2 relative mx-auto flex  flex-col px-2.5 md:px-5 xl:px-10">
-        {/* <main className="custom-scrollbar-2 relative mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 md:px-5 xl:px-10"> */}
+          {/* <main className="custom-scrollbar-2 relative mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col px-2.5 md:px-5 xl:px-10"> */}
           {children}
         </main>
-       
       </div>
       <Footer />
+      <Image
+        src={starsResultLeftXl}
+        className="absolute left-[15px] top-[67px] hidden xl:block 2xl:left-[20px] 2xl:top-[90px] 2xl:w-[608px]"
+        // className="ml-auto md:max-h-[480px]"
+        // className="ml-auto md:max-w-[541px]"
+        // className="ml-auto md:max-w-[541px]"
+        alt="start unique left"
+      />
+      <Image
+        src={starsResultRightXl}
+        className="absolute right-[31px] top-[225px] hidden xl:block 2xl:right-[40px] 2xl:top-[339px] 2xl:w-[496px]"
+        // className="ml-auto md:max-h-[480px]"
+        // className="ml-auto md:max-w-[541px]"
+        // className="ml-auto md:max-w-[541px]"
+        alt="start unique right"
+      />
+      <Image
+        src={starSurveyTopMobile}
+        alt="stars"
+        className="absolute right-1/2 top-[127px] translate-x-1/2  md:hidden "
+      />
+      <Image
+        src={cloudsMobileLeft}
+        alt="cloud top left"
+        className="absolute left-[-68px] top-[-2px] z-10 w-[230px] md:left-[-70px] md:top-[-15px] md:w-[342px] xl:left-[-25px] xl:top-[-15px] 2xl:left-[-36px] 2xl:top-[-22px]"
+        // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
+      />
+      <Image
+        src={cloudsMobileRight}
+        alt="cloud top right"
+        className="absolute right-[-86px] top-[-2px] z-10  w-[230px] md:right-[-69px]  md:top-[-15px] md:w-[342px] xl:right-[-25px] xl:top-[-15px] 2xl:right-[-36px] 2xl:top-[-22px]"
+        // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden "
+      />
     </div>
 
     // <div className=" main-layout mx-auto grid min-h-screen grid-cols-[auto_1fr] grid-rows-[var(--header-height)_1fr] ">
