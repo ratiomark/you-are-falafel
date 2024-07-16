@@ -108,7 +108,7 @@ export default function Home() {
             <Image
               src={falafelOnly}
               alt="falafel image"
-              className=" z-10 mx-auto hidden w-[67.5%] xl:block 2xl:hidden"
+              className=" z-10 mx-auto hidden w-[67.5%] xl:block 2xl:hidden max-h-[67vh]"
               // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_256px_-_5px_-_30px)] w-[67vw]  translate-x-1/2 xl:block 2xl:hidden"
             />
             <Image
