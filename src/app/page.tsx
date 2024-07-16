@@ -104,11 +104,11 @@ export default function Home() {
             // className="absolute  bottom-[calc(var(--main-page-padding-bottom)_-_30px)] right-[50%] z-10  hidden max-h-[65vh] min-w-[768px] max-w-[122vw]  translate-x-1/2 md:block xl:hidden"
             // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
           /> */}
-          <div className="relative z-20 flex  items-center justify-center ">
+          <div className="relative z-20 flex items-center justify-center pb-5 md:pb-10 xl:pb-[30px] 2xl:pb-10">
             <Image
               src={falafelOnly}
               alt="falafel image"
-              className=" z-10 mx-auto hidden w-[67.5%] xl:block 2xl:hidden max-h-[67vh]"
+              className="z-10 mx-auto hidden max-h-[67vh] w-[67.5%] xl:block 2xl:hidden"
               // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_39px)] right-[50%] z-10 hidden max-h-[calc(100vh_-_256px_-_5px_-_30px)] w-[67vw]  translate-x-1/2 xl:block 2xl:hidden"
             />
             <Image
@@ -134,7 +134,7 @@ export default function Home() {
               // className="absolute bottom-[calc(var(--main-page-padding-bottom)_-_20px)] right-[50%] z-10 min-w-[80vh] translate-x-1/2  md:hidden "
             />
             {/* </div> */}
-            <div className=" absolute bottom-[15px] z-20 flex w-full text-center font-libre  text-[22px] leading-7 tracking-[-0.44px] md:bottom-[35px]    md:text-[26px]  md:leading-8 md:tracking-[-0.52px] 2xl:text-[35px]  2xl:leading-[120%] 2xl:tracking-[-0.7px] ">
+            <div className=" absolute bottom-[calc(15px_+_20px)] z-20 flex w-full text-center font-libre  text-[22px] leading-7 tracking-[-0.44px] md:bottom-[calc(35px_+_40px)]  2xl:bottom-[calc(35px_+_40px)]  md:text-[26px]   md:leading-8  md:tracking-[-0.52px] xl:bottom-[calc(35px_+_30px)] 2xl:text-[35px]  2xl:leading-[120%] 2xl:tracking-[-0.7px] ">
               {/* <div className=" sticky bottom-[var(--main-page-padding-bottom)] z-20 flex w-full text-center  font-libre text-[22px] leading-7 tracking-[-0.44px]    md:text-[26px]  md:leading-8 md:tracking-[-0.52px] 2xl:text-[35px]  2xl:leading-[120%] 2xl:tracking-[-0.7px] "> */}
               <Link
                 href="/survey"
