@@ -1,7 +1,4 @@
 'use client';
-import { PageTitleAndDescription } from '@/shared/components/PageTitleAndDescription';
-import { DesignForm } from './DesignForm';
-import { ComingSoon } from '@/shared/components/ComingSoon/ComingSoon';
 import { redirect, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { cn } from '@/shared/utils/cn';
