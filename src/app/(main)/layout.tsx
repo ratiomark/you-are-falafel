@@ -8,7 +8,6 @@ import cloudImage from 'public/cloudImage.png';
 import cloud from 'public/cloud.svg';
 import cloud2 from 'public/cloud2.svg';
 import cloud3 from 'public/cloud3.svg';
-import falafelResult from 'public/falafelResult.webp';
 import starSurveyTopMobile from 'public/starSurveyTopMobile.svg';
 import cloudsMobileRight from 'public/cloudsRight.svg';
 import cloudsMobileLeft from 'public/cloudsLeft.svg';

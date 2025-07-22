@@ -25,7 +25,7 @@ import { usePostHog } from 'posthog-js/react';
 //   }
 // };
 
-// const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
+// const url = 'https://lolafel.fun';
 // const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
 
 // const description = `Which Falafel Are You?  | Try Now!
@@ -35,7 +35,7 @@ import { usePostHog } from 'posthog-js/react';
 // Created by: https://butcher.studio
 
 // Take the quiz here:
-// https://you-are-falafel-git-main-ratiomarks-projects.vercel.app`;
+// https://lolafel.fun`;
 // const shareLinkedIn = ({ url, title, description }: ShareData): string => {
 //   const params = new URLSearchParams({
 //     url: url,

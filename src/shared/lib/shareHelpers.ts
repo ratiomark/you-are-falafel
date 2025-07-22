@@ -6,7 +6,7 @@ interface CustomShareData {
   description: string;
 }
 
-const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
+const url = 'https://lolafel.fun';
 const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
 
 const description = `Which Falafel Are You?  | Try Now!
@@ -16,7 +16,7 @@ Just discovered the most hilarious personality quiz😂🧆 Give it a try and pr
 Created by: https://butcher.studio
 
 Take the quiz here:
-https://you-are-falafel-git-main-ratiomarks-projects.vercel.app`;
+https://lolafel.fun`;
 
 // export const copyToClipboard = async ({ url, title, description }: CustomShareData): Promise<void> => {
 export const copyToClipboard = async (): Promise<void> => {

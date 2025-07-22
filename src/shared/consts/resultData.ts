@@ -1,11 +1,22 @@
-export const resultData = {
+import { seoImages } from '@/shared/components/ShareModal';
+import { ResultType } from '@/shared/components/ShareModal';
+
+export const resultData: Record<ResultType, {
+    pageTitle: string;
+    pageDescription: string;
+    metaTitle: string;
+    metaDescription: string;
+    imageUrl: string;
+    copyText: string;
+    twitterText: string;
+  }> = {
   king: {
     pageTitle: 'You are - a falafel king!',
     pageDescription: `Wow! What a star we have here! It's the boss of all bosses, the ultimate chief of chiefs. Well, hello there, king of the world! 👑`,
     metaTitle: "I'm the Falafel King! Which quirky food are you? Butcher.Studio quiz",
     metaDescription:
       "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_king.svg',
+    imageUrl: seoImages.king,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm the Falafel King! Which food royalty are you? Take the quiz! \n
 Bow down to the Falafel King! 👑🧆 This quirky quiz from Butcher Studio crowned me as culinary royalty. Curious about your food kingdom? Take the test and rule your flavor empire! \n
@@ -22,7 +33,7 @@ Created by https://butcher.studio \n`,
     metaTitle: "I'm an Angel Falafel! Discover your food persona. Butcher.Studio quiz",
     metaDescription:
       "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_angel.svg',
+    imageUrl: seoImages.angel,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm an Angel Falafel! What's your heavenly flavor? Find out now! \n
 Turns out I'm a divine Angel Falafel! 😇🧆 This fun quiz by Butcher Studio revealed my celestial taste. Wonder about your foodie halo? Discover your angelic flavor now! \n
@@ -39,7 +50,7 @@ Created by https://butcher.studio \n`,
     metaTitle: 'Devilish Falafel here! Find your tasty alter ego: Butcher.Studio quiz',
     metaDescription:
       "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_demon.svg',
+    imageUrl: seoImages.demon,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm a Devil Falafel! What's your spicy alter ego? Try the quiz! \n
 Hot news: I'm a devilishly tasty Falafel! 😈🧆 This spicy quiz from Butcher Studio unveiled my fiery food soul. Curious about your culinary dark side? Find out now! \n
@@ -56,7 +67,7 @@ Created by https://butcher.studio \n`,
     metaTitle: "Alien Falafel reporting! What's your flavor? Butcher.Studio quiz",
     metaDescription:
       "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_alien.svg',
+    imageUrl: seoImages.alien,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm an Alien Falafel! What's your cosmic flavor? Take the test! \n
 Greetings, Earthlings! I'm an otherworldly Alien Falafel! 👽🧆 This cosmic quiz by Butcher Studio revealed my extraterrestrial taste. What's your space food persona? \n
@@ -73,7 +84,7 @@ Created by https://butcher.studio \n`,
     metaTitle: 'Artistic Falafel masterpiece! Your food twin? Butcher.Studio quiz',
     metaDescription:
       "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_artist.svg',
+    imageUrl: seoImages.artist,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm an Artist Falafel! What's your creative flavor? Discover now! \n
 Voila! I'm a masterpiece Artist Falafel! 🎨🧆 This colorful quiz from Butcher Studio painted my flavorful portrait. Want to discover your culinary canvas? Create now! \n
@@ -90,7 +101,7 @@ Created by https://butcher.studio \n`,
     metaTitle: "Surprise! I'm Sushi Falafel! Your food shock? Butcher.Studio quiz",
     metaDescription:
       "Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!",
-    imageUrl: 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result_sushi.svg',
+    imageUrl: seoImages.sushi,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 Surprise! I'm Sushi Falafel! What's your food plot twist? Quiz time! \n
 Plot twist: I'm a Sushi Falafel fusion! 🍣🧆 This quirky quiz by Butcher Studio rolled up my unexpected food identity. Curious about your culinary surprise? Uncover now! \n

@@ -26,7 +26,7 @@ const copyToClipboard = async ({ url, title, description }: ShareData): Promise<
   }
 };
 
-const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app';
+const url = 'https://lolafel.fun';
 const title = '🚨 URGENT FALAFEL ALERT! 🚨\n';
 
 const description = `Which Falafel Are You?  | Try Now!

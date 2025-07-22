@@ -16,8 +16,20 @@ interface ShareDialogProps {
 
 const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
 const iconsBg = ['#FFBAC2', '#8BE3FF', '#FFE900', '#00B261'];
-type ResultType = 'king' | 'angel' | 'demon' | 'alien' | 'artist' | 'sushi';
+export type ResultType = 'king' | 'angel' | 'demon' | 'alien' | 'artist' | 'sushi';
+export const seoImages: Record<ResultType, string> = {
+  angel: 'https://ik.imagekit.io/towzbt87r/lolafel/angel.png',
 
+  demon: 'https://ik.imagekit.io/towzbt87r/lolafel/devil.png',
+
+  alien: 'https://ik.imagekit.io/towzbt87r/lolafel/alien.png',
+
+  artist: 'https://ik.imagekit.io/towzbt87r/lolafel/artist.png',
+
+  king: 'https://ik.imagekit.io/towzbt87r/lolafel/king.png',
+
+  sushi: 'https://ik.imagekit.io/towzbt87r/lolafel/sushi.png',
+};
 const copyToClipboard = async (text: string): Promise<void> => {
   try {
     await navigator.clipboard.writeText(text);
@@ -79,7 +91,7 @@ const ShareLink: React.FC<ShareLinkProps> = ({ result }) => {
   const data = resultData[result];
 
   const handleShare = (index: number) => {
-    const url = `https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/result/${result.trim()}`;
+    const url = `https://www.lolafel.fun/result/${result.trim()}`;
     switch (index) {
       case 0:
         copyToClipboard(data.copyText);
