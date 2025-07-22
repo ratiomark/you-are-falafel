@@ -1,6 +1,18 @@
-import { seoImages } from '@/shared/components/ShareModal';
-import { ResultType } from '@/shared/components/ShareModal';
 
+import { ResultType } from '@/shared/components/ShareModal';
+export const seoImages: Record<ResultType, string> = {
+  angel: 'https://ik.imagekit.io/towzbt87r/lolafel/angel.png',
+
+  demon: 'https://ik.imagekit.io/towzbt87r/lolafel/devil.png',
+
+  alien: 'https://ik.imagekit.io/towzbt87r/lolafel/alien.png',
+
+  artist: 'https://ik.imagekit.io/towzbt87r/lolafel/artist.png',
+
+  king: 'https://ik.imagekit.io/towzbt87r/lolafel/king.png',
+
+  sushi: 'https://ik.imagekit.io/towzbt87r/lolafel/sushi.png',
+};
 export const resultData: Record<ResultType, {
     pageTitle: string;
     pageDescription: string;

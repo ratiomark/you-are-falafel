@@ -9,7 +9,20 @@ import LinkedInIcon from 'public/instaicon.svg';
 import CopyIcon from 'public/copyicon.svg';
 import TwitterIcon from 'public/twittericon.svg';
 import CloseIcon from 'public/closeIcon.svg';
-import { ResultType, seoImages } from '@/shared/components/ShareModal';
+import { ResultType } from '@/shared/components/ShareModal';
+export const seoImages: Record<ResultType, string> = {
+  angel: 'https://ik.imagekit.io/towzbt87r/lolafel/angel.png',
+
+  demon: 'https://ik.imagekit.io/towzbt87r/lolafel/devil.png',
+
+  alien: 'https://ik.imagekit.io/towzbt87r/lolafel/alien.png',
+
+  artist: 'https://ik.imagekit.io/towzbt87r/lolafel/artist.png',
+
+  king: 'https://ik.imagekit.io/towzbt87r/lolafel/king.png',
+
+  sushi: 'https://ik.imagekit.io/towzbt87r/lolafel/sushi.png',
+};
 
 const icons = [CopyIcon, FacebookIcon, LinkedInIcon, TwitterIcon];
 const iconsBg = ['#FFBAC2', '#8BE3FF', '#FFE900', '#00B261'];
