@@ -12,7 +12,8 @@
     "db:seed": "tsx prisma/seeds.ts",
     "db:push": "npx prisma db push",
     "db:gen": "npx prisma generate",
-    "db:reset:full": "pnpm run db:push && pnpm run db:gen && pnpm run db:seed"
+    "db:reset:full": "pnpm run db:push && pnpm run db:gen && pnpm run db:seed",
+    "prepare": "npx ts-node scripts/ts/prepare-lock-file.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",

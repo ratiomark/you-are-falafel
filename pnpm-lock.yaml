@@ -5184,7 +5184,7 @@ packages:
     dev: false
 
   git@github.com+leonardiwagner/js-function-reflector/f3a1295909cf870bbb7bb136ca53796fc3e87c17:
-    resolution: {commit: f3a1295909cf870bbb7bb136ca53796fc3e87c17, repo: git@github.com:leonardiwagner/js-function-reflector.git, type: git}
+    resolution: {commit: f3a1295909cf870bbb7bb136ca53796fc3e87c17, repo: https://github.com/leonardiwagner/js-function-reflector.git, type: git}
     name: js-function-reflector
     version: 1.3.0
     dev: false
