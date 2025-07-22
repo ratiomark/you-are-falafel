@@ -167,13 +167,7 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
       title: metaTitle,
       description: metaDescription,
 
-      images: [
-        {
-          url: imageUrl,
-          // width: 1000,
-          // height: 1000,
-        },
-      ],
+      images: [imageUrl],
     },
     openGraph: {
       siteName: 'LoLafel by Butcher.studio',
@@ -181,14 +175,7 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
       description: metaDescription,
       type: 'website',
       url: 'https://lolafel.fun',
-      images: [
-        {
-          url: imageUrl,
-
-          // width: 1000,
-          // height: 1000,
-        },
-      ],
+      images: [imageUrl],
     },
   };
 }
