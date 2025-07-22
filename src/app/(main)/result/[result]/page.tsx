@@ -19,7 +19,19 @@ interface SurveyResultProps {
   imageUrl: string;
 }
 const results = ['angel', 'demon', 'king', 'sushi', 'artist', 'alien'] as const;
+const seoImages: Record<typeof results[number], string> = {
+  angel: 'https://ik.imagekit.io/towzbt87r/lolafel/angel.png',
 
+  demon: 'https://ik.imagekit.io/towzbt87r/lolafel/devil.png',
+
+  alien: 'https://ik.imagekit.io/towzbt87r/lolafel/alien.png',
+
+  artist: 'https://ik.imagekit.io/towzbt87r/lolafel/artist.png',
+
+  king: 'https://ik.imagekit.io/towzbt87r/lolafel/king.png',
+
+  sushi: 'https://ik.imagekit.io/towzbt87r/lolafel/sushi.png',
+};
 type ResultType = (typeof results)[number];
 
 function SurveyResult({ params }: { params: { result: ResultType } }) {
@@ -160,14 +172,12 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
   return {
     title: metaTitle,
     description: metaDescription,
-
     twitter: {
       card: 'summary_large_image',
       site: 'LoLafel by Butcher.studio',
       title: metaTitle,
       description: metaDescription,
-
-      images: [imageUrl],
+      images: [seoImages[params.result]],
     },
     openGraph: {
       siteName: 'LoLafel by Butcher.studio',
@@ -175,7 +185,7 @@ export function generateMetadata({ params }: { params: { result: ResultType } })
       description: metaDescription,
       type: 'website',
       url: 'https://lolafel.fun',
-      images: [imageUrl],
+      images: [seoImages[params.result]],
     },
   };
 }

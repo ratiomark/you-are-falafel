@@ -16,7 +16,6 @@ const PostHogPageView = dynamic(() => import('./PostHogPageView'), {
   ssr: false,
 });
 
-
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
@@ -25,8 +24,8 @@ const title = 'Which Falafel Are You? Fun Quiz by Butcher.Studio | Try Now!';
 const description = 'What kind of falafel are you? Find out your falafel essence by taking the most important test at lolafel.fun! Created by BUTCHER Studio.';
 const titleSocial = 'LoLafel by Butcher.studio';
 const descriptionSocial = `Discover your quirky food persona with Butcher.Studio's hilarious quiz! Are you a regal Falafel King or a surprising Sushi roll? Find out now and share your tasty alter ego!`;
-const imageSocial = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/falafelResult.webp';
-const url = 'https://you-are-falafel-git-main-ratiomarks-projects.vercel.app/';
+const imageSocial = 'https://ik.imagekit.io/towzbt87r/lolafel/main.png';
+const url = 'https://www.lolafel.fun/';
 
 export function generateMetadata() {
   const metadata: Metadata = {
@@ -67,32 +66,18 @@ export function generateMetadata() {
       title: titleSocial,
       description: descriptionSocial,
 
-      images: [
-        {
-          url: imageSocial,
-          // width: 1000,
-          // height: 1000,
-        },
-      ],
+      images: [imageSocial],
     },
     openGraph: {
       tags: ['social', 'falafel', 'you', 'are', 'today'],
       siteName: 'LoLafel by Butcher.studio',
       title: titleSocial,
       description: descriptionSocial,
-      images: [
-        {
-          url: imageSocial,
-          // width: 1000,
-          // height: 1000,
-        },
-      ],
+      images: [imageSocial],
     },
   };
   return metadata;
 }
-
-
 
 // const metaSocial = {
 //   title: 'Falafel social title',
