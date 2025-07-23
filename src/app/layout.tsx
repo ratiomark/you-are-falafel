@@ -173,7 +173,7 @@ export default function RootLayout({
           suppressHydrationWarning
         >
           {/* Meta / Facebook Pixel */}
-          <MetaPixel />
+          {/* <MetaPixel /> */}
           {/* <PostHogPageView /> */}
           {children}
           <Toaster />
