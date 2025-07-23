@@ -134,7 +134,7 @@ const QuestionComponent: React.FC<QuestionProps> = ({ state, questionData }) => 
           >
             <Link
               className={cn(
-                ' flex min-w-full items-center justify-center rounded-full border-2 border-primary bg-background p-[15px] transition-all xl:hover:bg-[#FF2F85]  2xl:p-5',
+                ' flex min-w-full items-center justify-center rounded-full border-2 border-primary bg-background p-[15px] transition-all md:hover:bg-[#FF2F85]  2xl:p-5',
                 answer.value === currentAnswer?.value ? 'bg-[#FF2F85]' : 'text-primary',
               )}
               href={`?state=${handleAnswer(answer)}`}

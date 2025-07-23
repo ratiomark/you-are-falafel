@@ -228,7 +228,7 @@ const ShareLink: React.FC<ShareLinkProps> = ({ result }) => {
         window.open(shareLinkedIn(url), '_blank');
         break;
       case 3:
-        window.open(shareTwitter(data.twitterText, url), '_blank');
+        window.open(shareTwitter(data.twitterText), '_blank');
         // window.open(shareTwitter(data.twitterText, url), '_blank');
         break;
     }
