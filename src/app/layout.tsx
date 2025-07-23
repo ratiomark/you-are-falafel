@@ -184,7 +184,7 @@ export default function RootLayout({
     </>
   );
 }
-<>
+
   {/* <Script
     id="facebook-pixel"
     strategy="afterInteractive"
@@ -211,7 +211,7 @@ export default function RootLayout({
       src="https://www.facebook.com/tr?id=1231745995361917&ev=PageView&noscript=1"
     />
   </noscript> */}
-</>;
+
 {
   /* <Providers> */
 }
