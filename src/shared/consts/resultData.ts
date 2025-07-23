@@ -9,12 +9,13 @@ export const resultData = {
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm the Falafel King! Which food royalty are you? Take the quiz! \n
 Bow down to the Falafel King! 👑🧆 This quirky quiz from Butcher Studio crowned me as culinary royalty. Curious about your food kingdom? Take the test and rule your flavor empire! \n
+My result: https://lolafel.fun/result/king \n
 Take the quiz here: https://lolafel.fun \n
 Check out Butcher Studio: https://butcher.studio \n`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-👑🧆 I'm the Falafel King! This quirky quiz crowned me as culinary royalty. Which food ruler are you? Take the test and claim your flavor throne! \n
-Test your taste: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
+I'm the Falafel King! This quirky quiz crowned me as culinary royalty. Which food ruler are you? Take the test and claim your flavor throne! \n
+Created by https://butcher.studio \n
+My result: https://www.lolafel.fun/result/king \n`,
   },
   angel: {
     pageTitle: 'You are a falafel angel',
@@ -26,12 +27,13 @@ Created by https://butcher.studio \n`,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm an Angel Falafel! What's your heavenly flavor? Find out now! \n
 Turns out I'm a divine Angel Falafel! 😇🧆 This fun quiz by Butcher Studio revealed my celestial taste. Wonder about your foodie halo? Discover your angelic flavor now! \n
+My result: https://lolafel.fun/result/angel \n
 Take the quiz here: https://lolafel.fun \n
 Check out Butcher Studio: https://butcher.studio \n`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-😇🧆 Heavenly news! I'm an Angel Falafel! This divine quiz revealed my celestial taste. Curious about your foodie halo? Discover your angelic flavor now! \n
-Test your taste: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
+I'm an Angel Falafel! This divine quiz revealed my celestial taste. Curious about your foodie halo? Discover your angelic flavor now! \n
+Created by https://butcher.studio \n
+My result: https://www.lolafel.fun/result/angel \n`,
   },
   demon: {
     pageTitle: 'You are a falafel demon',
@@ -43,12 +45,13 @@ Created by https://butcher.studio \n`,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm a Devil Falafel! What's your spicy alter ego? Try the quiz! \n
 Hot news: I'm a devilishly tasty Falafel! 😈🧆 This spicy quiz from Butcher Studio unveiled my fiery food soul. Curious about your culinary dark side? Find out now! \n
+My result: https://lolafel.fun/result/demon \n
 Take the quiz here: https://lolafel.fun \n
 Check out Butcher Studio: https://butcher.studio \n`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
 😈🧆 Hot take: I'm a Devil Falafel! This spicy quiz unveiled my fiery food soul. What's your culinary dark side? Dare to find out! \n
-Unleash your inner food demon: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
+Created by https://butcher.studio \n
+My result: https://www.lolafel.fun/result/demon \n`,
   },
   alien: {
     pageTitle: 'You are a falafel alien',
@@ -60,12 +63,14 @@ Created by https://butcher.studio \n`,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm an Alien Falafel! What's your cosmic flavor? Take the test! \n
 Greetings, Earthlings! I'm an otherworldly Alien Falafel! 👽🧆 This cosmic quiz by Butcher Studio revealed my extraterrestrial taste. What's your space food persona? \n
+My result: https://lolafel.fun/result/alien \n
 Take the quiz here: https://lolafel.fun \n
 Check out Butcher Studio: https://butcher.studio \n`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
-👽🧆 Greetings, Earthlings! I'm an Alien Falafel! This cosmic quiz revealed my extraterrestrial taste. What's your space food persona? \n
+Greetings, Earthlings! I'm an Alien Falafel! This cosmic quiz revealed my extraterrestrial taste. What's your space food persona? \n
 Beam up to the quiz: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
+Created by https://butcher.studio  \n
+My result: https://www.lolafel.fun/result/alien \n`,
   },
   artist: {
     pageTitle: 'You are a falafel artist',
@@ -77,12 +82,13 @@ Created by https://butcher.studio \n`,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 I'm an Artist Falafel! What's your creative flavor? Discover now! \n
 Voila! I'm a masterpiece Artist Falafel! 🎨🧆 This colorful quiz from Butcher Studio painted my flavorful portrait. Want to discover your culinary canvas? Create now! \n
+My result: https://lolafel.fun/result/artist \n
 Take the quiz here: https://lolafel.fun \n
 Check out Butcher Studio: https://butcher.studio \n`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
 🎨🧆 Voila! I'm an Artist Falafel masterpiece! This colorful quiz painted my flavorful portrait. Ready to discover your culinary canvas? \n
-Create your food art: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
+Created by https://butcher.studio \n
+My result: https://www.lolafel.fun/result/artist \n`,
   },
   sushi: {
     pageTitle: 'We discovered that you are sushi!',
@@ -94,12 +100,13 @@ Created by https://butcher.studio \n`,
     copyText: `🚨 URGENT FALAFEL ALERT! 🚨 \n
 Surprise! I'm Sushi Falafel! What's your food plot twist? Quiz time! \n
 Plot twist: I'm a Sushi Falafel fusion! 🍣🧆 This quirky quiz by Butcher Studio rolled up my unexpected food identity. Curious about your culinary surprise? Uncover now! \n
+My result: https://lolafel.fun/result/sushi \n
 Take the quiz here: https://lolafel.fun \n
 Check out Butcher Studio: https://butcher.studio \n`,
     twitterText: `🚨 URGENT FALAFEL ALERT! 🚨\n
 🍣🧆 Plot twist: I'm a Sushi Falafel fusion! This quirky quiz rolled up my unexpected food identity. Curious about your culinary surprise? \n
-Uncover your food shock: https://lolafel.fun \n
-Created by https://butcher.studio \n`,
+Created by https://butcher.studio  \n
+My result: https://www.lolafel.fun/result/sushi \n`,
   },
 };
 

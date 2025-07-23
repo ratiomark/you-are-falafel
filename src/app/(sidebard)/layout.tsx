@@ -36,13 +36,13 @@ export default function Layout({
       <Image
         src={cloudsMobileLeft}
         alt="cloud top left"
-        className="absolute left-[-68px] top-[-2px] z-10 w-[230px] md:left-[-70px] md:top-[-15px] md:w-[342px] xl:left-[-25px] xl:top-[-15px] 2xl:left-[-36px] 2xl:top-[-22px]"
+        className="pointer-events-none absolute left-[-68px] top-[-2px] z-10 w-[230px] md:left-[-70px] md:top-[-15px] md:w-[342px] xl:left-[-25px] xl:top-[-15px] 2xl:left-[-36px] 2xl:top-[-22px]"
         // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
       />
       <Image
         src={cloudsMobileRight}
         alt="cloud top right"
-        className="absolute right-[-86px] top-[-2px] z-10  w-[230px] md:right-[-69px]  md:top-[-15px] md:w-[342px] xl:right-[-25px] xl:top-[-15px] 2xl:right-[-36px] 2xl:top-[-22px]"
+        className="pointer-events-none absolute right-[-86px] top-[-2px] z-10  w-[230px] md:right-[-69px]  md:top-[-15px] md:w-[342px] xl:right-[-25px] xl:top-[-15px] 2xl:right-[-36px] 2xl:top-[-22px]"
         // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden "
       />
 
@@ -68,7 +68,7 @@ export default function Layout({
       <Image
         src={sun}
         alt="sun"
-        className="animate-sun absolute right-[95px]  top-[149px] z-[5] hidden w-[177px] max-w-[89vw] md:block xl:right-[249px] xl:top-[49px] xl:w-[210px]  2xl:right-[368px] 2xl:top-[65px]   2xl:w-[279px]"
+        className="animate-sun pointer-events-none absolute right-[95px]  top-[149px] z-[5] hidden w-[177px] max-w-[89vw] md:block xl:right-[249px] xl:top-[49px] xl:w-[210px]  2xl:right-[368px] 2xl:top-[65px]   2xl:w-[279px]"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
       />
@@ -78,7 +78,7 @@ export default function Layout({
         src={starSurveyTopMobile}
         alt="stars"
         // className="animate-stars-no-delay absolute left-1/2 top-[143px]"
-        className="animate-stars-no-delay absolute left-[60%] top-[134px] z-[5] md:hidden "
+        className="animate-stars-no-delay pointer-events-none absolute left-[60%] top-[134px] z-[5] md:hidden "
         // className="animate-stars-no-delay absolute right-[9.58px] top-[134px] z-[5] w-[calc(100%_-_177.68px)]  md:hidden "
         // className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
@@ -100,7 +100,7 @@ export default function Layout({
       <Image
         src={stars768}
         alt="stars"
-        className="animate-stars-no-delay absolute left-[47px] top-[15vh] z-[5] hidden  w-[calc(100%_-_88px)] md:block xl:hidden  "
+        className="animate-stars-no-delay pointer-events-none absolute left-[47px] top-[15vh] z-[5] hidden  w-[calc(100%_-_88px)] md:block xl:hidden  "
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
@@ -108,7 +108,7 @@ export default function Layout({
       <Image
         src={stars1440}
         alt="stars"
-        className="animate-stars-no-delay absolute left-[85px] top-[15vh] z-[5] hidden  w-[calc(100%_-_188px)] xl:block  2xl:hidden"
+        className="animate-stars-no-delay pointer-events-none absolute left-[85px] top-[15vh] z-[5] hidden  w-[calc(100%_-_188px)] xl:block  2xl:hidden"
         // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
@@ -117,34 +117,34 @@ export default function Layout({
         src={stars1920}
         alt="stars"
         // className="absolute  left-[144px] top-[15vh] z-[5] hidden   max-w-[86vw]  2xl:block"
-        className="animate-stars-no-delay absolute left-[114px] top-[15vh] z-[5] hidden   w-[calc(100%_-_251px)] 2xl:block"
+        className="animate-stars-no-delay pointer-events-none absolute left-[114px] top-[15vh] z-[5] hidden   w-[calc(100%_-_251px)] 2xl:block"
         // className="animate-stars-appear absolute left-[114px] top-[15vh] z-[5] hidden   w-[1667px] 2xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-[5] hidden w-[calc(100%_-_80px)] max-w-[100vw]  translate-x-1/2 xl:block"
         // className="absolute  right-[50%] top-[0.5vh] z-10 hidden min-w-[972] max-w-[100vw]  translate-x-1/2 xl:block"
       />
       {/* ----------------- */}
 
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden z-10">
         <Header />
-        <main className=" custom-scrollbar-2 relative mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col  px-2.5 md:px-5 xl:px-10">
+        <main className=" custom-scrollbar-2 relative z-[15] mx-auto flex min-h-[calc(100vh_-_var(--header-height)_-_30px)] flex-col  px-2.5 md:px-5 xl:px-10">
           {children}
           <Image
             src={cloudsMobileLeft}
             alt="cloud top left"
-            className="absolute bottom-[-2px] right-[-68px] z-10 w-[230px] rotate-180 md:bottom-[-15px] md:right-[-70px] md:w-[342px] xl:bottom-[-15px] xl:right-[-25px] 2xl:bottom-[-22px] 2xl:right-[-36px]"
+            className="pointer-events-none absolute bottom-[-2px] right-[-68px] z-10 w-[230px] rotate-180 md:bottom-[-15px] md:right-[-70px] md:w-[342px] xl:bottom-[-15px] xl:right-[-25px] 2xl:bottom-[-22px] 2xl:right-[-36px]"
             // className="absolute left-[-68px] top-[-2px] z-10 w-[230px] "
           />
           <Image
             src={cloudsMobileRight}
             alt="cloud top right"
-            className=" absolute bottom-[-2px] left-[-86px] z-10 w-[230px]  rotate-180 md:bottom-[-15px]  md:left-[-69px] md:w-[342px] xl:bottom-[-15px] xl:left-[-25px] 2xl:bottom-[-22px] 2xl:left-[-36px]"
+            className="pointer-events-none absolute bottom-[-2px] left-[-86px] z-10 w-[230px]  rotate-180 md:bottom-[-15px]  md:left-[-69px] md:w-[342px] xl:bottom-[-15px] xl:left-[-25px] 2xl:bottom-[-22px] 2xl:left-[-36px]"
             // className="absolute right-[-85px] top-[-2px] z-10 w-[230px] md:hidden "
           />
           <Image
             src={starsBottomSurveyMobile}
             alt="stars"
             // className="animate-stars-no-delay absolute left-1/2 top-[143px]"
-            className="animate-stars-no-delay absolute bottom-[20px] left-[47%] z-[5] md:hidden "
+            className="animate-stars-no-delay pointer-events-none absolute bottom-[20px] left-[47%] z-[5] md:hidden "
             // className="animate-stars-no-delay absolute right-[9.58px] top-[134px] z-[5] w-[calc(100%_-_177.68px)]  md:hidden "
             // className="animate-stars-no-delay absolute left-[4px] top-[15vh] z-[5] w-[calc(100%_-_13.5px)]  md:hidden "
             // className="animate-stars-appear absolute left-[85px] top-[15vh] z-[5] hidden  max-w-[89vw] xl:block  2xl:hidden"
@@ -157,36 +157,36 @@ export default function Layout({
             src={cloud}
             alt="cloud right"
             // className="animate-cloud absolute left-[73vw]  top-[10vh] z-[7] w-[33vw] md:hidden"
-            className="animate-cloud-2  absolute left-[73vw]  top-[10vh] z-[7] w-[33vw] md:hidden"
+            className="animate-cloud-2 pointer-events-none  absolute left-[73vw]  top-[10vh] z-[7] w-[33vw] md:hidden"
           />
 
           <Image
             src={cloud2}
             alt="cloud left"
-            className="animate-cloud-2  absolute right-[78vw]  top-[13vh] z-[7] w-[33vw] md:hidden "
+            className="animate-cloud-2 pointer-events-none  absolute right-[78vw]  top-[13vh] z-[7] w-[33vw] md:hidden "
           />
 
           {/* md */}
           <Image
             src={cloud}
             alt="cloud"
-            className="animate-cloud-2-reverse absolute left-[65vw]  top-[55vh] z-[7] hidden w-[24vw] max-w-[280px] md:block xl:hidden"
+            className="animate-cloud-2-reverse pointer-events-none absolute left-[65vw]  top-[55vh] z-[7] hidden w-[24vw] max-w-[280px] md:block xl:hidden"
           />
           <Image
             src={cloud2}
             alt="cloud"
-            className="animate-cloud-2 absolute left-[15vw]  top-[67vh] z-[7] hidden w-[29vw] max-w-[320px] md:block xl:hidden"
+            className="animate-cloud-2 pointer-events-none absolute left-[15vw]  top-[67vh] z-[7] hidden w-[29vw] max-w-[320px] md:block xl:hidden"
           />
           <Image
             src={cloud3}
             alt="cloud"
-            className="absolute left-[13vw] top-[15vh]  z-[7] hidden w-[33vw] max-w-[180px] md:block  xl:hidden"
+            className="pointer-events-none absolute left-[13vw] top-[15vh]  z-[7] hidden w-[33vw] max-w-[180px] md:block  xl:hidden"
           />
           {/* xl */}
           <Image
             src={cloud}
             alt="cloud"
-            className="absolute bottom-[13vh] right-[18vw] z-[7] hidden w-[13.8vw] max-w-[267px] xl:block"
+            className="pointer-events-none absolute bottom-[13vh] right-[18vw] z-[7] hidden w-[13.8vw] max-w-[267px] xl:block"
           />
           {/* <Image
             src={cloud2}
@@ -197,7 +197,7 @@ export default function Layout({
           <Image
             src={cloud3}
             alt="cloud3"
-            className="absolute bottom-[8vh] left-[18vw] z-[7] hidden w-[13.3vw] max-w-[190px] xl:block 2xl:max-w-[254px]"
+            className="pointer-events-none absolute bottom-[8vh] left-[18vw] z-[7] hidden w-[13.3vw] max-w-[190px] xl:block 2xl:max-w-[254px]"
           />
         </div>
       </div>
