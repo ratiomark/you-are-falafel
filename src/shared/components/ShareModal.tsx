@@ -53,10 +53,10 @@ const shareLinkedIn = (url: string): string => {
   return `https://www.linkedin.com/shareArticle?mini=false&${params.toString()}`;
 };
 
-const shareTwitter = (text: string, url: string): string => {
+const shareTwitter = (text: string, url?: string): string => {
   const params = new URLSearchParams({
     text: text,
-    url: url.trim(),
+    // url: url.trim(),
   });
   return `https://twitter.com/intent/tweet?${params.toString()}`;
 };
@@ -109,7 +109,8 @@ const ShareLink: React.FC<ShareLinkProps> = ({ result }) => {
         window.open(shareLinkedIn(url), '_blank');
         break;
       case 3:
-        window.open(shareTwitter(data.twitterText, url), '_blank');
+        window.open(shareTwitter(data.twitterText), '_blank');
+        // window.open(shareTwitter(data.twitterText, url), '_blank');
         break;
     }
   };
