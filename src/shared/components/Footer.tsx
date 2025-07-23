@@ -84,7 +84,7 @@ export default function Footer() {
               >
                 by: butcher studio
               </Link>
-              <span className="absolute left-[8%] top-0 text-center">.2024</span>
+              <span className="absolute left-[8%] top-0 text-center">.2025</span>
             </p>
           </div>
           {/* <div className="items relative flex w-full flex-col justify-between gap-5  pt-20 font-creato text-[14px] uppercase leading-4">
@@ -175,7 +175,7 @@ export default function Footer() {
             </Link>
           </p>
 
-          <p className="basis-1/3 text-center">.2024</p>
+          <p className="basis-1/3 text-center">.2025</p>
 
           <Link
             target="_blank"

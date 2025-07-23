@@ -87,7 +87,7 @@ const socialTitleList = ['facebook', 'linkedIn', 'twitter'];
 
 export const FooterShareLinks = () => {
   const posthog = usePostHog();
-  const linkTexts = ['Facebook', 'LinkedIn', 'Twitter'];
+  const linkTexts = ['Facebook', 'LinkedIn', 'X'];
   return (
     <>
       <span
